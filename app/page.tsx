@@ -18,41 +18,16 @@ import {
   BriefcaseBusiness,
   Sparkles,
   Star,
-  UsersRound,
   X,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const instagram = "https://www.instagram.com/ianrjeronimo/";
-const whatsapp = "https://wa.me/5535991180166?text=" + encodeURIComponent("Olá, Ian! Gostaria de informações sobre o atendimento na área criminal.");
-const maps = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Ian Jerônimo · Advocacia Criminal, R. Rui Barbosa, 320, Centro, Lavras - MG, 37200-026");
-const reviews = "https://www.google.com/maps?cid=15504381876223002105";
+const contact = "https://wa.me/5535997492543";
+const whatsapp = "https://wa.me/5535997492543?text=" + encodeURIComponent("Olá, Dr. Leonardo! Gostaria de informações sobre o atendimento nas áreas trabalhista e previdenciária.");
+const maps = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Leonardo Carvalho Tenório · Advocacia Trabalhista e Previdenciária, R. Roberto Coutinho Rezende, 195, Guanabara, Pouso Alegre - MG, 37554-102");
+const reviews = "https://www.google.com/maps?cid=14878382819183384413";
 
-function InstagramMark({
-  size = 16,
-  strokeWidth = 1.8,
-}: {
-  size?: number;
-  strokeWidth?: number;
-}) {
-  return (
-    <svg
-      aria-hidden="true"
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect x="2.5" y="2.5" width="19" height="19" rx="5" />
-      <circle cx="12" cy="12" r="4.1" />
-      <circle cx="17.8" cy="6.4" r="0.75" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
+function WhatsAppMark({size = 16, strokeWidth = 1.8}: {size?: number; strokeWidth?: number}) { return <Phone size={size} strokeWidth={strokeWidth} aria-hidden="true" />; }
 
 const reveal: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -70,22 +45,16 @@ const stagger: Variants = {
 
 const areas = [
   {
-    title: "Orientação criminal", icon: Scale,
-    summary: "Clareza para compreender uma questão criminal e os caminhos que podem ser avaliados.",
-    details: "A orientação começa com a escuta e a análise das informações apresentadas. O atendimento ajuda a compreender a situação, os procedimentos envolvidos e os próximos passos que exigem avaliação jurídica individual.",
-    topics: ["Análise da situação e dos documentos", "Esclarecimento sobre procedimentos", "Orientação para os próximos passos"],
+    title: "Direito Trabalhista", icon: BriefcaseBusiness,
+    summary: "Orientação para compreender seus direitos no trabalho e avaliar os próximos passos com segurança.",
+    details: "Questões no trabalho merecem uma análise cuidadosa da sua história e dos documentos disponíveis. Leonardo oferece orientação trabalhista para esclarecer dúvidas e avaliar os caminhos possíveis em cada situação.",
+    topics: ["Análise da relação de trabalho", "Orientação sobre desligamento e verbas rescisórias", "Avaliação de jornadas e condições de trabalho", "Acompanhamento de demandas trabalhistas"],
   },
   {
-    title: "Acompanhamento processual", icon: BriefcaseBusiness,
-    summary: "Análise técnica e atenção às etapas de uma demanda na área criminal.",
-    details: "O acompanhamento de uma demanda criminal exige atenção aos fatos, aos documentos e às particularidades de cada etapa. Entre em contato para avaliar o contexto do seu caso e as possibilidades de atuação.",
-    topics: ["Análise dos fatos e documentos", "Acompanhamento de demandas criminais", "Comunicação sobre as etapas do caso"],
-  },
-  {
-    title: "Tribunal do Júri", icon: UsersRound,
-    summary: "Atuação em plenário com preparação, argumentação e atenção aos detalhes do caso.",
-    details: "Ian Jerônimo atua no Tribunal do Júri. A preparação considera as circunstâncias e os elementos de cada processo, com análise técnica e construção da argumentação para a atuação em plenário.",
-    topics: ["Análise e preparação do caso", "Atuação em plenário", "Defesa e assistência à acusação"],
+    title: "Direito Previdenciário", icon: Scale,
+    summary: "Atenção à sua trajetória de trabalho e às questões relacionadas à aposentadoria e aos benefícios do INSS.",
+    details: "A orientação previdenciária começa pela compreensão da sua trajetória e pela análise das informações e documentos apresentados. O atendimento ajuda a esclarecer dúvidas sobre aposentadoria e benefícios, considerando as particularidades do seu caso.",
+    topics: ["Análise do histórico de contribuições", "Orientação sobre aposentadoria", "Avaliação de questões relacionadas a benefícios do INSS", "Acompanhamento de demandas previdenciárias"],
   },
 ];
 
@@ -132,12 +101,15 @@ export default function Home() {
     useState<(typeof areas)[number] | null>(null);
 
   const dialogRef = useRef<HTMLElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!activeArea) return;
     const previousFocus = document.activeElement as HTMLElement | null;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    const content = contentRef.current;
+    content?.setAttribute("inert", "");
     const timer = window.setTimeout(() => dialogRef.current?.querySelector<HTMLButtonElement>("button")?.focus(), 0);
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") setActiveArea(null);
@@ -154,6 +126,7 @@ export default function Home() {
       window.clearTimeout(timer);
       window.removeEventListener("keydown", closeOnEscape);
       document.body.style.overflow = previousOverflow;
+      content?.removeAttribute("inert");
       previousFocus?.focus();
     };
   }, [activeArea]);
@@ -162,23 +135,24 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-ivory text-ink">
-        <header className="sticky top-0 z-40 border-b border-ink/10 bg-ivory/95 backdrop-blur-xl">
-          <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[88px] sm:px-8 lg:px-12">
+      <main className="bg-ivory text-ink">
+        <div ref={contentRef}>
+        <header className="sticky top-0 z-40 border-b border-white/15 bg-black text-white">
+          <div className="mx-auto flex h-[84px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[104px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Ian Jerônimo — início"
+              aria-label="Leonardo Carvalho Tenório — início"
               onClick={closeMenu}
               className="shrink-0"
             >
               <Image
-                src="/Logotipo IJ Advocacia Criminal.png"
+                src="/Logotipo Jurídico LC em Ouro Metálico.png"
                 width={2172}
                 height={724}
-                alt="Ian Jerônimo · Advocacia Criminal"
+                alt="Leonardo Carvalho Tenório · Advocacia Trabalhista e Previdenciária"
                 preload
-                className="h-auto w-[205px] sm:w-[260px]"
-                sizes="(max-width: 640px) 205px, 260px"
+                className="h-auto w-[230px] sm:w-[300px]"
+                sizes="(max-width: 640px) 230px, 300px"
               />
             </a>
             <nav
@@ -203,13 +177,13 @@ export default function Home() {
             </nav>
             <div className="hidden items-center gap-3 lg:flex">
               <a
-                href={instagram}
+                href={contact}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram de Ian Jerônimo"
-                className="grid size-10 place-items-center rounded-full border border-ink/15 text-ink transition-colors hover:border-brand-700 hover:text-brand-700"
+                aria-label="WhatsApp de Leonardo Carvalho Tenório"
+                className="grid size-10 place-items-center rounded-full border border-white/25 text-brand-200 transition-colors hover:border-gold hover:text-gold"
               >
-                <InstagramMark size={17} strokeWidth={1.7} />
+                <WhatsAppMark size={17} strokeWidth={1.7} />
               </a>
               <GlowingButton
                 href={whatsapp}
@@ -225,7 +199,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-full border border-ink/15 lg:hidden"
+              className="grid size-11 place-items-center rounded-full border border-white/25 lg:hidden"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -240,7 +214,7 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-ink/10 bg-ivory px-6 lg:hidden"
+                className="overflow-hidden border-t border-white/15 bg-black px-6 lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
@@ -254,7 +228,7 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm text-ink-soft transition-colors hover:text-brand-700"
+                      className="py-3 text-sm text-white/80 transition-colors hover:text-gold"
                     >
                       {label}
                     </a>
@@ -276,7 +250,7 @@ export default function Home() {
 
         <section
           id="inicio"
-          className="brand-hero relative isolate scroll-mt-24 border-b border-ink/10 bg-ink"
+          className="brand-hero relative isolate overflow-hidden scroll-mt-24 border-b border-ink/10 bg-ink"
         >
           <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-12 px-5 py-14 sm:px-8 sm:py-20 lg:min-h-[710px] lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:px-12 lg:py-20">
             <motion.div
@@ -289,15 +263,14 @@ export default function Home() {
                 variants={reveal}
                 className="max-w-[720px] font-serif text-[2.45rem] leading-[1.1] tracking-[-0.035em] text-white sm:text-5xl lg:text-[3.65rem]"
               >
-                Defesa criminal com{" "}
-                <span className="italic text-brand-700">estratégia</span> e atenção
-                a cada detalhe.
+                Seus direitos no trabalho.{" "}<br />
+                <span className="text-brand-700">Seu futuro protegido.</span>
               </motion.h1>
               <motion.p
                 variants={reveal}
                 className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft sm:text-base sm:leading-8"
               >
-                Ian Jerônimo, advogado criminalista em Lavras e região.
+                Leonardo Carvalho Tenório, advogado trabalhista e previdenciário em Pouso Alegre, com atendimento em todo o Brasil.
                 Orientação clara para compreender sua situação e os próximos
                 passos, com análise individual de cada caso.
               </motion.p>
@@ -330,11 +303,11 @@ export default function Home() {
               >
                 <span className="inline-flex items-center gap-2">
                   <MapPin size={15} className="text-brand-700" />
-                  Lavras · Minas Gerais
+                  Pouso Alegre · Minas Gerais
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <Sparkles size={15} className="text-brand-700" />
-                  (35) 99118-0166
+                  (35) 99749-2543
                 </span>
                 <a href="#avaliacoes" className="inline-flex items-center gap-2 py-2 text-sm text-gold underline underline-offset-4">
                   <Star size={15} fill="currentColor" aria-hidden="true" /> Leia os depoimentos
@@ -352,10 +325,10 @@ export default function Home() {
               className="relative mx-auto w-full max-w-[460px] lg:ml-auto lg:mr-3"
             >
               <div className="absolute -inset-3 rotate-2 border border-brand-600/25 sm:-inset-4" />
-              <div className="relative aspect-[0.82] overflow-hidden bg-brand-100">
+              <div className="relative aspect-[4/5] overflow-hidden bg-brand-100">
                 <Image
-                  src="/imgi_14_553312827_18373069843150255_4685612968014803679_n.jpg"
-                  alt="Ian Jerônimo, advogado criminalista em Lavras"
+                  src="/imgi_3_723216131_18599494774022246_8583372953301514537_n.jpg"
+                  alt="Leonardo Carvalho Tenório, advogado trabalhista e previdenciário em Pouso Alegre"
                   fill
                   preload
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 40vw"
@@ -364,9 +337,9 @@ export default function Home() {
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/55 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
-                    <p className="font-serif text-2xl">Ian Jerônimo</p>
+                    <p className="font-serif text-xl">Leonardo Carvalho Tenório</p>
                     <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-white/80">
-                      Advocacia Criminal
+                      Advocacia Trabalhista e Previdenciária
                     </p>
                   </div>
                   <span className="grid size-11 shrink-0 place-items-center rounded-full border border-white/60">
@@ -375,7 +348,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="absolute -left-3 top-[15%] border border-ink/10 bg-ivory px-4 py-3 text-[10px] font-medium tracking-[0.1em] text-ink shadow-card sm:-left-10 sm:px-5">
-                TÉCNICA · ESCUTA · RESPONSABILIDADE
+                AMIGO DO TRABALHADOR
               </div>
               <span className="absolute -bottom-8 -right-7 -z-10 size-28 rounded-full border border-brand-600/25" />
             </motion.div>
@@ -388,9 +361,9 @@ export default function Home() {
         >
           <div className="mx-auto grid max-w-7xl gap-6 px-5 py-7 sm:grid-cols-3 sm:gap-4 sm:px-8 lg:px-12">
             {[
-              ["Criminal", "Orientação e acompanhamento jurídico"],
-              ["Lavras", "Sede no Centro"],
-              ["Contato direto", "Converse com o advogado pelo WhatsApp"],
+              ["Trabalhista", "Orientação e acompanhamento jurídico"],
+              ["Previdenciário", "Aposentadoria e benefícios do INSS"],
+              ["Todo o Brasil", "Converse com o advogado pelo WhatsApp"],
             ].map(([value, label], index) => (
               <div
                 key={value}
@@ -439,7 +412,7 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.12 }}
               variants={stagger}
-              className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+              className="mt-12 grid gap-4 sm:grid-cols-2"
             >
               {areas.map((area) => {
                 const Icon = area.icon;
@@ -463,6 +436,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
+                      aria-haspopup="dialog"
                       className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-7 text-[10px] font-semibold uppercase tracking-[0.15em] text-brand-800 hover:text-brand-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-700"
                     >
                       Saiba mais{" "}
@@ -492,8 +466,8 @@ export default function Home() {
             >
               <div className="relative aspect-[3/4] overflow-hidden bg-brand-100">
                 <Image
-                  src="/imgi_4_836469264_18431077936150255_3812533423650644375_n.jpg"
-                  alt="Ian Jerônimo em atendimento no escritório"
+                  src="/imgi_18_830754624_18633980671022246_4547506194348257578_n.jpg"
+                  alt="Leonardo Carvalho Tenório em retrato profissional"
                   fill
                   sizes="(max-width: 1024px) 85vw, 43vw"
                   className="object-cover"
@@ -502,10 +476,10 @@ export default function Home() {
               <div className="absolute -left-2 top-8 -z-10 size-24 border-l border-t border-brand-600/40 sm:-left-5 sm:top-10 sm:size-32" />
               <div className="absolute bottom-0 left-5 max-w-[245px] border border-brand-600/30 bg-ivory px-5 py-4 shadow-card sm:left-8">
                 <p className="font-serif text-xl text-ink">
-                  Ian Jerônimo
+                  Leonardo Carvalho Tenório
                 </p>
                 <p className="mt-1 text-[11px] leading-5 text-ink-soft">
-                  Advocacia criminal em Lavras, MG.
+                  Advocacia trabalhista e previdenciária em Pouso Alegre, MG.
                 </p>
               </div>
             </motion.div>
@@ -526,8 +500,7 @@ export default function Home() {
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                Ian Jerônimo é advogado criminalista com sede no Centro de
-                Lavras, Minas Gerais. Sua atuação reúne análise jurídica,
+                Leonardo Carvalho Tenório é advogado trabalhista e previdenciário com sede em Pouso Alegre, Minas Gerais. Sua atuação reúne análise jurídica,
                 atenção às circunstâncias do caso e comunicação clara
                 com quem procura orientação.
               </motion.p>
@@ -542,12 +515,12 @@ export default function Home() {
               </motion.p>
               <motion.a
                 variants={reveal}
-                href={instagram}
+                href={contact}
                 target="_blank"
                 rel="noreferrer"
                 className="group mt-8 inline-flex items-center gap-2 border-b border-brand-700/40 pb-2 text-xs font-semibold uppercase tracking-[0.13em] text-brand-800 transition-colors hover:border-brand-700 hover:text-brand-700"
               >
-                Acesse o Instagram{" "}
+                Converse com Leonardo{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -613,18 +586,18 @@ export default function Home() {
             <div className="grid items-end gap-7 md:grid-cols-[1fr_auto]">
               <Heading
                 eyebrow="CONTEÚDOS JURÍDICOS"
-                description="Conteúdos e reflexões sobre a atuação jurídica compartilhados no perfil profissional."
+                description="Atendimento em Pouso Alegre e em todo o Brasil. Tire suas dúvidas diretamente com o advogado."
               >
                 Informação para conhecer melhor{" "}
                 <span className="italic text-brand-700">seus direitos.</span>
               </Heading>
               <a
-                href={instagram}
+                href={contact}
                 target="_blank"
                 rel="noreferrer"
                 className="group mb-1 inline-flex w-fit items-center gap-2 text-xs font-semibold uppercase tracking-[0.13em] text-brand-800"
               >
-                Ver no Instagram{" "}
+                Fale pelo WhatsApp{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -634,15 +607,15 @@ export default function Home() {
             <div className="mt-11 grid gap-6">
               {[
                 {
-                  image: "/imgi_5_804365540_18426935287150255_4258004040102395610_n.jpg",
-                  alt: "Ian Jerônimo durante atuação no Tribunal do Júri",
-                  eyebrow: "Tribunal do Júri",
-                  title: "A atuação criminal também se constrói em plenário.",
+                  image: "/imgi_16_836501031_18636005581022246_485899264290876127_n.jpg",
+                  alt: "Leonardo Carvalho Tenório participando de um evento profissional",
+                  eyebrow: "Atendimento",
+                  title: "Uma conversa clara é o primeiro passo.",
                 },
               ].map((post, index) => (
                 <motion.a
                   key={post.eyebrow}
-                  href={instagram}
+                  href={contact}
                   target="_blank"
                   rel="noreferrer"
                   initial={false}
@@ -665,7 +638,7 @@ export default function Home() {
                       {post.title}
                     </h3>
                     <span className="mt-5 inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.15em] text-brand-800">
-                      Acompanhe no Instagram <ArrowUpRight size={14} />
+                      Converse sobre seu atendimento <ArrowUpRight size={14} />
                     </span>
                   </div>
                 </motion.a>
@@ -681,10 +654,10 @@ export default function Home() {
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-12">
             <Heading
               eyebrow="PERFIL PÚBLICO"
-              description="Conheça as experiências compartilhadas por clientes e pessoas que acompanharam a atuação de Ian Jerônimo no Google."
+              description="Conheça as experiências compartilhadas no Google por quem foi atendido."
             >
               O que dizem sobre{" "}
-              <span className="italic text-brand-700">Ian Jerônimo.</span>
+              <span className="italic text-brand-700">Leonardo Carvalho Tenório.</span>
             </Heading>
             <div className="relative flex min-h-[245px] flex-col justify-between overflow-hidden border border-ink/10 bg-ivory p-7 sm:p-9">
               <div className="absolute -right-10 -top-16 size-56 rounded-full border border-brand-700/15" />
@@ -698,13 +671,13 @@ export default function Home() {
                     Avaliações no Google
                   </span>
                   <p className="mt-1 font-serif text-2xl text-ink">
-                    12 avaliações no Google
+                    5,0 · 171 avaliações no Google
                   </p>
                 </div>
               </div>
               <div className="relative mt-8 flex flex-wrap items-end justify-between gap-5">
                 <p className="max-w-xs text-[13px] leading-6 text-ink-soft">
-                  Consulte as avaliações e informações atualizadas diretamente no Google.
+                  Consulte o perfil no Google para avaliações e informações atualizadas.
                 </p>
                 <a
                   href={reviews}
@@ -720,42 +693,18 @@ export default function Home() {
 
           <div className="mx-auto mt-12 grid max-w-7xl gap-5 px-5 sm:px-8 md:grid-cols-2 lg:grid-cols-3 lg:px-12">
             {[
-  [
-    "Phelipe Carvalho",
-    "Ótimo advogado, me explicou tudo certinho e me salvou em um caso extremamente complexo! Recomendo de olhos fechados!",
-    "105018042187059165065"
-  ],
-  [
-    "Telma Batista rodrigues",
-    "Excelente advogado ...Parabéns Ian Jerônimo por sua dedicação como Advogado ...é uma área que todos nós precisamos de ajuda e vc faz com êxito!!!",
-    "101055185688031789735"
-  ],
-  [
-    "Zane Meire Batista Viana Zane",
-    "Advogado de excelência, dedicado, educado e ele merece ser mencionado no Google, com toda certeza.",
-    "109513956609429323509"
-  ],
-  [
-    "Stefany Rodrigues",
-    "Tive a oportunidade de assistir a um júri popular em que o Dr. Ian atuou como advogado de defesa e, em outra ocasião, como assistente de acusação. Em ambas as situações, demonstrou extrema competência, confiança nas palavras e uma oratória digna de admiração. Indico e recomendo de olhos fechados!",
-    "106243094222503868291"
-  ],
-  [
-    "Renato Alvarenga",
-    "Advogado do maior calibre. Uma referência em Lavras & região!",
-    "110851089013737932539"
-  ],
-  [
-    "Isabella Rodrigues Jerônimo",
-    "Sem dúvidas, o melhor criminalista de Lavras e região!",
-    "111718860662648174206"
-  ]
-].map(([name, quote, id]) => (
+  ["Caroline Leal", "Excelente profissional. Apresenta muito comprometimento e ética jurídica. Transmite clareza aos clientes, recomendo pela seriedade e dedicação ao seu exercício."],
+  ["Ana Lyvia Mello", "Advogado extremamente competente, prestativo e confiável. Atendimento excelente e muito profissional. Recomendo!"],
+  ["Ana Paula Tenório", "Excelente advogado trabalhista! Muito atencioso, esclareceu todas as minhas dúvidas e conduziu o processo com profissionalismo e transparência. Recomendo fortemente."],
+  ["Josiel Dames Ferreira Da Silva", "Um excelente profissional, me ajudou bastante tirou todas a minhas dúvidas. Não demora de atender seus clientes, eu o recomendo!"],
+  ["Fábio Rosa", "Excelente profissional! recomendo. Esclareceu todas as minhas dúvidas com muita atenção 🙏."],
+  ["DORIVA JONAS", "Fui muito bem atendido, com profissionalismo e humanidade"],
+].map(([name, quote]) => (
               <figure key={name} className="flex flex-col border border-ink/10 bg-ivory p-6 sm:p-7">
-                <div className="mb-5 flex items-center gap-1 text-[#9a711d]" aria-label="5 estrelas">{[0,1,2,3,4].map(star => <Star key={star} size={17} fill="currentColor" strokeWidth={1.5} aria-hidden="true" />)}</div>
+                <div className="mb-5 flex items-center gap-1 text-brand-700" role="img" aria-label="5 estrelas">{[0,1,2,3,4].map(star => <Star key={star} size={17} fill="currentColor" strokeWidth={1.5} aria-hidden="true" />)}</div>
                 <blockquote className="text-[15px] leading-7 text-ink">“{quote}”</blockquote>
                 <figcaption className="mt-auto flex items-center gap-3 pt-7"><span className="grid size-10 shrink-0 place-items-center rounded-full bg-ink text-sm font-bold text-gold" aria-hidden="true">{name.charAt(0)}</span><span className="text-sm font-semibold text-ink">{name}</span></figcaption>
-                <a href={"https://www.google.com/maps/contrib/" + id + "/reviews?hl=pt-BR"} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-2 py-2 text-xs text-brand-700 underline underline-offset-4">Ver avaliação no Google <ArrowUpRight size={14} /></a>
+                <a href={reviews} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-2 py-2 text-xs text-brand-700 underline underline-offset-4">Ver perfil no Google <ArrowUpRight size={14} /></a>
               </figure>
             ))}
           </div>
@@ -769,7 +718,7 @@ export default function Home() {
             <div>
               <Heading
                 eyebrow="CONTATO E LOCALIZAÇÃO"
-                description="Sede no Centro de Lavras, Minas Gerais. Entre em contato para consultar a disponibilidade e agendar seu atendimento."
+                description="Sede em Pouso Alegre, Minas Gerais. Entre em contato para consultar a disponibilidade e agendar seu atendimento."
               >
                 Um primeiro contato com{" "}
                 <span className="italic text-brand-700">tranquilidade.</span>
@@ -783,8 +732,8 @@ export default function Home() {
                 >
                   <Phone size={16} /> Fale pelo WhatsApp
                 </GlowingButton>
-                <a href="tel:+5535991180166" className="text-sm text-ink-soft hover:text-brand-700">Telefone: (35) 99118-0166</a>
-                <a href={instagram} target="_blank" rel="noreferrer" className="text-[11px] text-ink-soft hover:text-brand-700">@ianrjeronimo</a>
+                <a href="tel:+5535997492543" className="text-sm text-ink-soft hover:text-brand-700">Telefone: (35) 99749-2543</a>
+                <a href={contact} target="_blank" rel="noreferrer" className="text-[11px] text-ink-soft hover:text-brand-700">WhatsApp: (35) 99749-2543</a>
               </div>
             </div>
             <div className="relative overflow-hidden border border-ink/10 bg-white p-7 sm:p-10">
@@ -798,16 +747,16 @@ export default function Home() {
                     Endereço
                   </p>
                   <p className="mt-1 font-serif text-2xl text-ink">
-                    Lavras · MG
+                    Pouso Alegre · MG
                   </p>
                 </div>
               </div>
               <address className="mt-7 max-w-md not-italic text-[14px] leading-7 text-ink-soft">
-                R. Rui Barbosa, 320
+                R. Roberto Coutinho Rezende, 195
                 <br />
-                Centro, Lavras — MG
+                Guanabara, Pouso Alegre — MG
                 <br />
-                37200-026, Brasil
+                37554-102, Brasil
               </address>
               <div className="my-7 h-px bg-ink/10" />
               <div className="flex flex-wrap items-center justify-between gap-4">
@@ -848,18 +797,18 @@ export default function Home() {
         <footer className="bg-ink px-5 py-12 text-white sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.1fr_0.9fr_1fr]">
             <div>
-              <div className="inline-flex bg-ivory px-4 py-3">
+              <div className="inline-flex bg-black py-3">
                 <Image
-                  src="/Logotipo IJ Advocacia Criminal.png"
+                  src="/Logotipo Jurídico LC em Ouro Metálico.png"
                   width={2172}
                   height={724}
-                  alt="Ian Jerônimo · Advocacia Criminal"
+                  alt="Leonardo Carvalho Tenório · Advocacia Trabalhista e Previdenciária"
                   className="h-auto w-[240px]"
                   sizes="240px"
                 />
               </div>
               <p className="mt-4 max-w-xs text-xs leading-6 text-white/65">
-                Advocacia criminal em Lavras e região, Minas Gerais.
+                Advocacia trabalhista e previdenciária em Pouso Alegre, MG. Atendimento em todo o Brasil.
               </p>
             </div>
             <div>
@@ -887,12 +836,12 @@ export default function Home() {
               </h2>
               <div className="mt-4 flex flex-col items-start gap-3 text-xs text-white/75">
                 <a
-                  href={instagram}
+                  href={contact}
                   target="_blank"
                   rel="noreferrer"
                   className="footer-link inline-flex items-center gap-2"
                 >
-                  <InstagramMark size={14} /> @ianrjeronimo
+                  <WhatsAppMark size={14} /> WhatsApp: (35) 99749-2543
                 </a>
                 <a
                   href={maps}
@@ -901,14 +850,14 @@ export default function Home() {
                   className="footer-link inline-flex items-start gap-2"
                 >
                   <MapPin size={14} className="mt-0.5 shrink-0" />
-                  R. Rui Barbosa, 320 — Centro
+                  R. Roberto Coutinho Rezende, 195 — Guanabara
                 </a>
               </div>
             </div>
           </div>
           <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-3 border-t border-white/15 pt-5 text-[10px] text-white/50 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} Ian Jerônimo · Advocacia Criminal. Todos os direitos
+              © {new Date().getFullYear()} Leonardo Carvalho Tenório · Advocacia Trabalhista e Previdenciária. Todos os direitos
               reservados.
             </p>
             <p>
@@ -918,6 +867,7 @@ export default function Home() {
           </div>
         </footer>
 
+        </div>
         <AnimatePresence>
           {activeArea && (
             <motion.div
@@ -937,7 +887,7 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl bg-ivory p-7 shadow-card sm:max-w-xl sm:rounded-sm sm:p-10"
+                className="relative max-h-[90dvh] w-full overflow-y-auto rounded-t-2xl bg-ivory p-7 shadow-card sm:max-w-xl sm:rounded-sm sm:p-10"
               >
                 <button
                   type="button"

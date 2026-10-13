@@ -2,34 +2,34 @@
 
 :root {
   color-scheme: light;
-  --brand-gold: #e1b64d;
-  --brand-gold-dark: #090d0e;
-  --brand-gold-deep: #090d0e;
-  --brand-ink: #090d0e;
-  --brand-ink-soft: #505650;
-  --brand-ivory: #f6f6f3;
+  --brand-gold: #c1a16f;
+  --brand-gold-dark: #080706;
+  --brand-gold-deep: #080706;
+  --brand-ink: #080706;
+  --brand-ink-soft: #62594e;
+  --brand-ivory: #faf7f0;
   --brand-paper: #ffffff;
 }
 
 @theme inline {
-  --font-serif: var(--font-display), "Montserrat", system-ui, sans-serif;
+  --font-serif: var(--font-display), "Bodoni Moda", Georgia, serif;
   --font-sans: var(--font-body), "Manrope", system-ui, sans-serif;
-  --color-ink: #090d0e;
-  --color-ink-soft: #505650;
-  --color-ivory: #f6f6f3;
-  --color-brand-50: #f1f1ec;
-  --color-brand-100: #e5e4dc;
-  --color-brand-200: #f1d58f;
-  --color-brand-300: #dfc172;
-  --color-brand-400: #d6b557;
-  --color-brand-500: #e1b64d;
-  --color-brand-600: #bd8c27;
-  --color-brand-700: #76581c;
-  --color-brand-800: #56431c;
-  --color-brand-900: #282820;
-  --color-brand-950: #090d0e;
-  --color-stone: #92938e;
-  --color-marble: #e3e2db;
+  --color-ink: #080706;
+  --color-ink-soft: #62594e;
+  --color-ivory: #faf7f0;
+  --color-brand-50: #f3ede2;
+  --color-brand-100: #eadfca;
+  --color-brand-200: #efd2a4;
+  --color-brand-300: #dfc092;
+  --color-brand-400: #d4b47f;
+  --color-brand-500: #c1a16f;
+  --color-brand-600: #a08050;
+  --color-brand-700: #785b34;
+  --color-brand-800: #604220;
+  --color-brand-900: #30271b;
+  --color-brand-950: #080706;
+  --color-stone: #c7bba5;
+  --color-marble: #e7decf;
   --shadow-card: 0 18px 48px rgba(9, 13, 14, 0.12);
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 ::selection {
-  background: #090d0e;
+  background: #080706;
   color: #fff;
 }
 
@@ -62,11 +62,11 @@ body {
 }
 
 .eyebrow {
-  color: #090d0e;
+  color: #080706;
 }
 
 .eyebrow-light {
-  color: #f1d58f;
+  color: #efd2a4;
 }
 
 .eyebrow::before,
@@ -81,7 +81,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #505650;
+  color: #62594e;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -95,7 +95,7 @@ body {
   bottom: 0;
   left: 0;
   height: 1px;
-  background: #090d0e;
+  background: #080706;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -103,7 +103,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #090d0e;
+  color: #080706;
 }
 
 .nav-link:hover::after {
@@ -115,7 +115,7 @@ body {
 }
 
 .footer-link:hover {
-  color: #f1d58f;
+  color: #efd2a4;
 }
 
 ::-webkit-scrollbar {
@@ -123,17 +123,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #e5e4dc;
+  background: #eadfca;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #e5e4dc;
+  border: 2px solid #eadfca;
   border-radius: 999px;
-  background: #d6b557;
+  background: #d4b47f;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #090d0e;
+  background: #080706;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -148,22 +148,30 @@ body {
   }
 }
 
-:focus-visible { outline: 2px solid #76581c; outline-offset: 4px; }
-.brand-hero :focus-visible, footer :focus-visible { outline-color: #e1b64d; }
+:focus-visible { outline: 2px solid #785b34; outline-offset: 4px; }
+.brand-hero :focus-visible, footer :focus-visible { outline-color: #c1a16f; }
 
-/* Metallic accents sampled from the supplied IJ logo; dark gold preserves text contrast. */
-@theme inline { --color-gold: #e1b64d; --color-silver: #92938e; }
+/* Metallic accents sampled from the supplied LC logo; dark gold preserves text contrast. */
+@theme inline { --color-gold: #c1a16f; --color-silver: #c7bba5; }
 h1, h2 { text-wrap: balance; }
 body { caret-color: #d5a83e; }
 
-/* Strong geometric lettering echoes the supplied wordmark. */
-.font-serif { font-weight: 700; }
+/* High-contrast serif lettering echoes the supplied metallic wordmark. */
+.font-serif { font-weight: 500; }
 .italic { font-style: normal; }
 
-.brand-hero .text-ink-soft { color: #c9ccca; }
-.brand-hero .text-ink { color: #f6f6f3; }
-.brand-hero .text-brand-700 { color: #e1b64d; }
+.brand-hero .text-ink-soft { color: #ded6ca; }
+.brand-hero .text-ink { color: #faf7f0; }
+.brand-hero .text-brand-700 { color: #c1a16f; }
 .brand-hero .border-ink\/10 { border-color: #ffffff26; }
-.brand-hero .bg-ivory { background-color: #f6f6f3; color: #090d0e; }
-.brand-hero .border-brand-600\/25 { border-color: #e1b64d66; }
-.brand-hero a.bg-gold { color: #090d0e; }
+.brand-hero .bg-ivory { background-color: #faf7f0; color: #080706; }
+.brand-hero .border-brand-600\/25 { border-color: #c1a16f66; }
+.brand-hero a.bg-gold { color: #080706; }
+
+/* Navigation sits on the same black as the supplied logo. */
+header .nav-link { color: #ded6ca; font-size: 0.72rem; }
+header .nav-link:hover { color: #efd2a4; }
+header .nav-link::after { background: #c1a16f; }
+header :focus-visible { outline-color: #efd2a4; }
+@media (max-width: 359px) { header img { width: 200px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }

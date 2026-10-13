@@ -1,43 +1,45 @@
 ---
-name: "Ian Jerônimo · Advocacia Criminal"
-description: "Identidade institucional com preto, dourado e prata, leitura clara e presença pessoal."
+name: "Leonardo Carvalho Tenório · Advocacia"
+description: "Preto, ouro metálico e tipografia serifada para advocacia trabalhista e previdenciária."
 colors:
-  ink: "#090d0e"
-  ink-soft: "#505650"
-  ivory: "#f6f6f3"
+  ink: "#080706"
+  ink-soft: "#62594e"
+  ivory: "#faf7f0"
+  brand-50: "#f3ede2"
+  brand-100: "#eadfca"
+  brand-200: "#efd2a4"
+  brand-300: "#dfc092"
+  brand-400: "#d4b47f"
+  brand-500: "#c1a16f"
+  brand-600: "#a08050"
+  brand-700: "#785b34"
+  brand-800: "#604220"
+  brand-900: "#30271b"
+  brand-950: "#080706"
+  stone: "#c7bba5"
+  marble: "#e7decf"
+  gold: "#c1a16f"
+  silver: "#c7bba5"
   paper: "#ffffff"
-  brand-50: "#f1f1ec"
-  brand-100: "#e5e4dc"
-  brand-200: "#f1d58f"
-  brand-300: "#dfc172"
-  brand-400: "#d6b557"
-  brand-500: "#e1b64d"
-  brand-600: "#bd8c27"
-  brand-700: "#76581c"
-  brand-800: "#56431c"
-  brand-900: "#282820"
-  brand-950: "#090d0e"
-  silver: "#92938e"
-  marble: "#e3e2db"
-  hero-muted: "#c9ccca"
-  review-stars: "#9a711d"
+  hero-muted: "#ded6ca"
+  black: "#000000"
 typography:
   display:
-    fontFamily: "Montserrat, system-ui, sans-serif"
+    fontFamily: "Bodoni Moda, Georgia, serif"
     fontSize: "2.45rem"
-    fontWeight: 700
+    fontWeight: 500
     lineHeight: 1.1
     letterSpacing: "-0.035em"
   headline:
-    fontFamily: "Montserrat, system-ui, sans-serif"
+    fontFamily: "Bodoni Moda, Georgia, serif"
     fontSize: "2.25rem"
-    fontWeight: 700
+    fontWeight: 500
     lineHeight: 1.07
     letterSpacing: "-0.035em"
   title:
-    fontFamily: "Montserrat, system-ui, sans-serif"
+    fontFamily: "Bodoni Moda, Georgia, serif"
     fontSize: "1.8rem"
-    fontWeight: 700
+    fontWeight: 500
     lineHeight: 1.25
   body:
     fontFamily: "Manrope, system-ui, sans-serif"
@@ -67,17 +69,17 @@ spacing:
   section-desktop: "8rem"
 components:
   button-primary-sm:
-    backgroundColor: "{colors.brand-500}"
+    backgroundColor: "{colors.gold}"
     textColor: "{colors.ink}"
     rounded: "{rounded.full}"
     padding: "0.75rem 1.25rem"
   button-primary-md:
-    backgroundColor: "{colors.brand-500}"
+    backgroundColor: "{colors.gold}"
     textColor: "{colors.ink}"
     rounded: "{rounded.full}"
     padding: "0.875rem 1.5rem"
   button-primary-lg:
-    backgroundColor: "{colors.brand-500}"
+    backgroundColor: "{colors.gold}"
     textColor: "{colors.ink}"
     rounded: "{rounded.full}"
     padding: "1rem 1.75rem"
@@ -106,125 +108,81 @@ components:
     padding: "1.75rem"
 ---
 
-# Design System: Ian Jerônimo · Advocacia Criminal
+# Design System: Leonardo Carvalho Tenório · Advocacia
 
 ## Overview
 
-**Creative North Star: "Clareza e presença"**
+**Creative North Star: "Ouro, clareza e proximidade"**
 
-A identidade usa o logo IJ fornecido como referência e coloca a presença real de Ian Jerônimo em destaque. O hero preto contrasta com títulos brancos e dourado; as seções de leitura usam branco e neutros próximos da prata. O dourado vivo também identifica as ações com texto preto.
-
-Montserrat em peso forte dá aos títulos um caráter geométrico próximo à assinatura da marca; Manrope mantém a leitura clara. O logo permanece íntegro. O favicon ICO, o PNG e o ícone Apple são derivados do emblema IJ recortado do logo fornecido, sem reconstrução tipográfica.
+A identidade usa o logo LC original em ouro metálico, com fundo preto, superfícies de leitura em marfim e branco e títulos serifados. Bodoni Moda acompanha o contraste das letras da marca; Manrope mantém a leitura e as ações claras. O logo permanece íntegro nos caminhos de public e nos metadados.
 
 **Key Characteristics:**
-- Identidade IJ preservada com preto, dourado e prata.
-- Títulos geométricos em Montserrat bold e leitura em Manrope.
-- Hero preto e ações douradas com texto preto.
-- Superfícies brancas e neutras para leitura.
-- Fotografia real e avaliações completas com autor e fonte.
+- Logo LC metálico original sobre preto.
+- Bodoni Moda nos títulos e Manrope na leitura.
+- Ouro quente nas ações e bronze profundo em textos claros.
+- Fotografias reais e depoimentos com nome e fonte.
 
 ## Colors
 
-A paleta combina preto profundo, dourado vivo e neutros claros com caráter prateado. O frontmatter registra os valores normativos extraídos de app/globals.css e dos componentes da página.
+A escala de ouro, bronze e marfim foi extraída das regiões metálicas do logo; os neutros de leitura apoiam o contraste. Os valores normativos estão no frontmatter e em app/globals.css, que configura o Tailwind CSS 4 via @theme inline.
 
 ### Primary
-
-- **Dourado vivo**: brand-500 e o alias gold identificam os botões principais, a ênfase no hero e o encerramento da página. brand-400 é o hover do botão; o foco usa dourado profundo nas superfícies claras e dourado vivo no hero e rodapé.
-- **Dourado profundo**: brand-700 serve a texto e links sobre superfícies claras; brand-800 aparece nas ações auxiliares.
-- **Dourado claro**: brand-200 destaca títulos auxiliares sobre preto.
-- **Escala de apoio**: brand-50 e brand-100 compõem fundos neutros e suportes de imagem. brand-600 aparece em detalhes lineares. brand-300 e brand-900 permanecem declarados na escala, sem exigir nova aplicação visual.
-- **Dourado das estrelas**: review-stars dá contraste às cinco estrelas dos cartões de avaliações.
+Ouro quente (gold/brand-500) identifica as ações com texto preto. brand-400 serve ao hover. brand-200 destaca informação sobre preto. brand-700 e brand-800 mantêm contraste em texto sobre fundos claros.
 
 ### Neutral
+ink e brand-950 compõem hero, rodapé e texto. ivory e paper compõem superfícies de leitura. ink-soft identifica o texto secundário. hero-muted mantém o apoio legível sobre o hero. black é o fundo do logo, cabeçalho e suporte no rodapé. stone/silver e marble são neutros de apoio declarados.
 
-- **Preto profundo**: ink e brand-950 compartilham o mesmo valor. Compõem hero, rodapé, seção de destaque, texto e sobreposições.
-- **Cinza de leitura**: ink-soft organiza parágrafos e navegação claros; hero-muted mantém o texto de apoio legível sobre preto.
-- **Neutro claro**: ivory aproxima as superfícies de leitura da prata da identidade.
-- **Papel**: paper separa cartões e seções claras.
-- **Prata discreta e mármore**: silver e marble são neutros declarados; o logo fornecido expressa o detalhe prateado.
-
-**The Contrast Rule.** Use dourado vivo com texto preto nas ações; mantenha branco e dourado claro sobre preto, reservando dourado profundo para texto sobre superfícies claras.
+**The Contrast Rule.** Use ouro quente com texto preto nas ações e ouro profundo para texto sobre superfícies claras.
 
 ## Typography
 
-**Display Font:** Montserrat, com system-ui e sans-serif como alternativas.
-**Body Font:** Manrope, com system-ui e sans-serif como alternativas.
+Bodoni Moda é carregada por next/font/google nos pesos 400, 500 e 600; a classe font-serif usa peso 500. Manrope é carregada nos pesos 300 a 700. Fontes são servidas pela própria aplicação.
 
-Os títulos usam Montserrat em peso 700, com geometria firme. A leitura e as ações usam Manrope; navegação e botões combinam peso semibold, caixa alta e tracking. O layout carrega Montserrat nos pesos 500, 600, 700 e 800, e Manrope nos pesos 300 a 700. A classe histórica font-serif aplica Montserrat e recebe peso 700; a classe italic é normalizada para font-style normal.
+O H1 sobe de 2.45rem para 3rem em sm e 3.65rem em lg. Títulos de seção usam 2.25rem, 3rem e 3.55rem; o título biográfico chega a 3.45rem. Títulos de cartões usam 1.8rem; placas e painéis usam 1.25rem a 1.875rem. A leitura principal usa 15px/28px, o hero chega a 16px/32px e textos compactos usam 13px/24px. Rótulos usam 10px a 12px, navegação 0.72rem; créditos usam 10px. Enfase vem da cor e da hierarquia.
 
-### Hierarchy
-
-- **Display**: o título principal parte da definição do frontmatter, sobe para 3rem a partir de sm e 3.65rem a partir de lg.
-- **Headline**: títulos de seção sobem de 2.25rem para 3rem em sm e 3.55rem em lg. O título biográfico tem line-height 1.08 e chega a 3.45rem.
-- **Title**: cartões de atuação usam a definição do frontmatter; outros títulos de apoio usam 1.5rem ou 1.875rem.
-- **Body**: leitura principal usa a definição do frontmatter em blocos de até 36rem; no hero cresce para 1rem com line-height 2rem em sm. Descrições compactas usam 13px e line-height 1.5rem; avaliações usam 15px e line-height 1.75rem.
-- **Label**: botões pequenos e legendas usam a definição do frontmatter em caixa alta. Botões médios e grandes usam 12px e tracking 0.14em; navegação usa 0.68rem, peso 600 e tracking 0.08em.
-
-**The Emphasis Rule.** Preserve Montserrat bold e estilo normal nos títulos; destaque expressões curtas pela cor, sem itálico.
+**The Serif Rule.** Use Bodoni Moda em peso 500 nos títulos e Manrope na leitura; não simule itálico global nos títulos.
 
 ## Layout
 
-O conteúdo central usa largura máxima de 80rem, com gutters definidos no frontmatter. A navegação permanece fixa no topo; mede 76px no mobile e 88px a partir de sm. Os links de navegação desktop aparecem em lg; abaixo disso, um botão abre a lista móvel.
+Largura máxima de 80rem e gutters de 1.25rem, 2rem e 3rem. Cabeçalho sticky preto mede 84px no mobile e 104px a partir de sm; navegação completa aparece em lg. Menu móvel empilha links em fundo preto.
 
-As grades empilham no mobile. Cartões de atuação passam a duas colunas em sm e três em lg. Blocos editoriais alternam texto e imagem em duas colunas em lg; a peça de conteúdo jurídico divide imagem e texto em md. O ritmo de seção usa a escala do frontmatter, com intervalos mais amplos no desktop.
-
-O hero preto mantém texto e retrato lado a lado em lg, com proporção de colunas 1.05:0.95. Seu retrato tem proporção 0.82 e limite de 460px; a foto biográfica usa 3:4 e limite de 560px. A foto de plenário é contida em 16:9, preservando o conteúdo. Cada uma das três fotografias aparece uma vez: retrato no hero, atendimento na biografia e plenário no conteúdo. Essa distribuição descreve a página atual e não impõe composição a futuras telas.
+Hero com texto e retrato em duas colunas no desktop, empilhados no mobile. Retrato usa 4:5 e limite de 460px; biografia usa 3:4 e limite de 560px. Moldura e círculo do hero ficam contidos pela seção para evitar rolagem horizontal. Os dois serviços usam duas colunas em sm; avaliações usam uma coluna, duas em md e três em lg. Seções usam 5rem, 7rem e 8rem de respiro vertical.
 
 ## Elevation & Depth
 
-A profundidade vem principalmente da alternância tonal, bordas finas e sobreposição de pequenas placas nas fotografias. A sombra card, registrada no sidecar, serve a essas placas, ao modal e ao hover dos cartões; os cartões permanecem planos no estado de repouso. A moldura girada do retrato e círculos lineares pontuais mantêm o detalhe visual discreto.
+Alternância tonal e bordas de 1px definem os grupos. A sombra card, 0 18px 48px rgba(9,13,14,0.12), aparece nas placas, modal e hover de serviços. Menu móvel anima altura e opacidade em 220ms; modal anima em 240ms. Conteúdo editorial usa initial=false. MotionConfig reducedMotion=user e CSS para movimento reduzido limitam transições e rolagem suave.
 
-**The Resting Surface Rule.** Preserve cartões informativos planos no repouso e use a sombra card na interação ou nas peças sobrepostas.
-
-O conteúdo das seções é visível desde a primeira renderização, inclusive fora da viewport; os elementos editoriais usam initial=false. As variantes de revelação permanecem declaradas, mas não devem ocultar a leitura inicial. Menu e modal mantêm animações de interação; MotionConfig respeita a preferência do usuário por movimento reduzido. A rolagem suave também é desativada nessa preferência.
+**The Visible Content Rule.** Conteúdo editorial permanece visível desde a primeira renderização; menu e modal animam interações e respeitam movimento reduzido.
 
 ## Shapes
 
-Painéis, fotografias e cartões têm cantos retos. Pílulas e círculos distinguem ações, ícones e controles. O modal móvel usa apenas os cantos superiores arredondados; a partir de sm muda para o raio sm em todos os cantos. Bordas são de 1px, normalmente com ink em 10% ou 15% de opacidade; detalhes dourados usam opacidade reduzida.
+Fotos e cartões informativos têm cantos retos. Botões e controles circulares usam raio full. Modal usa cantos superiores de 1rem no mobile e raio sm em telas maiores. Bordas e detalhes usam ouro ou ink com opacidade baixa.
 
 ## Components
 
 ### Buttons
-
-As ações são compactas, claras e arredondadas, com fundo dourado vivo. O botão primário usa os três tamanhos do frontmatter, texto preto, peso 600 e caixa alta. No hover, muda para brand-400 e sobe 2px em 200ms. Seu foco usa outline de 2px em brand-700 e offset de 3px.
-
-O botão outline usa borda ink com 15% de opacidade; no hover, borda e texto mudam para brand-700. O botão inverse é branco com texto brand-800 sobre o encerramento dourado vivo, com subida de 2px no hover. Controles circulares usam a mesma linguagem de borda fina. O foco global usa brand-700 com outline de 2px e offset de 4px; no hero e no rodapé, a cor do outline muda para brand-500.
-
-### Cards / Containers
-
-Cartões de atuação usam papel, borda ink em 10%, cantos retos e o padding do frontmatter, ampliado no tablet. No hover sobem 4px, recebem borda brand-600 em 40% e sombra card, com transição de 300ms. Ícones ficam em círculos de 48px sobre brand-50, com traço dourado profundo. O título é geométrico e forte e o comando auxiliar permanece pequeno, em caixa alta.
-
-Painéis de localização e Google mantêm borda leve e hierarquia simples: ícone circular, título em Montserrat e texto secundário. Não há campos de formulário no produto atual.
+GlowingButton tem três tamanhos, ouro quente, texto preto, Manrope semibold e caixa alta. Hover altera o fundo para brand-400 e desloca 2px; foco usa outline de 2px e offset de 3px. Ações auxiliares de mapa/Google usam borda fina e ouro profundo no hover.
 
 ### Navigation
+Cabeçalho preto com logo íntegro, navegação clara e links de sublinhado animado. Foco no cabeçalho, hero e rodapé usa ouro claro; no restante usa ouro profundo.
 
-A barra usa ivory em 95% de opacidade, blur de fundo e borda inferior ink em 10%. Os links desktop são pequenos e espaçados; no hover, o texto escurece e uma linha de 1px se expande da esquerda em 180ms. A lista móvel abre com animação de altura e opacidade em 220ms. Links do rodapé usam branco translúcido, mudando para brand-200 no hover.
-
-### Review Cards
-
-Seis avaliações fornecidas aparecem integralmente em cartões de fundo ivory e borda ink em 10%. A grade usa uma coluna no mobile, duas em md e três em lg. Cada cartão apresenta cinco estrelas de 17px, texto da avaliação em ink, nome do autor, avatar circular com inicial dourada sobre preto e link para a fonte no Google. O padding é 1.5rem e sobe para 1.75rem em sm. A contagem de 12 avaliações permanece uma informação estática do material fornecido.
+### Cards / Containers
+Serviços usam superfície branca, borda ink/10, padding de 1.75rem a 2rem e ícone de traço. Hover sobe 4px e usa a sombra card. Seis depoimentos completos do material fornecido usam marfim, estrelas bronze, autor e link para o perfil Google; 5,0 e 171 são dados estáticos, com convite para consultar informação atualizada no Google.
 
 ### Area Dialog
+Painel inferior no mobile e central em sm, max-height 90dvh, largura máxima 36rem e rolagem interna. Conteúdo da página fica inert enquanto está aberto. Escape, bloqueio de rolagem, ciclo de Tab e retorno do foco ao botão de origem fazem parte do comportamento.
 
-O modal aparece como folha inferior no mobile e painel central no tablet, com limite de altura de 90vh e largura máxima de 36rem. Uma sobreposição ink em 55% com blur separa a tarefa. O painel usa neutro claro, título em Montserrat, texto com respiro e botão primário. Abertura e fechamento animam opacidade, deslocamento e escala em 240ms. Escape, retorno do foco, contenção de Tab e bloqueio de rolagem fazem parte do comportamento implementado.
-
-### Portrait Frame
-
-O retrato real é acompanhado por moldura dourada fina girada em 2 graus, degradê inferior preto para legibilidade da assinatura e uma placa clara com sombra. O nome do advogado permanece legível sem substituir o logo.
+### Brand Assets
+Logo original é usado no cabeçalho, rodapé, ícones e compartilhamento; os ícones de navegador reutilizam a imagem retangular original. Três fotografias fornecidas aparecem em hero, biografia e conteúdo. A quarta permanece disponível em public. Imagens e dados de compartilhamento usam os caminhos atuais; domínio de produção depende de NEXT_PUBLIC_SITE_URL.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** preservar o logo IJ fornecido e usar seu emblema original nos favicons.
-- **Do** combinar Montserrat bold e estilo normal em títulos com Manrope na leitura e nas ações.
-- **Do** usar dourado vivo com texto preto nas ações e contraste branco/dourado no hero preto.
-- **Do** manter foco visível, leitura confortável e respeito à preferência por movimento reduzido.
-- **Do** preservar fotografias reais e avaliações completas com autor e fonte.
+- **Do** preservar o logo LC original e as fotografias fornecidas.
+- **Do** usar ouro profundo em textos sobre marfim ou branco e ouro claro sobre preto.
+- **Do** manter foco visível, contenção de foco no modal e respeito a movimento reduzido.
 
 ### Don't:
-- **Don't** substituir a identidade IJ por outro nome, logo, emblema genérico ou paleta.
-- **Don't** reintroduzir títulos serifados ou itálicos nesta identidade.
-- **Don't** usar dourado vivo como texto longo sobre branco.
-- **Don't** aplicar o arredondamento de botões a todos os painéis informativos.
-- **Don't** abreviar avaliações fornecidas ou retirar seus nomes e fontes.
-
+- **Don’t** inventar resultados, experiência, e-mail, Instagram ou OAB.
+- **Don’t** atribuir atualização em tempo real às avaliações estáticas.
+- **Don’t** substituir os títulos serifados por uma fonte geométrica sem nova orientação de marca.

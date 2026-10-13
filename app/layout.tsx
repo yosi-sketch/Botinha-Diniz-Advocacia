@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Montserrat, Manrope } from "next/font/google";
+import { Bodoni_Moda, Manrope } from "next/font/google";
 import "./globals.css";
 
-const displayFont = Montserrat({
+const displayFont = Bodoni_Moda({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -18,25 +18,21 @@ const bodyFont = Manrope({
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 const metadataBase = siteUrl ? new URL(siteUrl) : undefined;
-const shareImage = "/Logotipo IJ Advocacia Criminal.png";
+const shareImage = "/Logotipo Jurídico LC em Ouro Metálico.png";
 
 export const metadata: Metadata = {
   ...(metadataBase ? { metadataBase } : {}),
-  title: "Ian Jerônimo | Advocacia Criminal | Lavras, MG",
+  title: "Leonardo Carvalho Tenório | Advogado Trabalhista e Previdenciário | Pouso Alegre, MG",
   description:
-    "Advogado criminalista em Lavras, MG. Orientação criminal, acompanhamento processual e atuação no Tribunal do Júri. Contato: (35) 99118-0166.",
-  keywords: ["Ian Jerônimo", "advogado criminalista em Lavras", "Direito Criminal", "Tribunal do Júri", "Lavras MG"],
-  icons: {
-    icon: [{ url: "/favicon-ij.ico?v=2", sizes: "32x32", type: "image/x-icon" }, { url: "/favicon-ij.png?v=2", sizes: "64x64", type: "image/png" }],
-    apple: [{ url: "/apple-touch-icon-ij.png?v=2", sizes: "180x180", type: "image/png" }],
-    shortcut: "/favicon-ij.ico?v=2",
-  },
+    "Advogado trabalhista e previdenciário em Pouso Alegre, MG. Orientação clara e atendimento em todo o Brasil. Contato: (35) 99749-2543.",
+  keywords: ["Leonardo Carvalho Tenório", "advogado trabalhista em Pouso Alegre", "Direito Trabalhista", "Direito Previdenciário", "Pouso Alegre MG"],
+  icons: { icon: [{ url: shareImage, type: "image/png" }], apple: [{ url: shareImage, type: "image/png" }] },
   openGraph: {
-    title: "Ian Jerônimo | Advocacia Criminal",
+    title: "Leonardo Carvalho Tenório | Advogado Trabalhista e Previdenciário",
     description:
-      "Advocacia criminal em Lavras e região, Minas Gerais.",
+      "Advocacia trabalhista e previdenciária em Pouso Alegre, MG. Atendimento em todo o Brasil.",
     locale: "pt_BR",
-    siteName: "Ian Jerônimo | Advocacia Criminal",
+    siteName: "Leonardo Carvalho Tenório | Advogado Trabalhista e Previdenciário",
     type: "website",
     images: metadataBase
       ? [
@@ -44,22 +40,22 @@ export const metadata: Metadata = {
             url: shareImage,
             width: 2172,
             height: 724,
-            alt: "Ian Jerônimo | Advocacia Criminal",
+            alt: "Leonardo Carvalho Tenório | Advogado Trabalhista e Previdenciário",
           },
         ]
       : undefined,
   },
   twitter: {
     card: metadataBase ? "summary_large_image" : "summary",
-    title: "Ian Jerônimo | Advocacia Criminal",
+    title: "Leonardo Carvalho Tenório | Advogado Trabalhista e Previdenciário",
     description:
-      "Advocacia criminal em Lavras e região, Minas Gerais.",
+      "Advocacia trabalhista e previdenciária em Pouso Alegre, MG. Atendimento em todo o Brasil.",
     ...(metadataBase ? { images: [shareImage] } : {}),
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#090d0e",
+  themeColor: "#080706",
 };
 
 export default function RootLayout({
@@ -68,8 +64,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={bodyFont.variable + " " + displayFont.variable + " scroll-smooth"}>
-      <body className="min-h-screen overflow-x-clip bg-ivory font-sans text-ink antialiased selection:bg-brand-700 selection:text-white">
+    <html lang="pt-BR" className={bodyFont.variable + " " + displayFont.variable}>
+      <body className="min-h-screen bg-ivory font-sans text-ink antialiased selection:bg-brand-700 selection:text-white">
         {children}
       </body>
     </html>
