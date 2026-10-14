@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Outfit, Manrope } from "next/font/google";
 import { brand } from "./lib/brand";
 import "./globals.css";
 
-const displayFont = Cormorant_Garamond({
-  variable: "--font-display",
+const displayFont = Outfit({
+  variable: "--font-display-face",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   display: "swap",
@@ -20,14 +20,14 @@ const bodyFont = Manrope({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 const metadataBase = siteUrl ? new URL(siteUrl) : undefined;
 const shareImage = brand.portrait;
-const title = "Silva & Lopes Advocacia | Assessoria Jurídica em Formiga, MG";
-const description = "Advocacia cível, criminal, previdenciária, empresarial e trabalhista em Formiga, MG. Converse com a Silva & Lopes pelo WhatsApp: (37) 99902-0336.";
+const title = "RAS Advogados | Advocacia em Sete Lagoas, MG";
+const description = "Assessoria jurídica em Direito Empresarial e Civil, Penal Empresarial e Financeiro, Imobiliário e Planejamento Sucessório. RAS Advogados em Sete Lagoas: (31) 3177-0100.";
 
 export const metadata: Metadata = {
   ...(metadataBase ? { metadataBase } : {}),
   title,
   description,
-  keywords: ["Silva & Lopes Advocacia", "advogado em Formiga", "direito cível", "direito criminal", "direito previdenciário", "direito empresarial", "direito trabalhista", "Formiga MG"],
+  keywords: ["RAS Advogados", "advogado em Sete Lagoas", "direito civil", "direito penal empresarial", "direito financeiro", "direito empresarial", "direito imobiliário", "planejamento sucessório", "Sete Lagoas MG"],
   icons: { icon: [{ url: brand.logo, type: "image/png" }], apple: [{ url: brand.logo, type: "image/png" }] },
   openGraph: {
     title,
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
       ? [
           {
             url: shareImage,
-            width: 675,
-            height: 810,
+            width: 681,
+            height: 840,
             alt: brand.businessName,
           },
         ]
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#5e171f",
+  themeColor: "#0e3b55",
 };
 
 export default function RootLayout({

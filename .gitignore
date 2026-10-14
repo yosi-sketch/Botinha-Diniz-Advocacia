@@ -20,6 +20,9 @@
 # production
 /build
 
+# Local previews generated during visual verification
+/outputs/
+
 # misc
 .DS_Store
 *.pem

@@ -12,21 +12,22 @@ import {
   ArrowRight,
   ArrowUpRight,
   Phone,
+  MessageCircle,
   MapPin,
   Menu,
   Scale,
   BriefcaseBusiness,
   ShieldCheck,
-  HeartHandshake,
-  Users,
+  House,
+  ScrollText,
   Camera,
   Star,
   X,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
-import { brand, contact, whatsapp, secondWhatsapp, whatsappFor, maps, reviews } from "./lib/brand";
+import { brand, partners, testimonials, contact, whatsapp, telephone, whatsappFor, maps, reviews } from "./lib/brand";
 
-function WhatsAppMark({size = 16, strokeWidth = 1.8}: {size?: number; strokeWidth?: number}) { return <Phone size={size} strokeWidth={strokeWidth} aria-hidden="true" />; }
+function WhatsAppMark({size = 16, strokeWidth = 1.8}: {size?: number; strokeWidth?: number}) { return <MessageCircle size={size} strokeWidth={strokeWidth} aria-hidden="true" />; }
 
 const reveal: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -44,34 +45,34 @@ const stagger: Variants = {
 
 const areas = [
   {
-    title: "Direito cível", icon: Scale,
-    summary: "Cuidado com o seu patrimônio, suas relações e os direitos que fazem parte da sua vida.",
-    details: "A Silva & Lopes oferece orientação para prevenir conflitos e acompanhar demandas cíveis. Cada situação é analisada com atenção aos documentos, às responsabilidades envolvidas e aos caminhos possíveis para a defesa de seus direitos.",
-    topics: ["Proteção do patrimônio e das relações civis", "Análise de contratos e obrigações", "Orientação para prevenção de conflitos", "Acompanhamento de demandas e reparações, quando cabíveis"],
+    title: "Direito Empresarial", icon: BriefcaseBusiness,
+    summary: "Orientação para as relações do seu negócio, com atenção aos contratos e à prevenção de riscos.",
+    details: "A RAS Advogados assessora questões jurídicas da atividade empresarial. O atendimento considera a realidade do negócio, os documentos apresentados e as responsabilidades envolvidas para orientar decisões com clareza.",
+    topics: ["Assessoria jurídica empresarial", "Análise de contratos comerciais", "Orientação sobre relações societárias", "Prevenção de conflitos e acompanhamento de demandas"],
   },
   {
-    title: "Direito criminal", icon: ShieldCheck,
-    summary: "Assessoria estratégica para a defesa de direitos fundamentais e a proteção da liberdade.",
-    details: "Questões criminais exigem uma análise responsável e atenção a cada etapa. O escritório orienta sobre os direitos envolvidos e acompanha a demanda, com uma atuação voltada à defesa e à proteção das garantias fundamentais.",
-    topics: ["Orientação e assessoria em questões criminais", "Defesa de direitos e garantias fundamentais", "Análise da demanda e da documentação", "Acompanhamento das etapas da defesa"],
+    title: "Direito Civil", icon: Scale,
+    summary: "Cuidado com os contratos, o patrimônio e os direitos presentes nas suas relações pessoais.",
+    details: "A atuação civil envolve a análise de contratos, obrigações e conflitos entre pessoas e empresas. Cada demanda é avaliada a partir de seu contexto e dos documentos disponíveis, com orientação sobre os caminhos possíveis.",
+    topics: ["Contratos e obrigações civis", "Responsabilidade civil", "Proteção de direitos e patrimônio", "Orientação e acompanhamento de conflitos"],
   },
   {
-    title: "Direito previdenciário", icon: HeartHandshake,
-    summary: "Orientação para compreender benefícios previdenciários e assistenciais e os requisitos do seu pedido.",
-    details: "A assessoria considera sua situação, o histórico e os documentos disponíveis para esclarecer as possibilidades relativas a benefícios. O atendimento ajuda a organizar a demanda e acompanhar as etapas necessárias, conforme as particularidades de cada caso.",
-    topics: ["Orientação sobre benefícios previdenciários", "Análise de benefícios assistenciais", "Organização e avaliação de documentos", "Acompanhamento de pedidos e demandas"],
+    title: "Penal Empresarial e Financeiro", icon: ShieldCheck,
+    summary: "Análise responsável de questões penais no contexto das atividades empresariais e financeiras.",
+    details: "Questões penais empresariais e financeiras exigem atenção ao contexto e às garantias de cada pessoa envolvida. A RAS Advogados analisa a situação e orienta a condução da demanda, com cuidado técnico e respeito à confidencialidade.",
+    topics: ["Orientação em questões penais empresariais", "Análise de demandas penais financeiras", "Defesa de direitos e garantias", "Acompanhamento de investigações e processos"],
   },
   {
-    title: "Direito empresarial", icon: BriefcaseBusiness,
-    summary: "Apoio às decisões do seu negócio, com atenção à prevenção de riscos e às relações comerciais.",
-    details: "A Silva & Lopes acompanha questões jurídicas da atividade empresarial, buscando compreender a realidade de cada negócio. A orientação preventiva auxilia na análise de documentos, contratos e decisões, com clareza sobre responsabilidades e riscos.",
-    topics: ["Assessoria jurídica preventiva", "Análise de contratos e relações comerciais", "Orientação para decisões empresariais", "Acompanhamento de demandas da empresa"],
+    title: "Direito Imobiliário", icon: House,
+    summary: "Assessoria nas decisões sobre imóveis, da análise de documentos às relações contratuais.",
+    details: "A orientação imobiliária ajuda a compreender os documentos e as responsabilidades relacionados ao imóvel. O escritório analisa a demanda e acompanha as questões jurídicas pertinentes à negociação, à propriedade e aos contratos.",
+    topics: ["Análise de contratos imobiliários", "Orientação em compra, venda e locação", "Questões de propriedade e documentação", "Prevenção e acompanhamento de conflitos imobiliários"],
   },
   {
-    title: "Direito trabalhista", icon: Users,
-    summary: "Assessoria nas relações de trabalho, com atenção aos direitos, às obrigações e à prevenção de conflitos.",
-    details: "As relações de trabalho envolvem direitos e responsabilidades que merecem acompanhamento cuidadoso. O escritório analisa a demanda, esclarece dúvidas e orienta sobre os próximos passos, considerando os documentos e o contexto de cada situação.",
-    topics: ["Orientação sobre direitos e obrigações laborais", "Análise de documentos e relações de trabalho", "Prevenção de riscos e conflitos", "Acompanhamento de demandas trabalhistas"],
+    title: "Planejamento Sucessório", icon: ScrollText,
+    summary: "Organização patrimonial com atenção à família, à continuidade e às próximas gerações.",
+    details: "O planejamento sucessório parte da compreensão da realidade familiar e patrimonial. A análise individual permite discutir alternativas de organização e transmissão do patrimônio, observando a vontade dos envolvidos e os requisitos aplicáveis.",
+    topics: ["Análise do contexto familiar e patrimonial", "Orientação sobre organização da sucessão", "Avaliação de instrumentos de planejamento", "Acompanhamento de questões sucessórias"],
   },
 ];
 
@@ -90,8 +91,8 @@ function Heading({
       <h2
         className={
           light
-            ? "font-serif text-4xl leading-[1.07] tracking-[-0.035em] text-white sm:text-5xl lg:text-[3.55rem]"
-            : "font-serif text-4xl leading-[1.07] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.55rem]"
+            ? "font-display text-4xl leading-[1.07] tracking-[-0.035em] text-white sm:text-5xl lg:text-[3.55rem]"
+            : "font-display text-4xl leading-[1.07] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.55rem]"
         }
       >
         {children}
@@ -167,14 +168,14 @@ export default function Home() {
           <div className="mx-auto flex h-[84px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[104px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Silva & Lopes Advocacia — início"
+              aria-label="RAS Advogados — início"
               onClick={closeMenu}
               className="shrink-0"
             >
               <Image
                 src={brand.logo}
-                width={1774}
-                height={886}
+                width={1961}
+                height={802}
                 alt={brand.businessName}
                 preload
                 className="h-auto w-[140px] sm:w-[180px]"
@@ -194,6 +195,9 @@ export default function Home() {
               <a className="nav-link" href="#sobre">
                 Sobre
               </a>
+              <a className="nav-link" href="#socios">
+                Sócios
+              </a>
               <a className="nav-link" href="#avaliacoes">
                 Avaliações
               </a>
@@ -206,7 +210,7 @@ export default function Home() {
                 href={contact}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp da Silva & Lopes Advocacia"
+                aria-label="WhatsApp da RAS Advogados"
                 className="grid size-10 place-items-center rounded-full border border-ink/20 text-brand-700 transition-colors hover:border-brand-700 hover:text-brand-800"
               >
                 <WhatsAppMark size={17} strokeWidth={1.7} />
@@ -247,6 +251,7 @@ export default function Home() {
                     ["Início", "#inicio"],
                     ["Atuação", "#atuacao"],
                     ["Sobre", "#sobre"],
+                    ["Sócios", "#socios"],
                     ["Avaliações no Google", "#avaliacoes"],
                     ["Contato", "#contato"],
                   ].map(([label, href]) => (
@@ -287,16 +292,16 @@ export default function Home() {
             >
               <motion.h1
                 variants={reveal}
-                className="max-w-[720px] font-serif text-[2.75rem] leading-[1.06] tracking-[-0.025em] text-white sm:text-[3.5rem] lg:text-[4.2rem]"
+                className="max-w-[720px] font-display text-[2.65rem] leading-[1.08] tracking-[-0.035em] text-white sm:text-[3.5rem] lg:text-[3.9rem]"
               >
-                Proteção jurídica.{" "}<br />
-                <span className="text-brand-700">Segurança para seguir.</span>
+                Decisões seguras.{" "}<br />
+                <span className="text-brand-700">Direitos protegidos.</span>
               </motion.h1>
               <motion.p
                 variants={reveal}
                 className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft sm:text-base sm:leading-8"
               >
-                Do cível ao criminal, uma parceria para cuidar dos seus direitos. A Silva & Lopes Advocacia orienta pessoas e empresas na prevenção de conflitos e na condução de demandas, com atenção a cada situação.
+                Assessoria jurídica para cuidar do seu negócio, do seu patrimônio e das decisões que importam. Em Sete Lagoas, a RAS Advogados alia análise cuidadosa e orientação clara em cada etapa.
               </motion.p>
               <motion.div
                 variants={reveal}
@@ -327,7 +332,7 @@ export default function Home() {
               >
                 <span className="inline-flex items-center gap-2">
                   <MapPin size={15} className="text-brand-700" />
-                  Formiga · Minas Gerais
+                  Sete Lagoas · Minas Gerais
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <Phone size={15} className="text-brand-700" />
@@ -348,10 +353,10 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[460px] lg:ml-auto lg:mr-3"
             >
-              <div className="relative aspect-[5/6] overflow-hidden bg-brand-800">
+              <div className="relative aspect-[681/840] overflow-hidden bg-brand-800">
                 <Image
                   src={brand.portrait}
-                  alt="Equipe da Silva & Lopes Advocacia em material institucional sobre parceria jurídica especializada"
+                  alt="Sócios da RAS Advogados: Cleiton Silva, Denilson Rodrigues e Willian Rangel"
                   fill
                   preload
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 40vw"
@@ -380,7 +385,7 @@ export default function Home() {
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-serif text-2xl text-brand-700 sm:text-[1.7rem]">
+                <span className="font-display text-2xl text-brand-700 sm:text-[1.7rem]">
                   {value}
                 </span>
                 <span className="max-w-[145px] text-[11px] leading-5 text-ink-soft">
@@ -435,7 +440,7 @@ export default function Home() {
                       </span>
                     </div>
                     <div>
-                    <h3 className="max-w-sm font-serif text-[1.8rem] leading-tight text-ink">
+                    <h3 className="max-w-sm font-display text-[1.8rem] leading-tight text-ink">
                       {area.title}
                     </h3>
                     <p className="mt-3 max-w-xl text-[13px] leading-6 text-ink-soft">
@@ -471,7 +476,7 @@ export default function Home() {
               <div className="relative aspect-[6/5] bg-ivory p-8 sm:p-10">
                 <Image src={brand.logo} alt={brand.businessName} fill sizes="(max-width: 640px) 90vw, 460px" className="object-contain p-8 sm:p-10" />
               </div>
-              <figcaption className="mt-4 text-sm leading-6 text-ink-soft">Silva & Lopes Advocacia · Formiga, Minas Gerais.</figcaption>
+              <figcaption className="mt-4 text-sm leading-6 text-ink-soft">RAS Advogados · Sete Lagoas, Minas Gerais.</figcaption>
             </figure>
             <motion.div
               initial={false}
@@ -481,16 +486,16 @@ export default function Home() {
             >
               <motion.h2
                 variants={reveal}
-                className="mt-4 max-w-2xl font-serif text-4xl leading-[1.08] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.45rem]"
+                className="mt-4 max-w-2xl font-display text-4xl leading-[1.08] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.45rem]"
               >
-                Uma parceria jurídica.{" "}
-                <span className="text-brand-700">Um cuidado próximo.</span>
+                Três trajetórias.{" "}
+                <span className="text-brand-700">Um compromisso com você.</span>
               </motion.h2>
               <motion.p
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                Com sede em Formiga, Minas Gerais, a Silva & Lopes Advocacia oferece assessoria jurídica a pessoas e empresas. A atuação abrange as áreas cível, criminal, previdenciária, empresarial e trabalhista, com atenção à prevenção de conflitos e à defesa de direitos.
+                Em Sete Lagoas, Minas Gerais, a RAS Advogados reúne Willian Rangel, Denilson Rodrigues e Cleiton Silva. A atuação dos sócios conecta o Direito Empresarial e Civil, o Penal Empresarial e Financeiro, o Direito Imobiliário e o Planejamento Sucessório.
               </motion.p>
               <motion.p
                 variants={reveal}
@@ -512,6 +517,26 @@ export default function Home() {
                 />
               </motion.a>
             </motion.div>
+          </div>
+        </section>
+
+        <section id="socios" aria-labelledby="partners-title" className="scroll-mt-28 bg-ivory pb-20 pt-16 sm:pb-28 sm:pt-20">
+          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+            <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+              <h2 id="partners-title" className="max-w-xl font-display text-4xl leading-[1.1] tracking-[-0.03em] text-brand-700 sm:text-5xl">Conheça os sócios<br className="hidden sm:block" /> da RAS Advogados.</h2>
+              <p className="max-w-sm text-sm leading-7 text-ink-soft">Conhecimentos que se complementam para orientar pessoas, famílias e empresas.</p>
+            </div>
+            <div className="grid gap-x-7 gap-y-12 md:grid-cols-3">
+              {partners.map((partner) => (
+                <figure key={partner.name}>
+                  <Image src={partner.image} alt={"Retrato institucional de " + partner.name + ", advogado da RAS Advogados"} width={partner.width} height={partner.height} sizes="(max-width: 767px) 90vw, 33vw" className="h-auto w-full" />
+                  <figcaption className="mt-5 border-t border-brand-700/20 pt-4">
+                    <h3 className="font-display text-2xl text-brand-700">{partner.name}</h3>
+                    <p className="mt-2 text-[13px] leading-6 text-ink-soft">{partner.area}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -552,7 +577,7 @@ export default function Home() {
                   className="py-6 first:pt-0 sm:py-7"
                 >
                   <div>
-                    <h3 className="font-serif text-2xl">{title}</h3>
+                    <h3 className="font-display text-2xl">{title}</h3>
                     <p className="mt-2 max-w-lg text-[13px] leading-6 text-brand-100">
                       {description}
                     </p>
@@ -565,12 +590,12 @@ export default function Home() {
 
         <section className="bg-brand-50 py-20 sm:py-24" aria-labelledby="questions-title">
           <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20 lg:px-12">
-            <h2 id="questions-title" className="font-serif text-3xl leading-tight text-ink sm:text-4xl">Antes da nossa primeira conversa.</h2>
+            <h2 id="questions-title" className="font-display text-3xl leading-tight text-ink sm:text-4xl">Antes da nossa primeira conversa.</h2>
             <div className="divide-y divide-ink/15 border-y border-ink/15">
               {[
-                ["Como funciona o primeiro contato?", "Envie uma mensagem para um dos nossos WhatsApps e conte brevemente sua necessidade. A equipe orientará sobre disponibilidade, agendamento e informações iniciais."],
-                ["Onde fica o escritório?", "Estamos na Rua Campos Altos, nº 276, em Formiga, Minas Gerais. Entre em contato pelo WhatsApp para combinar sua visita e consultar o formato de atendimento adequado à sua demanda."],
-                ["Quais documentos devo separar?", "Separe os documentos relacionados à sua questão, como contratos, comunicações ou documentos de benefícios. A equipe indicará o que será necessário conforme a análise inicial."],
+                ["Como funciona o primeiro contato?", "Envie uma mensagem pelo WhatsApp ou ligue para (31) 3177-0100 e conte brevemente sua necessidade. A equipe orientará sobre disponibilidade, agendamento e informações iniciais."],
+                ["Onde fica o escritório?", "Estamos na Praça Vo Fina, nº 124, no Centro de Sete Lagoas, Minas Gerais. Entre em contato pelo WhatsApp para combinar sua visita e consultar o formato de atendimento adequado à sua demanda."],
+                ["Quais documentos devo separar?", "Separe os documentos relacionados à sua questão, como contratos, comunicações, escrituras ou documentos da empresa. A equipe indicará o que será necessário conforme a análise inicial."],
               ].map(([question, answer]) => (
                 <details key={question} className="group py-6">
                   <summary className="cursor-pointer text-base font-semibold text-ink marker:text-brand-700">{question}</summary>
@@ -585,39 +610,49 @@ export default function Home() {
           id="avaliacoes"
           className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
         >
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-12">
-            <Heading
-
-              description="Conheça as experiências compartilhadas no Google por quem foi atendido."
-            >
-              Experiências compartilhadas.{" "}
-              <span className="text-brand-700">Conheça no Google.</span>
-            </Heading>
-            <div className="relative flex min-h-[245px] flex-col justify-between overflow-hidden border border-ink/10 bg-ivory p-7 sm:p-9">
-
-              <div className="relative flex items-center gap-4">
-                <span className="grid size-12 place-items-center rounded-full bg-brand-50 text-brand-700">
-                  <MapPin size={20} strokeWidth={1.6} />
-                </span>
+          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+            <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+              <Heading description="Experiências compartilhadas no Google por quem conhece nosso atendimento.">
+                O que dizem{" "}
+                <span className="text-brand-700">sobre a RAS.</span>
+              </Heading>
+              <div className="flex shrink-0 items-center gap-4 text-brand-700">
+                <p className="font-display text-5xl leading-none tabular-nums" aria-label={`Nota ${brand.googleRating} de 5 no Google`}>
+                  {brand.googleRating}
+                </p>
                 <div>
-                  <p className="font-serif text-2xl text-ink">
-                    {brand.googleReviewCount} avaliações no Google
-                  </p>
+                  <span className="flex gap-1" role="img" aria-label="5 de 5 estrelas">
+                    {[0, 1, 2, 3, 4].map((star) => <Star key={star} size={16} fill="currentColor" aria-hidden="true" />)}
+                  </span>
+                  <p className="mt-2 text-xs text-ink-soft">{brand.googleReviewCount} avaliações no Google</p>
                 </div>
               </div>
-              <div className="relative mt-8 flex flex-wrap items-end justify-between gap-5">
-                <p className="max-w-xs text-[13px] leading-6 text-ink-soft">
-                  Conheça os relatos sobre a Silva & Lopes Advocacia. A quantidade de avaliações pode mudar; consulte o perfil para informações atualizadas.
-                </p>
-                <a
-                  href={reviews}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-ink/15 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.13em] text-ink transition-colors hover:border-brand-700 hover:text-brand-700"
-                >
-                  Ver avaliações <ArrowUpRight size={14} />
-                </a>
-              </div>
+            </div>
+            <div className="mt-12 grid divide-y divide-ink/15 border-y border-ink/15 md:grid-cols-3 md:divide-x md:divide-y-0">
+              {testimonials.map((testimonial) => (
+                <figure key={testimonial.name} className="flex flex-col justify-between gap-7 py-8 md:px-7 md:py-10 md:first:pl-0 md:last:pr-0">
+                  <blockquote className="text-[15px] leading-7 text-ink">
+                    <p>“{testimonial.text}”</p>
+                  </blockquote>
+                  <figcaption>
+                    <p className="font-display text-xl text-brand-700">{testimonial.name}</p>
+                    <p className="mt-1 text-xs text-ink-soft">Avaliação no Google</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+            <div className="mt-7 flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
+              <p className="max-w-xl text-xs leading-6 text-ink-soft">
+                Seleção de avaliações publicadas no Google. Nota e quantidade conforme os dados fornecidos; consulte o perfil para informações atualizadas.
+              </p>
+              <a
+                href={reviews}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-11 w-fit shrink-0 items-center gap-2 rounded-full border border-ink/15 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.13em] text-ink transition-colors hover:border-brand-700 hover:text-brand-700"
+              >
+                Ver todas as avaliações <ArrowUpRight size={14} />
+              </a>
             </div>
           </div>
 
@@ -631,7 +666,7 @@ export default function Home() {
             <div>
               <Heading
 
-                description="Sede em Formiga, Minas Gerais. Converse com nossa equipe pelo WhatsApp para consultar a disponibilidade e combinar seu atendimento."
+                description="Sede em Sete Lagoas, Minas Gerais. Converse com nossa equipe pelo WhatsApp para consultar a disponibilidade e combinar seu atendimento."
               >
                 Um primeiro contato com{" "}
                 <span className="text-brand-700">tranquilidade.</span>
@@ -645,8 +680,7 @@ export default function Home() {
                 >
                   <Phone size={16} /> Fale pelo WhatsApp
                 </GlowingButton>
-                <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 text-sm text-brand-700 hover:text-brand-800"><WhatsAppMark size={16} /> WhatsApp principal: {brand.phone}</a>
-                <a href={secondWhatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 text-sm text-brand-700 hover:text-brand-800"><WhatsAppMark size={16} /> Outro WhatsApp: {brand.secondPhone}</a>
+                <a href={telephone} className="inline-flex min-h-11 items-center gap-2 text-sm text-brand-700 hover:text-brand-800"><Phone size={16} /> Ligue: {brand.phone}</a>
                 <a href={brand.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 py-2 text-sm text-brand-700 hover:text-brand-800"><Camera size={16} /> {brand.instagramHandle}</a>
               </div>
             </div>
@@ -657,7 +691,7 @@ export default function Home() {
                   <MapPin size={21} strokeWidth={1.6} />
                 </span>
                 <div>
-                  <h3 className="font-serif text-2xl text-ink">Nosso escritório em Formiga</h3>
+                  <h3 className="font-display text-2xl text-ink">Nosso escritório em Sete Lagoas</h3>
                 </div>
               </div>
               <address className="mt-7 max-w-md not-italic text-[14px] leading-7 text-ink-soft">
@@ -684,7 +718,7 @@ export default function Home() {
         <section className="bg-linen px-5 py-14 text-ink sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl">
+              <h2 className="mt-3 max-w-2xl font-display text-3xl leading-tight sm:text-4xl">
                 Seus direitos merecem uma conversa com atenção.
               </h2>
             </div>
@@ -705,15 +739,15 @@ export default function Home() {
               <div className="inline-flex px-3 py-2">
                 <Image
                   src={brand.logo}
-                  width={1774}
-                  height={886}
+                  width={1961}
+                  height={802}
                   alt={brand.businessName}
                   className="h-auto w-[200px]"
                   sizes="200px"
                 />
               </div>
               <p className="mt-4 max-w-xs text-xs leading-6 text-ink-soft">
-                Advocacia e assessoria jurídica em Formiga, MG. Cuidado com seus direitos e com as decisões do seu negócio.
+                Advocacia e assessoria jurídica em Sete Lagoas, MG. Cuidado com seus direitos e com as decisões do seu negócio.
               </p>
             </div>
             <div>
@@ -726,6 +760,9 @@ export default function Home() {
                 </a>
                 <a className="footer-link" href="#sobre">
                   Sobre o escritório
+                </a>
+                <a className="footer-link" href="#socios">
+                  Conheça os sócios
                 </a>
                 <a className="footer-link" href="#avaliacoes">
                   Perfil no Google
@@ -741,12 +778,10 @@ export default function Home() {
               </h2>
               <div className="mt-4 flex flex-col items-start gap-3 text-xs text-ink-soft">
                 <a
-                  href={contact}
-                  target="_blank"
-                  rel="noreferrer"
+                  href={telephone}
                   className="footer-link inline-flex items-center gap-2"
                 >
-                  <WhatsAppMark size={14} /> WhatsApp: {brand.phone}
+                  <Phone size={14} /> {brand.phone}
                 </a>
                 <a
                   href={maps}
@@ -757,7 +792,6 @@ export default function Home() {
                   <MapPin size={14} className="mt-0.5 shrink-0" />
                   {brand.address}
                 </a>
-                <a href={secondWhatsapp} target="_blank" rel="noopener noreferrer" className="footer-link inline-flex items-center gap-2"><WhatsAppMark size={14} /> WhatsApp: {brand.secondPhone}</a>
                 <a href={brand.instagram} target="_blank" rel="noopener noreferrer" className="footer-link inline-flex items-center gap-2"><Camera size={14} /> {brand.instagramHandle}</a>
               </div>
             </div>
@@ -807,7 +841,7 @@ export default function Home() {
 
                 <h2
                   id="area-dialog-title"
-                  className="mt-4 max-w-sm pr-10 font-serif text-4xl leading-tight text-ink"
+                  className="mt-4 max-w-sm pr-10 font-display text-4xl leading-tight text-ink"
                 >
                   {activeArea.title}
                 </h2>

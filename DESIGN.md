@@ -1,49 +1,61 @@
 ---
-name: "Silva & Lopes Advocacia"
-description: "Vinho, carvão e superfícies claras quentes, com tipografia serifada alinhada ao logo."
+name: "RAS Advogados"
+description: "Azul-petróleo, neutros frios e tipografia geométrica alinhados ao logo original."
 colors:
-  ink: "#272625"
-  ink-soft: "#625954"
+  ink: "#202d35"
+  ink-soft: "#52636e"
   paper: "#ffffff"
-  ivory: "#f8f5f0"
-  linen: "#e9e1d8"
-  brand-50: "#faf2f2"
-  brand-100: "#f1dddd"
-  brand-200: "#e0baba"
-  brand-300: "#cb9496"
-  brand-400: "#ac666b"
-  brand-500: "#853740"
-  brand-600: "#702630"
-  brand-700: "#5e171f"
-  brand-800: "#4d1019"
-  brand-900: "#3c0e15"
-  brand-950: "#280b10"
-  hero-divider: "rgb(241 221 221 / 20%)"
+  ivory: "#f4f6f7"
+  linen: "#e1e9ed"
+  brand-50: "#eef4f7"
+  brand-100: "#dbe9f0"
+  brand-200: "#b8d2e1"
+  brand-300: "#8fb5cb"
+  brand-400: "#6493ae"
+  brand-500: "#235e7e"
+  brand-600: "#174d6b"
+  brand-700: "#0e3b55"
+  brand-800: "#0d3248"
+  brand-900: "#0b293b"
+  brand-950: "#08202e"
+  hero-divider: "rgb(219 233 240 / 20%)"
 typography:
   display:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
-    fontSize: "2.75rem"
-    fontWeight: 500
-    lineHeight: 1.06
-    letterSpacing: "-0.025em"
+    fontFamily: "Outfit, system-ui, sans-serif"
+    fontSize: "2.65rem"
+    fontWeight: 400
+    lineHeight: 1.08
+    letterSpacing: "-0.035em"
   display-tablet:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
+    fontFamily: "Outfit, system-ui, sans-serif"
     fontSize: "3.5rem"
   display-desktop:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
-    fontSize: "4.2rem"
+    fontFamily: "Outfit, system-ui, sans-serif"
+    fontSize: "3.9rem"
   headline-desktop:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
+    fontFamily: "Outfit, system-ui, sans-serif"
     fontSize: "3.55rem"
   biography-desktop:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
+    fontFamily: "Outfit, system-ui, sans-serif"
     fontSize: "3.45rem"
   title:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
+    fontFamily: "Outfit, system-ui, sans-serif"
     fontSize: "1.8rem"
   compact-title:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
+    fontFamily: "Outfit, system-ui, sans-serif"
     fontSize: "1.7rem"
+  heading-mobile:
+    fontFamily: "Outfit, system-ui, sans-serif"
+    fontSize: "2.25rem"
+  heading-tablet:
+    fontFamily: "Outfit, system-ui, sans-serif"
+    fontSize: "3rem"
+  heading-small:
+    fontFamily: "Outfit, system-ui, sans-serif"
+    fontSize: "1.875rem"
+  partner-name:
+    fontFamily: "Outfit, system-ui, sans-serif"
+    fontSize: "1.5rem"
   navigation:
     fontFamily: "Manrope, system-ui, sans-serif"
     fontSize: "0.8rem"
@@ -87,61 +99,73 @@ components:
     textColor: "{colors.paper}"
 ---
 
-# Design System: Silva & Lopes Advocacia
+# Design System: RAS Advogados
 
 ## Overview
-**Creative North Star: "Proteção com clareza"**
 
-Vinho e carvão extraídos do logo, títulos Cormorant Garamond e leitura Manrope formam uma identidade profissional coesa. A marca fornecida orienta o contraste entre superfícies claras quentes e vinho escuro.
+**Creative North Star: "Clareza com presença"**
+
+Azul-petróleo do logo original, superfícies claras frias e títulos geométricos formam uma identidade sóbria e próxima. Outfit acompanha as formas sem serifa dos materiais institucionais; Manrope mantém a leitura e os controles claros.
 
 **Key Characteristics:**
-- Logo e imagem institucional originais preservados.
-- Superfícies claras quentes alternadas com vinho escuro.
-- Serifas de alto contraste nos títulos e leitura simples nos controles.
+- Logo transparente original e quatro fotografias institucionais preservados.
+- Superfícies claras frias alternadas com azul escuro.
+- Títulos geométricos sem serifa e leitura Manrope.
 
 ## Colors
+
 ### Primary
-O vinho da marca, brand-700, vem da média RGB 94/23/31 dos grupos vermelhos opacos do PNG. A escala complementa os degradês presentes no símbolo: brand-500 nos botões, brand-600 no hover, brand-900 e brand-950 nas superfícies escuras.
+Azul-petróleo da marca, brand-700, extraído da cor RGB opaca mais frequente do PNG original. Pixels transparentes foram excluídos. A escala de azuis deriva dessa cor: brand-500 nos botões, brand-600 no hover, brand-900 e brand-950 nas superfícies escuras.
 
 ### Neutral
-O carvão, ink, vem da média RGB 39/38/37 dos grupos escuros opacos do logo. Pixels transparentes foram excluídos da amostragem. Ivory e linen dão contraste ao logo sem alterar seus pixels; ink-soft atende a leitura secundária. Paper é a superfície branca.
+Ink e ink-soft sustentam os textos em superfícies claras. Ivory, linen e paper são neutros frios de apoio. O logo é monocromático: os tons secundários são complementos derivados, não cores adicionais extraídas do arquivo.
 
-**The Contrast Rule.** Texto escuro nas superfícies claras; branco, brand-100 e brand-200 nas superfícies vinho. Os pares principais foram verificados com contraste superior a 4,5:1. Seleção, cursor de texto, foco e scrollbar seguem a paleta.
+**The Contrast Rule.** Texto escuro sobre superfícies claras; branco e azuis claros nas superfícies escuras. Foco, seleção, caret e scrollbar seguem a paleta. Os pares principais de corpo e CTA foram verificados acima de 4,5:1.
 
 ## Typography
-Cormorant Garamond tem serifas finas e contraste próximo às letras do logo. Manrope mantém textos e controles legíveis. Ambas são servidas localmente pela aplicação por next/font/google.
 
-Títulos usam peso 500. O display cresce nos três valores registrados no frontmatter; os títulos de seção variam entre 2,25rem, 3rem e headline-desktop. A entrelinha do display é 1,06 e dos títulos de seção 1,07. Corpo principal usa 15px com entrelinha de 28px; no hero sobe para 16px e 32px a partir de sm. Textos auxiliares usam compact-body; botões usam 12px ou label. A navegação usa o token navigation. Títulos recebem quebra equilibrada.
+**Display Font:** Outfit, system-ui, sans-serif.
+**Body Font:** Manrope, system-ui, sans-serif.
+
+Outfit usa peso 400 nos títulos e formas geométricas compatíveis com a marca. Manrope usa pesos 400–700 na leitura e nos controles. Ambas são servidas pela aplicação por next/font/google.
+
+O H1 usa display, display-tablet e display-desktop, com entrelinha de 1,08 e tracking de -0,035em. Os títulos de seção usam heading-mobile, heading-tablet e headline-desktop, com entrelinha de 1,07; biografia usa biography-desktop. Serviços usam title; os nomes dos sócios, partner-name. Corpo principal com 15px e entrelinha de 28px; no hero passa a 16px/32px em sm. Textos auxiliares com 13px/24px, endereço com 14px/28px, controles com 10–12px. Títulos têm quebra equilibrada.
 
 ## Layout
-Contêiner máximo de 80rem e margens de 1,25rem, 2rem e 3rem. Cabeçalho claro com alturas de 84px e 104px. Hero em duas colunas a partir de lg e empilhado em telas menores. Serviços aparecem em linhas abertas, com texto, ícone e ação. Sobre, atendimento, perguntas, avaliações e contato têm separação generosa. Rodapé claro com colunas que se empilham no celular. Breakpoints sm, md e lg são 640px, 768px e 1024px.
+
+Contêiner máximo de 80rem; margens de 1,25rem, 2rem e 3rem. Cabeçalho claro com alturas de 84px e 104px. Hero em duas colunas a partir de lg e empilhado em telas menores. Serviços usam linhas separadas por divisórias. Sócios em três colunas a partir de md e uma coluna no celular. Fotografias preservam suas proporções originais, sem recorte. Seções usam intervalos generosos de 5rem a 8rem. Breakpoints sm, md e lg em 640px, 768px e 1024px. Rodapé e contato se empilham no celular.
 
 ## Elevation & Depth
-Superfícies e divisórias de 1px delimitam os grupos. A sombra card, 0 18px 48px rgb(60 14 21 / 12%), pertence ao modal. Serviços usam divisórias, sem cartões elevados.
+
+Superfícies planas e divisórias sutis delimitam os grupos. A sombra card pertence ao modal de detalhes; sua cor deriva do azul-petróleo. O fundo do modal escurece e desfoca o conteúdo para concentrar o foco na interação.
 
 ## Shapes
-Imagens preservam seu enquadramento original. Contêineres editoriais têm cantos retos. Botões e controles circulares usam full; o modal usa cantos superiores de 1rem no celular e 0,25rem em telas maiores.
+
+Imagens e contêineres editoriais com cantos retos. Botões e controles circulares usam full. Modal usa cantos superiores de 1rem no celular e 0,25rem em telas maiores. Nenhuma máscara altera a fotografia original.
 
 ## Components
+
 ### Buttons
-Contato pelo WhatsApp com brand-500 e texto branco, hover brand-600 e foco brand-700. Transição de 200ms. Padding padrão de 14px por 24px; versão grande de 16px por 28px. Links secundários usam a paleta e indicam a ação.
+Contato principal com brand-500 e texto branco; hover brand-600, foco brand-700, transição de 200ms. Padding padrão de 14px por 24px; versão grande de 16px por 28px. Links secundários usam sublinhado ou contorno e indicam sua ação com ícone Lucide.
 
 ### Navigation
-Navegação Manrope com sublinhado de 1px no hover. Menu móvel expande em 220ms, expõe aria-expanded e fecha por Escape ou seleção de link.
+Manrope, com sublinhado de 1px no hover. Menu móvel expande em 220ms, expõe aria-expanded e fecha por Escape ou seleção de link. Navegação inclui acesso direto aos sócios.
 
 ### Service details
-Linhas de serviço com ícones Lucide e botão de detalhes. Modais com transição de 240ms, Escape, ciclo de Tab, fundo inert, bloqueio de rolagem e retorno do foco. Conteúdo editorial aparece desde a primeira renderização. MotionConfig e CSS respeitam movimento reduzido.
+Linhas de serviço com ícones Lucide e ação de detalhes. Modais com transição de 240ms, Escape, ciclo de Tab, conteúdo de fundo inert, bloqueio de rolagem e retorno do foco. CTA do modal leva ao WhatsApp com a área de interesse na mensagem. Conteúdo permanece visível por padrão; MotionConfig e CSS respeitam movimento reduzido.
 
 ### Media and information
-Logo transparente original em public/Logo Jurídico Silva & Lopes.png, fornecido pelo cliente, no cabeçalho, sobre, rodapé e ícones. A imagem institucional public/silva-lopes-equipe.png foi copiada integralmente do anexo codex-clipboard-55cc4c51-2ab5-479c-ab6f-65ac5cab3118.png, com checksum idêntico; aparece inteira no hero. Nenhum arquivo fornecido foi editado. Avaliações direcionam ao Google, sem reproduzir relatos não fornecidos. Perguntas usam details nativo.
+Logo original no cabeçalho, apresentação do escritório, rodapé e ícones. Foto coletiva no hero e no compartilhamento; três retratos individuais na seção de sócios. As quatro fotografias são cópias integrais dos anexos, verificadas por SHA-256. As setas e textos existentes nos materiais permanecem parte das imagens. Avaliações exibem três relatos completos fornecidos pelo cliente em colunas abertas, com divisórias sutis, autoria e fonte. No celular, os relatos se empilham. Nota agregada e quantidade de avaliações ficam junto ao título, com link para o perfil Google. Nenhum relato não fornecido é reproduzido. Perguntas usam details nativo.
 
 ## Do's and Don'ts
+
 ### Do:
-- Preservar os assets originais.
-- Centralizar os dados de contato.
-- Usar os dois WhatsApps fornecidos, sem e-mail.
-- Manter contraste e navegação por teclado.
+- Preservar o logo e as fotografias originais.
+- Centralizar os dados de contato em app/lib/brand.ts.
+- Usar Outfit nos títulos e Manrope na leitura e nos controles.
+- Manter contraste, navegação por teclado e suporte a movimento reduzido.
+
 ### Don't:
 - Inventar dados de contato, nota do Google, depoimentos ou resultados.
-- Atribuir nomes completos, formação, OAB ou experiência não fornecidos.
-- Alterar as cores ou a transparência do logo original.
+- Atribuir formação, OAB ou tempo de experiência não fornecidos.
+- Alterar cores, transparência ou pixels do logo original.

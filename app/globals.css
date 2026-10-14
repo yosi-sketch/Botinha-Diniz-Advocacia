@@ -1,34 +1,34 @@
 @import "tailwindcss";
 
-/* Logo original, pixels opacos: vinho médio #5e171f e carvão #272625.
-   A escala vinho e os neutros quentes complementam as cores extraídas.
+/* Azul-petróleo #0e3b55: cor opaca mais frequente no logo original.
+   O logo é monocromático; a paleta secundária usa tons derivados e neutros frios.
    Tailwind CSS 4 configura o tema neste arquivo. */
 :root {
   color-scheme: light;
-  --brand-ink: #272625;
-  --brand-ink-soft: #625954;
-  --brand-paper: #f8f5f0;
+  --brand-ink: #202d35;
+  --brand-ink-soft: #52636e;
+  --brand-paper: #f4f6f7;
 }
 @theme inline {
-  --font-serif: var(--font-display), "Cormorant Garamond", Georgia, serif;
+  --font-display: var(--font-display-face), "Outfit", system-ui, sans-serif;
   --font-sans: var(--font-body), "Manrope", system-ui, sans-serif;
-  --color-ink: #272625;
-  --color-ink-soft: #625954;
+  --color-ink: #202d35;
+  --color-ink-soft: #52636e;
   --color-paper: #ffffff;
-  --color-ivory: #f8f5f0;
-  --color-linen: #e9e1d8;
-  --color-brand-50: #faf2f2;
-  --color-brand-100: #f1dddd;
-  --color-brand-200: #e0baba;
-  --color-brand-300: #cb9496;
-  --color-brand-400: #ac666b;
-  --color-brand-500: #853740;
-  --color-brand-600: #702630;
-  --color-brand-700: #5e171f;
-  --color-brand-800: #4d1019;
-  --color-brand-900: #3c0e15;
-  --color-brand-950: #280b10;
-  --shadow-card: 0 18px 48px rgb(60 14 21 / 12%);
+  --color-ivory: #f4f6f7;
+  --color-linen: #e1e9ed;
+  --color-brand-50: #eef4f7;
+  --color-brand-100: #dbe9f0;
+  --color-brand-200: #b8d2e1;
+  --color-brand-300: #8fb5cb;
+  --color-brand-400: #6493ae;
+  --color-brand-500: #235e7e;
+  --color-brand-600: #174d6b;
+  --color-brand-700: #0e3b55;
+  --color-brand-800: #0d3248;
+  --color-brand-900: #0b293b;
+  --color-brand-950: #08202e;
+  --shadow-card: 0 18px 48px rgb(14 59 85 / 14%);
 }
 html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
 body {
@@ -39,7 +39,7 @@ body {
 }
 ::selection { background: var(--color-brand-700); color: #fff; }
 h1, h2 { text-wrap: balance; }
-.font-serif { font-weight: 500; }
+.font-display { font-weight: 400; }
 .nav-link {
   position: relative;
   padding-block: 0.75rem;
@@ -63,11 +63,11 @@ h1, h2 { text-wrap: balance; }
 .footer-link { transition: color 180ms ease; }
 .footer-link:hover { color: var(--color-brand-700); }
 :focus-visible { outline: 2px solid var(--color-brand-600); outline-offset: 4px; }
-.brand-hero :focus-visible { outline-color: var(--color-brand-200); }
+:is(.brand-hero, .bg-brand-950) :focus-visible { outline-color: var(--color-brand-200); }
 .brand-hero .text-ink-soft { color: var(--color-brand-100); }
 .brand-hero .text-ink { color: var(--color-ivory); }
 .brand-hero .text-brand-700 { color: var(--color-brand-200); }
-.brand-hero .border-ink\/10 { border-color: rgb(241 221 221 / 20%); }
+.brand-hero .border-ink\/10 { border-color: rgb(219 233 240 / 20%); }
 .brand-hero a:hover { color: #fff; }
 ::-webkit-scrollbar { width: 9px; }
 ::-webkit-scrollbar-track { background: var(--color-brand-50); }

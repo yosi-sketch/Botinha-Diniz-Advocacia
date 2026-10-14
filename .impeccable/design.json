@@ -1,49 +1,49 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-14T05:22:21.138Z",
-  "title": "Design System: Silva & Lopes Advocacia",
+  "generatedAt": "2026-10-14T12:13:41.905Z",
+  "title": "Design System: RAS Advogados",
   "extensions": {
     "colorMeta": {
       "brand-700": {
         "role": "primary",
-        "displayName": "Vinho da marca",
-        "canonical": "#5e171f",
+        "displayName": "Azul-petróleo da marca",
+        "canonical": "#0e3b55",
         "tonalRamp": [
-          "#280b10",
-          "#3c0e15",
-          "#4d1019",
-          "#5e171f",
-          "#853740",
-          "#ac666b",
-          "#e0baba",
-          "#faf2f2"
+          "#08202e",
+          "#0b293b",
+          "#0d3248",
+          "#0e3b55",
+          "#235e7e",
+          "#6493ae",
+          "#b8d2e1",
+          "#eef4f7"
         ]
       },
       "brand-500": {
         "role": "primary",
-        "displayName": "Vinho dos botões",
-        "canonical": "#853740"
+        "displayName": "Azul dos botões",
+        "canonical": "#235e7e"
       },
       "ink": {
         "role": "neutral",
-        "displayName": "Carvão do logo",
-        "canonical": "#272625"
+        "displayName": "Carvão frio",
+        "canonical": "#202d35"
       },
       "ivory": {
         "role": "neutral",
-        "displayName": "Marfim quente",
-        "canonical": "#f8f5f0"
+        "displayName": "Superfície clara fria",
+        "canonical": "#f4f6f7"
       },
       "linen": {
         "role": "neutral",
-        "displayName": "Linho",
-        "canonical": "#e9e1d8"
+        "displayName": "Cinza azulado",
+        "canonical": "#e1e9ed"
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Cormorant Garamond",
-        "purpose": "Títulos serifados compatíveis com a marca"
+        "displayName": "Outfit",
+        "purpose": "Títulos geométricos alinhados à marca"
       },
       "body": {
         "displayName": "Manrope",
@@ -53,7 +53,7 @@
     "shadows": [
       {
         "name": "card",
-        "value": "0 18px 48px rgb(60 14 21 / 12%)",
+        "value": "0 18px 48px rgb(14 59 85 / 14%)",
         "purpose": "Modal de detalhes"
       }
     ],
@@ -95,49 +95,70 @@
       "kind": "button",
       "refersTo": "button-primary",
       "description": "Contato pelo WhatsApp",
-      "html": "<a class=\"ds-primary\" href=\"https://wa.me/5537999020336\">Fale pelo WhatsApp</a>",
-      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;background:var(--color-brand-500,#853740);color:var(--color-paper,#fff);border:1px solid var(--color-brand-500,#853740);border-radius:9999px;padding:14px 24px;font:600 12px Manrope,sans-serif;letter-spacing:.14em;text-decoration:none;transition:background .2s}.ds-primary:hover{background:var(--color-brand-600,#702630);border-color:var(--color-brand-600,#702630)}.ds-primary:focus-visible{outline:2px solid var(--color-brand-700,#5e171f);outline-offset:3px}"
+      "html": "<a class=\"ds-primary\" href=\"https://wa.me/553131770100\">Fale pelo WhatsApp</a>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;background:var(--color-brand-500,#235e7e);color:var(--color-paper,#fff);border:1px solid var(--color-brand-500,#235e7e);border-radius:9999px;padding:14px 24px;font:600 12px Manrope,sans-serif;letter-spacing:.14em;text-decoration:none;transition:background .2s}.ds-primary:hover{background:var(--color-brand-600,#174d6b);border-color:var(--color-brand-600,#174d6b)}.ds-primary:focus-visible{outline:2px solid var(--color-brand-700,#0e3b55);outline-offset:3px}"
     },
     {
       "name": "Link de navegação",
       "kind": "nav",
       "description": "Navegação entre seções",
       "html": "<a class=\"ds-nav\" href=\"#atuacao\">Atuação</a>",
-      "css": ".ds-nav{position:relative;display:inline-block;padding:12px 0;font:600 12.8px Manrope,sans-serif;color:var(--color-ink-soft,#625954);text-decoration:none;transition:color .18s}.ds-nav:after{position:absolute;inset:auto 0 0;height:1px;background:var(--color-brand-700,#5e171f);content:\"\";transform:scaleX(0);transform-origin:left;transition:transform .18s}.ds-nav:hover{color:var(--color-brand-700,#5e171f)}.ds-nav:hover:after{transform:scaleX(1)}.ds-nav:focus-visible{outline:2px solid var(--color-brand-600,#702630);outline-offset:4px}"
+      "css": ".ds-nav{position:relative;display:inline-block;padding:12px 0;font:600 12.8px Manrope,sans-serif;color:var(--color-ink-soft,#52636e);text-decoration:none;transition:color .18s}.ds-nav:after{position:absolute;inset:auto 0 0;height:1px;background:var(--color-brand-700,#0e3b55);content:\"\";transform:scaleX(0);transform-origin:left;transition:transform .18s}.ds-nav:hover{color:var(--color-brand-700,#0e3b55)}.ds-nav:hover:after{transform:scaleX(1)}.ds-nav:focus-visible{outline:2px solid var(--color-brand-600,#174d6b);outline-offset:4px}"
     },
     {
       "name": "Pergunta frequente",
       "kind": "custom",
       "description": "Expansão nativa de informação",
-      "html": "<details class=\"ds-faq\"><summary>Onde fica o escritório?</summary><p>Rua Campos Altos, nº 276, Formiga, MG.</p></details>",
-      "css": ".ds-faq{padding:24px 0;border-top:1px solid rgb(39 38 37 / 15%);color:var(--color-ink,#272625);font:400 14px/28px Manrope,sans-serif}.ds-faq summary{cursor:pointer;font-size:16px;font-weight:600}.ds-faq summary::marker{color:var(--color-brand-700,#5e171f)}.ds-faq summary:hover{color:var(--color-brand-700,#5e171f)}.ds-faq summary:focus-visible{outline:2px solid var(--color-brand-600,#702630);outline-offset:4px}.ds-faq p{margin-top:16px;color:var(--color-ink-soft,#625954)}"
+      "html": "<details class=\"ds-faq\"><summary>Onde fica o escritório?</summary><p>Praça Vo Fina, nº 124 — Centro, Sete Lagoas, MG.</p></details>",
+      "css": ".ds-faq{padding:24px 0;border-top:1px solid rgb(32 45 53 / 15%);color:var(--color-ink,#202d35);font:400 14px/28px Manrope,sans-serif}.ds-faq summary{cursor:pointer;font-size:16px;font-weight:600}.ds-faq summary::marker{color:var(--color-brand-700,#0e3b55)}.ds-faq summary:hover{color:var(--color-brand-700,#0e3b55)}.ds-faq summary:focus-visible{outline:2px solid var(--color-brand-600,#174d6b);outline-offset:4px}.ds-faq p{margin-top:16px;color:var(--color-ink-soft,#52636e)}"
+    },
+    {
+      "name": "Link secundário",
+      "kind": "button",
+      "description": "Ação secundária em superfície clara",
+      "html": "<a class=\"ds-secondary\" href=\"#atuacao\">Áreas de atuação</a>",
+      "css": ".ds-secondary{display:inline-flex;align-items:center;min-height:44px;padding:12px 4px;color:var(--color-ink,#202d35);font:500 14px Manrope,sans-serif;text-decoration:none;transition:color .2s}.ds-secondary:hover{color:var(--color-brand-700,#0e3b55)}.ds-secondary:focus-visible{outline:2px solid var(--color-brand-600,#174d6b);outline-offset:4px}"
+    },
+    {
+      "name": "Linha de serviço",
+      "kind": "custom",
+      "description": "Serviços separados por divisórias, com ação de detalhes",
+      "html": "<article class=\"ds-service\"><h3>Direito Empresarial</h3><p>Orientação para as relações do seu negócio, com atenção aos contratos e à prevenção de riscos.</p><button type=\"button\">Saiba mais</button></article>",
+      "css": ".ds-service{padding:32px 0;border-bottom:1px solid rgb(32 45 53 / 15%);color:var(--color-ink,#202d35)}.ds-service h3{margin:0;font:400 28.8px/1.25 Outfit,sans-serif}.ds-service p{max-width:65ch;margin:12px 0;color:var(--color-ink-soft,#52636e);font:400 13px/24px Manrope,sans-serif}.ds-service button{min-height:44px;padding:0;border:0;background:transparent;color:var(--color-brand-800,#0d3248);font:600 12px Manrope,sans-serif;cursor:pointer}.ds-service button:hover{color:var(--color-brand-700,#0e3b55)}.ds-service button:focus-visible{outline:2px solid var(--color-brand-700,#0e3b55);outline-offset:4px}"
+    },
+    {
+      "name": "Depoimento",
+      "kind": "custom",
+      "description": "Relato original do Google com autoria, em colunas abertas no computador e empilhado no celular.",
+      "html": "<figure class=\"ds-testimonial\"><blockquote><p>“Sempre que preciso o atendimento é impecável. Além do atendimento personalizado, oferecem clareza nas explicações, demonstrando confiança, ética e agilidade nos atendimentos.”</p></blockquote><figcaption><p>Janine Liz</p><small>Avaliação no Google</small></figcaption></figure>",
+      "css": ".ds-testimonial{margin:0;padding:32px 0;border-block:1px solid rgb(32 45 53 / 15%)}.ds-testimonial blockquote{margin:0;font:400 15px/28px Manrope,sans-serif;color:var(--color-ink,#202d35)}.ds-testimonial blockquote p{margin:0}.ds-testimonial figcaption{margin-top:28px}.ds-testimonial figcaption p{margin:0;font:400 20px/28px Outfit,sans-serif;color:var(--color-brand-700,#0e3b55)}.ds-testimonial small{display:block;margin-top:4px;font:400 12px/16px Manrope,sans-serif;color:var(--color-ink-soft,#52636e)}"
     }
   ],
   "narrative": {
-    "northStar": "Proteção com clareza",
-    "overview": "Vinho e carvão extraídos do logo, títulos Cormorant Garamond e leitura Manrope formam uma identidade profissional coesa. A marca fornecida orienta o contraste entre superfícies claras quentes e vinho escuro.",
+    "northStar": "Clareza com presença",
+    "overview": "Azul-petróleo do logo original, superfícies claras frias e títulos geométricos formam uma identidade sóbria e próxima. Outfit acompanha as formas sem serifa dos materiais institucionais; Manrope mantém a leitura e os controles claros.",
     "keyCharacteristics": [
-      "Logo e imagem institucional originais preservados.",
-      "Superfícies claras quentes alternadas com vinho escuro.",
-      "Serifas de alto contraste nos títulos e leitura simples nos controles."
+      "Logo transparente original e quatro fotografias institucionais preservados.",
+      "Superfícies claras frias alternadas com azul escuro.",
+      "Títulos geométricos sem serifa e leitura Manrope."
     ],
     "rules": [
       {
         "name": "The Contrast Rule",
-        "body": "Texto escuro nas superfícies claras; branco, brand-100 e brand-200 nas superfícies vinho. Os pares principais foram verificados com contraste superior a 4,5:1. Seleção, cursor de texto, foco e scrollbar seguem a paleta.",
+        "body": "Texto escuro sobre superfícies claras; branco e azuis claros nas superfícies escuras. Foco, seleção, caret e scrollbar seguem a paleta. Os pares principais de corpo e CTA foram verificados acima de 4,5:1.",
         "section": "colors"
       }
     ],
     "dos": [
-      "Preservar os assets originais.",
-      "Centralizar os dados de contato.",
-      "Usar os dois WhatsApps fornecidos, sem e-mail.",
-      "Manter contraste e navegação por teclado."
+      "Preservar o logo e as fotografias originais.",
+      "Centralizar os dados de contato em app/lib/brand.ts.",
+      "Usar Outfit nos títulos e Manrope na leitura e nos controles.",
+      "Manter contraste, navegação por teclado e suporte a movimento reduzido."
     ],
     "donts": [
       "Inventar dados de contato, nota do Google, depoimentos ou resultados.",
-      "Atribuir nomes completos, formação, OAB ou experiência não fornecidos.",
-      "Alterar as cores ou a transparência do logo original.\r"
+      "Atribuir formação, OAB ou tempo de experiência não fornecidos.",
+      "Alterar cores, transparência ou pixels do logo original."
     ]
   }
 }

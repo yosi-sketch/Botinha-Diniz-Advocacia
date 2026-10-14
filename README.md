@@ -1,26 +1,31 @@
-# Silva & Lopes Advocacia
+# RAS Advogados
 
-Site institucional do escritório em Formiga, MG. Apresenta as áreas cível, criminal, previdenciária, empresarial e trabalhista, com contato pelos dois WhatsApps fornecidos.
+Site institucional em Sete Lagoas, MG, com apresentação dos sócios, áreas de atuação, perguntas frequentes, avaliações no Google e contato.
 
 ## Desenvolvimento
+
 Instale com `npm install` e inicie com `npm run dev`.
 Validação: `npm run lint -- app`, `node node_modules/typescript/bin/tsc --noEmit` e `npm run build`.
-Os scripts executam os arquivos das ferramentas diretamente para funcionar em caminhos Windows que contêm `&`.
 
 ## Identidade e conteúdo
-Tailwind CSS 4 usa `@theme inline` em `app/globals.css`. Vinho médio #5e171f e carvão #272625 foram extraídos por amostragem dos pixels opacos do logo original. Marfim #f8f5f0 e linho #e9e1d8 complementam a paleta.
-Cormorant Garamond nos títulos e Manrope no corpo são carregadas por `next/font/google` e servidas pela aplicação.
-Contatos, links e arquivos estão centralizados em `app/lib/brand.ts`. Seções e modais estão em `app/page.tsx`; metadados em `app/layout.tsx`.
+
+Tailwind CSS 4 configura o tema com `@theme inline` em `app/globals.css`.
+Azul-petróleo #0e3b55 extraído dos pixels opacos do logo; azuis derivados e neutros frios complementam a paleta monocromática.
+Outfit nos títulos e Manrope no corpo, servidas localmente por `next/font/google`.
+Dados, assets, sócios e links centralizados em `app/lib/brand.ts`. Seções e modais em `app/page.tsx`; metadados em `app/layout.tsx`.
 
 ## Dados do escritório
-WhatsApp principal: (37) 99902-0336.
-Segundo WhatsApp: (37) 99939-0455.
-Endereço: R. Campos Altos, nº 276 - Formiga, MG, 35576-172.
-Instagram: @silvaelopesadvocacia.
-Sem e-mail, conforme confirmação do cliente. OAB, formação, resultados e tempo de experiência não foram informados.
-As 81 avaliações são um dado estático fornecido pelo cliente. O site direciona ao perfil Google de cid 5097582474649043815 para os relatos e dados atuais; não apresenta nota ou depoimentos não fornecidos.
-Configure `NEXT_PUBLIC_SITE_URL` com o domínio de produção para habilitar as imagens de compartilhamento com endereço absoluto.
+
+- Telefone e WhatsApp: (31) 3177-0100, confirmado pelo cliente.
+- Endereço: Praça Vo Fina, nº 124 — Centro, Sete Lagoas — MG, 35700-549.
+- Instagram: @ras.advogadosoficial.
+- Google: cid 3724645382148157793; nota 5,0 e 57 avaliações informadas pelo cliente; três relatos completos do material fornecido, sem textos inventados.
+- Sócios: Willian Rangel, Denilson Rodrigues e Cleiton Silva. Áreas de atuação conforme os materiais fornecidos.
+
+E-mail, OAB, formação, tempo de experiência e horários completos não foram fornecidos.
+Configure `NEXT_PUBLIC_SITE_URL` com o domínio de produção para habilitar imagens de compartilhamento com endereço absoluto.
 
 ## Arquivos
-- `public/Logo Jurídico Silva & Lopes.png`: logo original transparente, intacto, em cabeçalho, sobre, rodapé e ícones.
-- `public/silva-lopes-equipe.png`: imagem institucional anexada pelo cliente, copiada integralmente, em hero e compartilhamento.
+
+Logo original transparente: `public/Logotipo RAS Advogados em Azul-petróleo.png`.
+Fotografias originais: `public/ras-socios.png`, `public/willian-rangel.png`, `public/denilson-rodrigues.png` e `public/cleiton-silva.png`. Cópias integrais dos anexos, exibidas sem alteração dos pixels.
