@@ -1,17 +1,22 @@
-# Leonardo Carvalho Tenório · Advocacia
+# Dr. Luciano Meni · Advocacia & Assessoria Jurídica
 
-Site institucional de advogado trabalhista e previdenciário em Pouso Alegre, Minas Gerais, com atendimento em todo o Brasil.
+Site institucional com foco em assessoria jurídica empresarial, contratos, registro de marcas e patentes. Sede em Itajubá, MG, com atendimento presencial e remoto.
 
 ## Desenvolvimento
-Instale as dependências com npm install e inicie com npm run dev.
-Validação: npm run lint e npm run build. O lint global inclui scripts de terceiros da skill e pode emitir avisos; npx eslint app valida apenas a aplicação.
+Instale com npm install e inicie com npm run dev.
+Validação da aplicação: npx eslint app, npx tsc --noEmit e npm run build.
 
-## Marca e conteúdo
-Logo LC e fotografias fornecidos em public. Tema Tailwind CSS 4 em app/globals.css; fontes Bodoni Moda e Manrope e metadados em app/layout.tsx; conteúdo em app/page.tsx.
-Paleta do logo: preto #080706, dourado #c1a16f, dourado claro #efd2a4 e bronze #785b34. Marfim #faf7f0 para leitura.
-WhatsApp e telefone: (35) 99749-2543. Link direto: https://wa.me/5535997492543.
-Sede: R. Roberto Coutinho Rezende, 195, Guanabara, Pouso Alegre - MG, 37554-102.
-E-mail, perfil de Instagram e OAB não foram informados. Não há promessa de atendimento imediato: agendamento pelo WhatsApp.
-Nota 5,0 e 171 avaliações são dados estáticos fornecidos pelo cliente, acompanhados de link ao perfil Google. Seis depoimentos completos selecionados do material enviado.
-Configure NEXT_PUBLIC_SITE_URL com o domínio de produção para habilitar imagens de compartilhamento.
-Os arquivos originais de public são preservados, inclusive o logo usado nos ícones de navegador.
+## Identidade e conteúdo
+Tema Tailwind CSS 4 em app/globals.css, configurado com @theme inline. Azul profundo #132135, azul aço #40648b e prata #d1d1d3 são médias das regiões opacas do logo, excluindo transparência. Neutros frios complementam a paleta.
+Fontes Cinzel e Manrope são carregadas por next/font/google e servidas pela aplicação.
+Dados de contato, caminhos de assets e depoimentos em app/lib/brand.ts. Áreas de atuação, modais e seções em app/page.tsx; metadados em app/layout.tsx.
+
+## Dados do escritório
+WhatsApp e telefone: (35) 98881-4505.
+Endereço: Av. B P S, n. 944 - Pinheirinho, Itajubá - MG, 37500-179.
+Instagram: @drlucianomeni, identificado na imagem fornecida.
+E-mail, OAB e horários regulares não foram informados e não são exibidos.
+Nota 5,0 e 103 avaliações são dados estáticos enviados pelo cliente. Os seis relatos usam os trechos completos fornecidos, sem completar avaliações truncadas.
+O perfil Google usa cid 1823622625055284594.
+Configure NEXT_PUBLIC_SITE_URL com o domínio de produção para as imagens de compartilhamento.
+Logo atual: public/Logotipo Jurídico Azul com Monograma NL.png. Os arquivos originais de public são usados sem alterações.

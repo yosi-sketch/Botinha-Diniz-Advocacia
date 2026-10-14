@@ -16,16 +16,14 @@ import {
   Menu,
   Scale,
   BriefcaseBusiness,
-  Sparkles,
+  FileText,
+  Lightbulb,
+  Camera,
   Star,
   X,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
-
-const contact = "https://wa.me/5535997492543";
-const whatsapp = "https://wa.me/5535997492543?text=" + encodeURIComponent("Olá, Dr. Leonardo! Gostaria de informações sobre o atendimento nas áreas trabalhista e previdenciária.");
-const maps = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Leonardo Carvalho Tenório · Advocacia Trabalhista e Previdenciária, R. Roberto Coutinho Rezende, 195, Guanabara, Pouso Alegre - MG, 37554-102");
-const reviews = "https://www.google.com/maps?cid=14878382819183384413";
+import { brand, contact, whatsapp, telephone, maps, reviews, testimonials } from "./lib/brand";
 
 function WhatsAppMark({size = 16, strokeWidth = 1.8}: {size?: number; strokeWidth?: number}) { return <Phone size={size} strokeWidth={strokeWidth} aria-hidden="true" />; }
 
@@ -45,16 +43,28 @@ const stagger: Variants = {
 
 const areas = [
   {
-    title: "Direito Trabalhista", icon: BriefcaseBusiness,
-    summary: "Orientação para compreender seus direitos no trabalho e avaliar os próximos passos com segurança.",
-    details: "Questões no trabalho merecem uma análise cuidadosa da sua história e dos documentos disponíveis. Leonardo oferece orientação trabalhista para esclarecer dúvidas e avaliar os caminhos possíveis em cada situação.",
-    topics: ["Análise da relação de trabalho", "Orientação sobre desligamento e verbas rescisórias", "Avaliação de jornadas e condições de trabalho", "Acompanhamento de demandas trabalhistas"],
+    title: "Assessoria empresarial", icon: BriefcaseBusiness,
+    summary: "Apoio jurídico para as decisões, as relações comerciais e os desafios do dia a dia da sua empresa.",
+    details: "A assessoria começa pela compreensão do negócio e das suas necessidades. O Dr. Luciano Meni analisa documentos e questões jurídicas para orientar decisões e acompanhar as demandas da empresa, com comunicação clara em cada etapa.",
+    topics: ["Consultoria para decisões empresariais", "Análise de documentos e relações comerciais", "Orientação jurídica preventiva", "Acompanhamento de demandas da empresa"],
   },
   {
-    title: "Direito Previdenciário", icon: Scale,
-    summary: "Atenção à sua trajetória de trabalho e às questões relacionadas à aposentadoria e aos benefícios do INSS.",
-    details: "A orientação previdenciária começa pela compreensão da sua trajetória e pela análise das informações e documentos apresentados. O atendimento ajuda a esclarecer dúvidas sobre aposentadoria e benefícios, considerando as particularidades do seu caso.",
-    topics: ["Análise do histórico de contribuições", "Orientação sobre aposentadoria", "Avaliação de questões relacionadas a benefícios do INSS", "Acompanhamento de demandas previdenciárias"],
+    title: "Contratos", icon: FileText,
+    summary: "Elaboração e revisão cuidadosa de contratos, alinhadas às particularidades de cada negócio.",
+    details: "Relações comerciais bem definidas começam com documentos que refletem a realidade do negócio. O atendimento abrange a elaboração, a análise e a revisão de contratos, com orientação sobre cláusulas, responsabilidades e os pontos que merecem atenção.",
+    topics: ["Elaboração de contratos empresariais", "Revisão de cláusulas e responsabilidades", "Análise de riscos contratuais", "Orientação em negociações comerciais"],
+  },
+  {
+    title: "Registro de marcas", icon: Scale,
+    summary: "Orientação e acompanhamento para cuidar da identidade que sua empresa está construindo.",
+    details: "O nome e a identidade da empresa fazem parte da sua trajetória. O Dr. Luciano Meni oferece assessoria em registro de marcas, desde a análise inicial até o acompanhamento do pedido, esclarecendo as etapas e as particularidades de cada demanda.",
+    topics: ["Análise inicial da marca", "Orientação sobre o pedido de registro", "Acompanhamento do processo", "Assessoria sobre a proteção da identidade empresarial"],
+  },
+  {
+    title: "Patentes", icon: Lightbulb,
+    summary: "Assessoria para compreender os caminhos de proteção de invenções e projetos inovadores.",
+    details: "Cada projeto exige uma avaliação própria. A assessoria em patentes ajuda a compreender a demanda, organizar as informações disponíveis e avaliar os próximos passos relacionados à proteção de invenções.",
+    topics: ["Análise da demanda e da documentação", "Orientação sobre propriedade intelectual", "Assessoria em pedidos de patente", "Acompanhamento das etapas do processo"],
   },
 ];
 
@@ -63,7 +73,6 @@ function Heading({
   description,
   light = false,
 }: {
-  eyebrow: string;
   children: ReactNode;
   description?: string;
   light?: boolean;
@@ -137,19 +146,20 @@ export default function Home() {
     <MotionConfig reducedMotion="user">
       <main className="bg-ivory text-ink">
         <div ref={contentRef}>
-        <header className="sticky top-0 z-40 border-b border-white/15 bg-black text-white">
+        <a href="#inicio" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-sm focus:bg-white focus:p-4 focus:text-ink">Ir para o conteúdo</a>
+        <header className="sticky top-0 z-40 border-b border-ink/10 bg-ivory text-ink">
           <div className="mx-auto flex h-[84px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[104px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Leonardo Carvalho Tenório — início"
+              aria-label="Dr. Luciano Meni — início"
               onClick={closeMenu}
               className="shrink-0"
             >
               <Image
-                src="/Logotipo Jurídico LC em Ouro Metálico.png"
+                src={brand.logo}
                 width={2172}
                 height={724}
-                alt="Leonardo Carvalho Tenório · Advocacia Trabalhista e Previdenciária"
+                alt="Dr. Luciano Meni · Advocacia & Assessoria Jurídica"
                 preload
                 className="h-auto w-[230px] sm:w-[300px]"
                 sizes="(max-width: 640px) 230px, 300px"
@@ -180,8 +190,8 @@ export default function Home() {
                 href={contact}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp de Leonardo Carvalho Tenório"
-                className="grid size-10 place-items-center rounded-full border border-white/25 text-brand-200 transition-colors hover:border-gold hover:text-gold"
+                aria-label="WhatsApp de Dr. Luciano Meni"
+                className="grid size-10 place-items-center rounded-full border border-ink/20 text-brand-700 transition-colors hover:border-brand-700 hover:text-brand-800"
               >
                 <WhatsAppMark size={17} strokeWidth={1.7} />
               </a>
@@ -199,7 +209,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-full border border-white/25 lg:hidden"
+              className="grid size-11 place-items-center rounded-full border border-ink/20 lg:hidden"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -214,7 +224,7 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-white/15 bg-black px-6 lg:hidden"
+                className="overflow-hidden border-t border-ink/10 bg-ivory px-6 lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
@@ -228,13 +238,13 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm text-white/80 transition-colors hover:text-gold"
+                      className="py-3 text-sm text-ink-soft transition-colors hover:text-brand-700"
                     >
                       {label}
                     </a>
                   ))}
                   <a
-                    className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.13em] text-ink"
+                    className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-5 py-3.5 text-xs font-semibold text-white"
                     href={whatsapp}
                     target="_blank"
                     rel="noreferrer"
@@ -261,18 +271,16 @@ export default function Home() {
             >
               <motion.h1
                 variants={reveal}
-                className="max-w-[720px] font-serif text-[2.45rem] leading-[1.1] tracking-[-0.035em] text-white sm:text-5xl lg:text-[3.65rem]"
+                className="max-w-[720px] font-serif text-[2.2rem] leading-[1.18] tracking-[-0.025em] text-white sm:text-[2.8rem] lg:text-[3.2rem]"
               >
-                Seus direitos no trabalho.{" "}<br />
-                <span className="text-brand-700">Seu futuro protegido.</span>
+                Seu negócio, bem assessorado.{" "}<br />
+                <span className="text-brand-700">Decisões com clareza.</span>
               </motion.h1>
               <motion.p
                 variants={reveal}
                 className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft sm:text-base sm:leading-8"
               >
-                Leonardo Carvalho Tenório, advogado trabalhista e previdenciário em Pouso Alegre, com atendimento em todo o Brasil.
-                Orientação clara para compreender sua situação e os próximos
-                passos, com análise individual de cada caso.
+                Assessoria jurídica empresarial com o Dr. Luciano Meni. Orientação em contratos, marcas e patentes para acompanhar sua empresa, com análise cuidadosa e clareza em cada decisão.
               </motion.p>
               <motion.div
                 variants={reveal}
@@ -303,13 +311,13 @@ export default function Home() {
               >
                 <span className="inline-flex items-center gap-2">
                   <MapPin size={15} className="text-brand-700" />
-                  Pouso Alegre · Minas Gerais
+                  Itajubá · Minas Gerais
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <Sparkles size={15} className="text-brand-700" />
-                  (35) 99749-2543
+                  <Phone size={15} className="text-brand-700" />
+                  {brand.phone}
                 </span>
-                <a href="#avaliacoes" className="inline-flex items-center gap-2 py-2 text-sm text-gold underline underline-offset-4">
+                <a href="#avaliacoes" className="inline-flex items-center gap-2 py-2 text-sm text-brand-200 underline underline-offset-4">
                   <Star size={15} fill="currentColor" aria-hidden="true" /> Leia os depoimentos
                 </a>
               </motion.div>
@@ -324,22 +332,21 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[460px] lg:ml-auto lg:mr-3"
             >
-              <div className="absolute -inset-3 rotate-2 border border-brand-600/25 sm:-inset-4" />
               <div className="relative aspect-[4/5] overflow-hidden bg-brand-100">
                 <Image
-                  src="/imgi_3_723216131_18599494774022246_8583372953301514537_n.jpg"
-                  alt="Leonardo Carvalho Tenório, advogado trabalhista e previdenciário em Pouso Alegre"
+                  src={brand.portrait}
+                  alt="Dr. Luciano Meni, advogado com atuação em assessoria jurídica empresarial em Itajubá"
                   fill
                   preload
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 40vw"
                   className="object-cover object-[50%_35%]"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/55 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-950/90 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
                   <div>
-                    <p className="font-serif text-xl">Leonardo Carvalho Tenório</p>
+                    <p className="font-serif text-xl">Dr. Luciano Meni</p>
                     <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-white/80">
-                      Advocacia Trabalhista e Previdenciária
+                      Advocacia & Assessoria Jurídica
                     </p>
                   </div>
                   <span className="grid size-11 shrink-0 place-items-center rounded-full border border-white/60">
@@ -348,9 +355,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="absolute -left-3 top-[15%] border border-ink/10 bg-ivory px-4 py-3 text-[10px] font-medium tracking-[0.1em] text-ink shadow-card sm:-left-10 sm:px-5">
-                AMIGO DO TRABALHADOR
+                ASSESSORIA PARA SUA EMPRESA
               </div>
-              <span className="absolute -bottom-8 -right-7 -z-10 size-28 rounded-full border border-brand-600/25" />
             </motion.div>
           </div>
         </section>
@@ -361,9 +367,9 @@ export default function Home() {
         >
           <div className="mx-auto grid max-w-7xl gap-6 px-5 py-7 sm:grid-cols-3 sm:gap-4 sm:px-8 lg:px-12">
             {[
-              ["Trabalhista", "Orientação e acompanhamento jurídico"],
-              ["Previdenciário", "Aposentadoria e benefícios do INSS"],
-              ["Todo o Brasil", "Converse com o advogado pelo WhatsApp"],
+              ["Empresas", "Assessoria jurídica para o seu negócio"],
+              ["Contratos", "Elaboração, análise e revisão"],
+              ["Marcas e patentes", "Orientação em propriedade intelectual"],
             ].map(([value, label], index) => (
               <div
                 key={value}
@@ -397,11 +403,11 @@ export default function Home() {
               className="flex flex-col justify-between gap-6 md:flex-row md:items-end"
             >
               <Heading
-                eyebrow="ÁREAS DE ATUAÇÃO"
-                description="Informação jurídica e acompanhamento cuidadoso, considerando as particularidades de cada situação."
+
+                description="Do planejamento às demandas do dia a dia: orientação jurídica alinhada à realidade da sua empresa."
               >
-                Orientação nos momentos que{" "}
-                <span className="italic text-brand-700">pedem cuidado.</span>
+                Apoio jurídico para quem{" "}
+                <span className="text-brand-700">empreende.</span>
               </Heading>
               <p className="max-w-[250px] pb-1 text-xs leading-6 text-ink-soft">
                 Selecione uma área para conhecer os temas atendidos.
@@ -437,6 +443,7 @@ export default function Home() {
                       type="button"
                       onClick={() => setActiveArea(area)}
                       aria-haspopup="dialog"
+                      aria-label={`Saiba mais sobre ${area.title.toLowerCase()}`}
                       className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-7 text-[10px] font-semibold uppercase tracking-[0.15em] text-brand-800 hover:text-brand-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-700"
                     >
                       Saiba mais{" "}
@@ -457,32 +464,12 @@ export default function Home() {
           className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-24 lg:px-12">
-            <motion.div
-              initial={false}
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={reveal}
-              className="relative mx-auto w-full max-w-[560px] pb-5 pr-5 sm:pb-7 sm:pr-7"
-            >
-              <div className="relative aspect-[3/4] overflow-hidden bg-brand-100">
-                <Image
-                  src="/imgi_18_830754624_18633980671022246_4547506194348257578_n.jpg"
-                  alt="Leonardo Carvalho Tenório em retrato profissional"
-                  fill
-                  sizes="(max-width: 1024px) 85vw, 43vw"
-                  className="object-cover"
-                />
+            <figure className="mx-auto w-full max-w-[330px]">
+              <div className="relative aspect-[9/16] overflow-hidden bg-brand-50">
+                <Image src={brand.certificate} alt="Registro de formação de Luciano Meni compartilhado pelo escritório" fill sizes="(max-width: 640px) 85vw, 330px" className="object-contain" />
               </div>
-              <div className="absolute -left-2 top-8 -z-10 size-24 border-l border-t border-brand-600/40 sm:-left-5 sm:top-10 sm:size-32" />
-              <div className="absolute bottom-0 left-5 max-w-[245px] border border-brand-600/30 bg-ivory px-5 py-4 shadow-card sm:left-8">
-                <p className="font-serif text-xl text-ink">
-                  Leonardo Carvalho Tenório
-                </p>
-                <p className="mt-1 text-[11px] leading-5 text-ink-soft">
-                  Advocacia trabalhista e previdenciária em Pouso Alegre, MG.
-                </p>
-              </div>
-            </motion.div>
+              <figcaption className="mt-4 text-xs leading-6 text-ink-soft">Formação e atualização fazem parte da trajetória profissional.</figcaption>
+            </figure>
             <motion.div
               initial={false}
               whileInView="visible"
@@ -493,25 +480,20 @@ export default function Home() {
                 variants={reveal}
                 className="mt-4 max-w-2xl font-serif text-4xl leading-[1.08] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.45rem]"
               >
-                Cada história merece ser recebida com{" "}
-                <span className="italic text-brand-700">atenção.</span>
+                Conhecimento jurídico.{" "}
+                <span className="text-brand-700">Atenção ao seu negócio.</span>
               </motion.h2>
               <motion.p
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                Leonardo Carvalho Tenório é advogado trabalhista e previdenciário com sede em Pouso Alegre, Minas Gerais. Sua atuação reúne análise jurídica,
-                atenção às circunstâncias do caso e comunicação clara
-                com quem procura orientação.
+                Com sede em Itajubá, Minas Gerais, o Dr. Luciano Meni Gonçalves atua em advocacia e assessoria jurídica para empresas. Contratos, registro de marcas e patentes integram uma atuação voltada às necessidades de cada negócio.
               </motion.p>
               <motion.p
                 variants={reveal}
                 className="mt-4 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                O atendimento começa com a escuta da sua situação e a análise
-                das informações disponíveis. Entre em contato diretamente
-                com o advogado para consultar a disponibilidade e organizar
-                seu atendimento.
+                O atendimento começa com uma conversa sobre sua empresa e a análise das informações disponíveis. A proposta é traduzir questões jurídicas em orientações claras, com atenção aos documentos, às relações comerciais e aos próximos passos. Atendimento presencial e remoto, mediante agendamento.
               </motion.p>
               <motion.a
                 variants={reveal}
@@ -520,7 +502,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="group mt-8 inline-flex items-center gap-2 border-b border-brand-700/40 pb-2 text-xs font-semibold uppercase tracking-[0.13em] text-brand-800 transition-colors hover:border-brand-700 hover:text-brand-700"
               >
-                Converse com Leonardo{" "}
+                Converse com o Dr. Luciano{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -533,12 +515,12 @@ export default function Home() {
         <section className="relative overflow-hidden bg-brand-950 py-20 text-white sm:py-28 lg:py-32">
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.86fr_1.14fr] lg:gap-20 lg:px-12">
             <Heading
-              eyebrow="UMA ATUAÇÃO COM CUIDADO"
+
               light
-              description="Informação, escuta e análise fazem parte de uma orientação jurídica responsável."
+              description="Entender a empresa, avaliar documentos e explicar os caminhos possíveis faz parte de uma assessoria próxima e responsável."
             >
               Clareza para compreender cada{" "}
-              <span className="italic text-brand-200">etapa.</span>
+              <span className="text-brand-200">etapa.</span>
             </Heading>
             <motion.div
               initial={false}
@@ -549,16 +531,16 @@ export default function Home() {
             >
               {[
                 [
-                  "Escuta atenta",
-                  "Compreender o contexto é parte essencial de uma orientação cuidadosa.",
+                  "Compreensão do negócio",
+                  "Conhecer a realidade da empresa é o ponto de partida para uma orientação jurídica pertinente.",
                 ],
                 [
-                  "Informação acessível",
-                  "Explicações claras ajudam a entender direitos, procedimentos e possibilidades.",
+                  "Comunicação clara",
+                  "Orientações acessíveis ajudam a compreender documentos, responsabilidades e decisões.",
                 ],
                 [
-                  "Respeito às particularidades",
-                  "Cada pessoa tem uma história e circunstâncias que precisam ser consideradas.",
+                  "Análise cuidadosa",
+                  "Cada contrato, marca ou demanda recebe atenção às particularidades do negócio.",
                 ],
               ].map(([title, description]) => (
                 <motion.div
@@ -578,70 +560,19 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          id="conteudos"
-          className="scroll-mt-24 bg-brand-50 py-20 sm:py-28"
-        >
-          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-            <div className="grid items-end gap-7 md:grid-cols-[1fr_auto]">
-              <Heading
-                eyebrow="CONTEÚDOS JURÍDICOS"
-                description="Atendimento em Pouso Alegre e em todo o Brasil. Tire suas dúvidas diretamente com o advogado."
-              >
-                Informação para conhecer melhor{" "}
-                <span className="italic text-brand-700">seus direitos.</span>
-              </Heading>
-              <a
-                href={contact}
-                target="_blank"
-                rel="noreferrer"
-                className="group mb-1 inline-flex w-fit items-center gap-2 text-xs font-semibold uppercase tracking-[0.13em] text-brand-800"
-              >
-                Fale pelo WhatsApp{" "}
-                <ArrowUpRight
-                  size={15}
-                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                />
-              </a>
-            </div>
-            <div className="mt-11 grid gap-6">
+        <section className="bg-brand-50 py-20 sm:py-24" aria-labelledby="questions-title">
+          <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20 lg:px-12">
+            <h2 id="questions-title" className="font-serif text-3xl leading-tight text-ink sm:text-4xl">Antes da nossa primeira conversa.</h2>
+            <div className="divide-y divide-ink/15 border-y border-ink/15">
               {[
-                {
-                  image: "/imgi_16_836501031_18636005581022246_485899264290876127_n.jpg",
-                  alt: "Leonardo Carvalho Tenório participando de um evento profissional",
-                  eyebrow: "Atendimento",
-                  title: "Uma conversa clara é o primeiro passo.",
-                },
-              ].map((post, index) => (
-                <motion.a
-                  key={post.eyebrow}
-                  href={contact}
-                  target="_blank"
-                  rel="noreferrer"
-                  initial={false}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.15 }}
-                  transition={{ duration: 0.62, delay: index * 0.08 }}
-                  className="group grid overflow-hidden border border-ink/10 bg-white md:grid-cols-[0.85fr_1.15fr]"
-                >
-                  <div className="relative mx-auto aspect-[16/9] w-full max-w-[480px] overflow-hidden">
-                    <Image
-                      src={post.image}
-                      alt={post.alt}
-                      fill
-                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 40vw, 28vw"
-                      className="object-contain"
-                    />
-                  </div>
-                  <div className="flex flex-col justify-end p-7 sm:p-8 lg:p-9">
-                    <h3 className="mt-3 font-serif text-3xl leading-tight text-ink">
-                      {post.title}
-                    </h3>
-                    <span className="mt-5 inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.15em] text-brand-800">
-                      Converse sobre seu atendimento <ArrowUpRight size={14} />
-                    </span>
-                  </div>
-                </motion.a>
+                ["Como funciona o primeiro contato?", "Envie uma mensagem pelo WhatsApp e conte brevemente a necessidade da sua empresa. O escritório orientará sobre disponibilidade, agendamento e informações iniciais."],
+                ["O atendimento pode ser remoto?", "Sim. Além do atendimento presencial em Itajubá, o contato e a orientação podem ocorrer de forma remota. Consulte pelo WhatsApp o formato adequado à sua demanda."],
+                ["Quais documentos devo separar?", "Tenha em mãos os documentos relacionados à sua questão, como contratos, informações da empresa ou materiais da marca. A documentação necessária será indicada conforme a análise inicial."],
+              ].map(([question, answer]) => (
+                <details key={question} className="group py-6">
+                  <summary className="cursor-pointer text-base font-semibold text-ink marker:text-brand-700">{question}</summary>
+                  <p className="mt-4 max-w-xl text-sm leading-7 text-ink-soft">{answer}</p>
+                </details>
               ))}
             </div>
           </div>
@@ -653,15 +584,14 @@ export default function Home() {
         >
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-12">
             <Heading
-              eyebrow="PERFIL PÚBLICO"
+
               description="Conheça as experiências compartilhadas no Google por quem foi atendido."
             >
               O que dizem sobre{" "}
-              <span className="italic text-brand-700">Leonardo Carvalho Tenório.</span>
+              <span className="text-brand-700">Dr. Luciano Meni.</span>
             </Heading>
             <div className="relative flex min-h-[245px] flex-col justify-between overflow-hidden border border-ink/10 bg-ivory p-7 sm:p-9">
-              <div className="absolute -right-10 -top-16 size-56 rounded-full border border-brand-700/15" />
-              <div className="absolute -right-2 -top-8 size-40 rounded-full border border-brand-700/15" />
+
               <div className="relative flex items-center gap-4">
                 <span className="grid size-12 place-items-center rounded-full bg-brand-50 text-brand-700">
                   <MapPin size={20} strokeWidth={1.6} />
@@ -671,13 +601,13 @@ export default function Home() {
                     Avaliações no Google
                   </span>
                   <p className="mt-1 font-serif text-2xl text-ink">
-                    5,0 · 171 avaliações no Google
+                    {brand.googleRating} · {brand.googleReviewCount} avaliações no Google
                   </p>
                 </div>
               </div>
               <div className="relative mt-8 flex flex-wrap items-end justify-between gap-5">
                 <p className="max-w-xs text-[13px] leading-6 text-ink-soft">
-                  Consulte o perfil no Google para avaliações e informações atualizadas.
+                  Nota e quantidade de avaliações podem mudar. Consulte o perfil no Google para informações atualizadas.
                 </p>
                 <a
                   href={reviews}
@@ -692,18 +622,11 @@ export default function Home() {
           </div>
 
           <div className="mx-auto mt-12 grid max-w-7xl gap-5 px-5 sm:px-8 md:grid-cols-2 lg:grid-cols-3 lg:px-12">
-            {[
-  ["Caroline Leal", "Excelente profissional. Apresenta muito comprometimento e ética jurídica. Transmite clareza aos clientes, recomendo pela seriedade e dedicação ao seu exercício."],
-  ["Ana Lyvia Mello", "Advogado extremamente competente, prestativo e confiável. Atendimento excelente e muito profissional. Recomendo!"],
-  ["Ana Paula Tenório", "Excelente advogado trabalhista! Muito atencioso, esclareceu todas as minhas dúvidas e conduziu o processo com profissionalismo e transparência. Recomendo fortemente."],
-  ["Josiel Dames Ferreira Da Silva", "Um excelente profissional, me ajudou bastante tirou todas a minhas dúvidas. Não demora de atender seus clientes, eu o recomendo!"],
-  ["Fábio Rosa", "Excelente profissional! recomendo. Esclareceu todas as minhas dúvidas com muita atenção 🙏."],
-  ["DORIVA JONAS", "Fui muito bem atendido, com profissionalismo e humanidade"],
-].map(([name, quote]) => (
+            {testimonials.map(({ name, quote }) => (
               <figure key={name} className="flex flex-col border border-ink/10 bg-ivory p-6 sm:p-7">
                 <div className="mb-5 flex items-center gap-1 text-brand-700" role="img" aria-label="5 estrelas">{[0,1,2,3,4].map(star => <Star key={star} size={17} fill="currentColor" strokeWidth={1.5} aria-hidden="true" />)}</div>
                 <blockquote className="text-[15px] leading-7 text-ink">“{quote}”</blockquote>
-                <figcaption className="mt-auto flex items-center gap-3 pt-7"><span className="grid size-10 shrink-0 place-items-center rounded-full bg-ink text-sm font-bold text-gold" aria-hidden="true">{name.charAt(0)}</span><span className="text-sm font-semibold text-ink">{name}</span></figcaption>
+                <figcaption className="mt-auto flex items-center gap-3 pt-7"><span className="grid size-10 shrink-0 place-items-center rounded-full bg-ink text-sm font-bold text-silver" aria-hidden="true">{name.charAt(0)}</span><span className="text-sm font-semibold text-ink">{name}</span></figcaption>
                 <a href={reviews} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-2 py-2 text-xs text-brand-700 underline underline-offset-4">Ver perfil no Google <ArrowUpRight size={14} /></a>
               </figure>
             ))}
@@ -717,11 +640,11 @@ export default function Home() {
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
-                eyebrow="CONTATO E LOCALIZAÇÃO"
-                description="Sede em Pouso Alegre, Minas Gerais. Entre em contato para consultar a disponibilidade e agendar seu atendimento."
+
+                description="Sede em Itajubá, Minas Gerais. Entre em contato para consultar a disponibilidade e agendar seu atendimento."
               >
                 Um primeiro contato com{" "}
-                <span className="italic text-brand-700">tranquilidade.</span>
+                <span className="text-brand-700">tranquilidade.</span>
               </Heading>
               <div className="mt-9 flex flex-col items-start gap-4">
                 <GlowingButton
@@ -732,8 +655,9 @@ export default function Home() {
                 >
                   <Phone size={16} /> Fale pelo WhatsApp
                 </GlowingButton>
-                <a href="tel:+5535997492543" className="text-sm text-ink-soft hover:text-brand-700">Telefone: (35) 99749-2543</a>
-                <a href={contact} target="_blank" rel="noreferrer" className="text-[11px] text-ink-soft hover:text-brand-700">WhatsApp: (35) 99749-2543</a>
+                <a href={telephone} className="text-sm text-ink-soft hover:text-brand-700">Telefone: {brand.phone}</a>
+                <a href={contact} target="_blank" rel="noreferrer" className="text-[11px] text-ink-soft hover:text-brand-700">WhatsApp: {brand.phone}</a>
+                <a href={brand.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 py-2 text-sm text-brand-700 hover:text-brand-800"><Camera size={16} /> @drlucianomeni</a>
               </div>
             </div>
             <div className="relative overflow-hidden border border-ink/10 bg-white p-7 sm:p-10">
@@ -747,16 +671,16 @@ export default function Home() {
                     Endereço
                   </p>
                   <p className="mt-1 font-serif text-2xl text-ink">
-                    Pouso Alegre · MG
+                    Itajubá · MG
                   </p>
                 </div>
               </div>
               <address className="mt-7 max-w-md not-italic text-[14px] leading-7 text-ink-soft">
-                R. Roberto Coutinho Rezende, 195
+                Av. B P S, n. 944
                 <br />
-                Guanabara, Pouso Alegre — MG
+                Pinheirinho, Itajubá — MG
                 <br />
-                37554-102, Brasil
+                37500-179, Brasil
               </address>
               <div className="my-7 h-px bg-ink/10" />
               <div className="flex flex-wrap items-center justify-between gap-4">
@@ -776,11 +700,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-gold px-5 py-14 text-ink sm:px-8 sm:py-16 lg:px-12">
+        <section className="bg-silver px-5 py-14 text-ink sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl">
-                Informação clara pode ajudar a organizar os próximos passos.
+                Vamos conversar sobre o próximo passo da sua empresa.
               </h2>
             </div>
             <a
@@ -794,28 +718,28 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="bg-ink px-5 py-12 text-white sm:px-8 lg:px-12">
+        <footer className="bg-brand-50 px-5 py-12 text-ink sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.1fr_0.9fr_1fr]">
             <div>
-              <div className="inline-flex bg-black py-3">
+              <div className="inline-flex px-3 py-2">
                 <Image
-                  src="/Logotipo Jurídico LC em Ouro Metálico.png"
+                  src={brand.logo}
                   width={2172}
                   height={724}
-                  alt="Leonardo Carvalho Tenório · Advocacia Trabalhista e Previdenciária"
+                  alt="Dr. Luciano Meni · Advocacia & Assessoria Jurídica"
                   className="h-auto w-[240px]"
                   sizes="240px"
                 />
               </div>
-              <p className="mt-4 max-w-xs text-xs leading-6 text-white/65">
-                Advocacia trabalhista e previdenciária em Pouso Alegre, MG. Atendimento em todo o Brasil.
+              <p className="mt-4 max-w-xs text-xs leading-6 text-ink-soft">
+                Assessoria jurídica empresarial em Itajubá, MG. Atendimento presencial e remoto.
               </p>
             </div>
             <div>
-              <h2 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-200">
+              <h2 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-700">
                 Navegação
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-white/75">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-ink-soft">
                 <a className="footer-link" href="#atuacao">
                   Áreas de atuação
                 </a>
@@ -831,17 +755,17 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h2 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-200">
+              <h2 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-700">
                 Informações
               </h2>
-              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-white/75">
+              <div className="mt-4 flex flex-col items-start gap-3 text-xs text-ink-soft">
                 <a
                   href={contact}
                   target="_blank"
                   rel="noreferrer"
                   className="footer-link inline-flex items-center gap-2"
                 >
-                  <WhatsAppMark size={14} /> WhatsApp: (35) 99749-2543
+                  <WhatsAppMark size={14} /> WhatsApp: {brand.phone}
                 </a>
                 <a
                   href={maps}
@@ -850,14 +774,15 @@ export default function Home() {
                   className="footer-link inline-flex items-start gap-2"
                 >
                   <MapPin size={14} className="mt-0.5 shrink-0" />
-                  R. Roberto Coutinho Rezende, 195 — Guanabara
+                  Av. B P S, n. 944 — Pinheirinho
                 </a>
+                <a href={brand.instagram} target="_blank" rel="noopener noreferrer" className="footer-link inline-flex items-center gap-2"><Camera size={14} /> @drlucianomeni</a>
               </div>
             </div>
           </div>
-          <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-3 border-t border-white/15 pt-5 text-[10px] text-white/50 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-3 border-t border-ink/15 pt-5 text-[10px] text-ink-soft sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} Leonardo Carvalho Tenório · Advocacia Trabalhista e Previdenciária. Todos os direitos
+              © {new Date().getFullYear()} Dr. Luciano Meni · Advocacia & Assessoria Jurídica. Todos os direitos
               reservados.
             </p>
             <p>
@@ -911,15 +836,15 @@ export default function Home() {
                   {activeArea.topics.map((topic) => (
                     <li
                       key={topic}
-                      className="flex items-center gap-3 text-sm text-ink"
+                      className="flex items-start gap-3 text-sm leading-6 text-ink"
                     >
-                      <span className="size-1.5 rounded-full bg-brand-700" />
+                      <span className="mt-2 size-1.5 shrink-0 rounded-full bg-brand-700" />
                       {topic}
                     </li>
                   ))}
                 </ul>
                 <GlowingButton
-                  href={whatsapp}
+                  href={contact + "?text=" + encodeURIComponent(`Olá, Dr. Luciano! Gostaria de conversar sobre ${activeArea.title.toLowerCase()}.`)}
                   target="_blank"
                   size="md"
                   className="mt-8 rounded-full"

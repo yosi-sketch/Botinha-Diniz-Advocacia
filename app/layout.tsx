@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Bodoni_Moda, Manrope } from "next/font/google";
+import { Cinzel, Manrope } from "next/font/google";
+import { brand } from "./lib/brand";
 import "./globals.css";
 
-const displayFont = Bodoni_Moda({
+const displayFont = Cinzel({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -18,21 +19,21 @@ const bodyFont = Manrope({
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 const metadataBase = siteUrl ? new URL(siteUrl) : undefined;
-const shareImage = "/Logotipo Jurídico LC em Ouro Metálico.png";
+const shareImage = brand.logo;
+const title = "Dr. Luciano Meni | Advocacia & Assessoria Jurídica Empresarial | Itajubá, MG";
+const description = "Assessoria jurídica empresarial, contratos, registro de marcas e patentes em Itajubá, MG. Fale com o Dr. Luciano Meni: (35) 98881-4505.";
 
 export const metadata: Metadata = {
   ...(metadataBase ? { metadataBase } : {}),
-  title: "Leonardo Carvalho Tenório | Advogado Trabalhista e Previdenciário | Pouso Alegre, MG",
-  description:
-    "Advogado trabalhista e previdenciário em Pouso Alegre, MG. Orientação clara e atendimento em todo o Brasil. Contato: (35) 99749-2543.",
-  keywords: ["Leonardo Carvalho Tenório", "advogado trabalhista em Pouso Alegre", "Direito Trabalhista", "Direito Previdenciário", "Pouso Alegre MG"],
+  title,
+  description,
+  keywords: ["Dr. Luciano Meni", "advogado em Itajubá", "assessoria jurídica empresarial", "contratos", "registro de marcas", "patentes", "Itajubá MG"],
   icons: { icon: [{ url: shareImage, type: "image/png" }], apple: [{ url: shareImage, type: "image/png" }] },
   openGraph: {
-    title: "Leonardo Carvalho Tenório | Advogado Trabalhista e Previdenciário",
-    description:
-      "Advocacia trabalhista e previdenciária em Pouso Alegre, MG. Atendimento em todo o Brasil.",
+    title,
+    description,
     locale: "pt_BR",
-    siteName: "Leonardo Carvalho Tenório | Advogado Trabalhista e Previdenciário",
+    siteName: brand.businessName,
     type: "website",
     images: metadataBase
       ? [
@@ -40,22 +41,21 @@ export const metadata: Metadata = {
             url: shareImage,
             width: 2172,
             height: 724,
-            alt: "Leonardo Carvalho Tenório | Advogado Trabalhista e Previdenciário",
+            alt: brand.businessName,
           },
         ]
       : undefined,
   },
   twitter: {
     card: metadataBase ? "summary_large_image" : "summary",
-    title: "Leonardo Carvalho Tenório | Advogado Trabalhista e Previdenciário",
-    description:
-      "Advocacia trabalhista e previdenciária em Pouso Alegre, MG. Atendimento em todo o Brasil.",
+    title,
+    description,
     ...(metadataBase ? { images: [shareImage] } : {}),
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#080706",
+  themeColor: "#132135",
 };
 
 export default function RootLayout({

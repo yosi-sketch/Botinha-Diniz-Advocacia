@@ -1,4 +1,4 @@
-# Leonardo Carvalho Tenório · Advocacia
+# Dr. Luciano Meni · Advocacia & Assessoria Jurídica
 
 <!-- impeccable:product-schema 1 -->
 
@@ -6,25 +6,25 @@
 web
 
 ## Users
-Trabalhadores e pessoas que procuram orientação previdenciária em Pouso Alegre e em todo o Brasil.
+Empresários e gestores que procuram assessoria jurídica para seus negócios, em Itajubá e por atendimento remoto.
 
 ## Product Purpose
-Apresentar o advogado e facilitar contato direto pelo WhatsApp.
+Apresentar o escritório e facilitar contato direto pelo WhatsApp.
 
 ## Positioning
-Advogado trabalhista e previdenciário. Amigo do trabalhador. Sede em Pouso Alegre, Minas Gerais; atendimento em todo o Brasil.
+Assessoria jurídica empresarial em geral, com atuação em contratos, registro de marcas e patentes. Sede em Itajubá, Minas Gerais.
 
 ## Operating Context
-Página institucional com navegação por seções, menu móvel, avaliações e detalhes de atuação em modais. Conversa e agendamento ocorrem pelo WhatsApp.
+Página institucional com navegação por seções, menu móvel, avaliações, perguntas frequentes e detalhes de serviços em modais. Agendamento pelo WhatsApp.
 
 ## Capabilities and Constraints
-Next.js 16, React 19, Tailwind CSS 4 e Framer Motion. Preservar responsividade, foco nos modais e movimento reduzido. Usar assets reais fornecidos. Não inventar resultados, experiência, OAB, e-mail, Instagram ou disponibilidade imediata.
+Next.js 16, React 19, Tailwind CSS 4 e Framer Motion. Usar apenas imagens fornecidas. Preservar responsividade, foco nos modais e movimento reduzido. Não inventar OAB, e-mail, horário fixo, títulos acadêmicos, resultados ou experiência.
 
 ## Brand Commitments
-Logo LC original com preto e ouro metálico. Bodoni Moda para títulos serifados próximos ao logo; Manrope para leitura. Superfícies de leitura em marfim e branco. Português brasileiro, comunicação clara e sóbria.
+Logo azul fornecido com monograma NL e nome Luciano Meni Gonçalves, preservando a transparência original e sem fundo adicional. Azul profundo, azul aço e prata. Cinzel nos títulos, com serifas que acompanham o logo; Manrope para leitura. Superfícies claras frias alternadas com azul profundo. Comunicação sóbria, clara e profissional.
 
 ## Evidence on Hand
-WhatsApp e telefone: (35) 99749-2543. Endereço: R. Roberto Coutinho Rezende, 195, Guanabara, Pouso Alegre - MG, 37554-102. Logo e quatro fotografias em public. Nota 5,0, 171 avaliações e relatos enviados pelo cliente; informação estática. Perfil público Google: cid 14878382819183384413. E-mail e Instagram não informados.
+Telefone e WhatsApp: (35) 98881-4505. Endereço: Av. B P S, n. 944 - Pinheirinho, Itajubá - MG, 37500-179. Logo, retrato e fotografia de certificado em public. Nota 5,0 e 103 avaliações fornecidas pelo cliente, como dados estáticos. Perfil Google: cid 1823622625055284594. Depoimentos completos do arquivo enviado. Instagram @drlucianomeni visível na fotografia fornecida. E-mail e OAB não informados.
 
 ## Product Principles
-Contato direto, escuta atenta, comunicação clara, informações sustentadas nos materiais e experiência acessível.
+Contato direto, compreensão do negócio, análise cuidadosa, comunicação clara e experiência acessível.

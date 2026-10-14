@@ -1,373 +1,53 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-13T19:45:05.378Z",
-  "title": "Design System: Leonardo Carvalho Tenório · Advocacia",
+  "generatedAt": "2026-10-13T22:14:46.241Z",
+  "title": "Design System: Dr. Luciano Meni · Advocacia & Assessoria Jurídica",
   "extensions": {
     "colorMeta": {
       "ink": {
         "role": "neutral",
-        "displayName": "ink",
-        "tonalRamp": [
-          "#080706",
-          "#30271b",
-          "#62594e",
-          "#887b69",
-          "#b4a891",
-          "#d6c8b0",
-          "#eadfca",
-          "#faf7f0"
-        ]
+        "displayName": "Azul profundo"
       },
-      "ink-soft": {
-        "role": "neutral",
-        "displayName": "ink-soft",
-        "tonalRamp": [
-          "#080706",
-          "#30271b",
-          "#62594e",
-          "#887b69",
-          "#b4a891",
-          "#d6c8b0",
-          "#eadfca",
-          "#faf7f0"
-        ]
+      "steel": {
+        "role": "primary",
+        "displayName": "Azul aço"
+      },
+      "silver": {
+        "role": "secondary",
+        "displayName": "Prata metálica"
       },
       "ivory": {
         "role": "neutral",
-        "displayName": "ivory",
-        "tonalRamp": [
-          "#080706",
-          "#30271b",
-          "#62594e",
-          "#887b69",
-          "#b4a891",
-          "#d6c8b0",
-          "#eadfca",
-          "#faf7f0"
-        ]
-      },
-      "brand-50": {
-        "role": "primary",
-        "displayName": "brand-50",
-        "tonalRamp": [
-          "#30271b",
-          "#604220",
-          "#785b34",
-          "#a08050",
-          "#c1a16f",
-          "#d4b47f",
-          "#efd2a4",
-          "#f3ede2"
-        ]
-      },
-      "brand-100": {
-        "role": "primary",
-        "displayName": "brand-100",
-        "tonalRamp": [
-          "#30271b",
-          "#604220",
-          "#785b34",
-          "#a08050",
-          "#c1a16f",
-          "#d4b47f",
-          "#efd2a4",
-          "#f3ede2"
-        ]
-      },
-      "brand-200": {
-        "role": "primary",
-        "displayName": "brand-200",
-        "tonalRamp": [
-          "#30271b",
-          "#604220",
-          "#785b34",
-          "#a08050",
-          "#c1a16f",
-          "#d4b47f",
-          "#efd2a4",
-          "#f3ede2"
-        ]
-      },
-      "brand-300": {
-        "role": "primary",
-        "displayName": "brand-300",
-        "tonalRamp": [
-          "#30271b",
-          "#604220",
-          "#785b34",
-          "#a08050",
-          "#c1a16f",
-          "#d4b47f",
-          "#efd2a4",
-          "#f3ede2"
-        ]
-      },
-      "brand-400": {
-        "role": "primary",
-        "displayName": "brand-400",
-        "tonalRamp": [
-          "#30271b",
-          "#604220",
-          "#785b34",
-          "#a08050",
-          "#c1a16f",
-          "#d4b47f",
-          "#efd2a4",
-          "#f3ede2"
-        ]
-      },
-      "brand-500": {
-        "role": "primary",
-        "displayName": "brand-500",
-        "tonalRamp": [
-          "#30271b",
-          "#604220",
-          "#785b34",
-          "#a08050",
-          "#c1a16f",
-          "#d4b47f",
-          "#efd2a4",
-          "#f3ede2"
-        ]
-      },
-      "brand-600": {
-        "role": "primary",
-        "displayName": "brand-600",
-        "tonalRamp": [
-          "#30271b",
-          "#604220",
-          "#785b34",
-          "#a08050",
-          "#c1a16f",
-          "#d4b47f",
-          "#efd2a4",
-          "#f3ede2"
-        ]
-      },
-      "brand-700": {
-        "role": "primary",
-        "displayName": "brand-700",
-        "tonalRamp": [
-          "#30271b",
-          "#604220",
-          "#785b34",
-          "#a08050",
-          "#c1a16f",
-          "#d4b47f",
-          "#efd2a4",
-          "#f3ede2"
-        ]
-      },
-      "brand-800": {
-        "role": "primary",
-        "displayName": "brand-800",
-        "tonalRamp": [
-          "#30271b",
-          "#604220",
-          "#785b34",
-          "#a08050",
-          "#c1a16f",
-          "#d4b47f",
-          "#efd2a4",
-          "#f3ede2"
-        ]
-      },
-      "brand-900": {
-        "role": "primary",
-        "displayName": "brand-900",
-        "tonalRamp": [
-          "#30271b",
-          "#604220",
-          "#785b34",
-          "#a08050",
-          "#c1a16f",
-          "#d4b47f",
-          "#efd2a4",
-          "#f3ede2"
-        ]
-      },
-      "brand-950": {
-        "role": "primary",
-        "displayName": "brand-950",
-        "tonalRamp": [
-          "#30271b",
-          "#604220",
-          "#785b34",
-          "#a08050",
-          "#c1a16f",
-          "#d4b47f",
-          "#efd2a4",
-          "#f3ede2"
-        ]
-      },
-      "stone": {
-        "role": "neutral",
-        "displayName": "stone",
-        "tonalRamp": [
-          "#080706",
-          "#30271b",
-          "#62594e",
-          "#887b69",
-          "#b4a891",
-          "#d6c8b0",
-          "#eadfca",
-          "#faf7f0"
-        ]
-      },
-      "marble": {
-        "role": "neutral",
-        "displayName": "marble",
-        "tonalRamp": [
-          "#080706",
-          "#30271b",
-          "#62594e",
-          "#887b69",
-          "#b4a891",
-          "#d6c8b0",
-          "#eadfca",
-          "#faf7f0"
-        ]
-      },
-      "gold": {
-        "role": "primary",
-        "displayName": "gold",
-        "tonalRamp": [
-          "#30271b",
-          "#604220",
-          "#785b34",
-          "#a08050",
-          "#c1a16f",
-          "#d4b47f",
-          "#efd2a4",
-          "#f3ede2"
-        ]
-      },
-      "silver": {
-        "role": "neutral",
-        "displayName": "silver",
-        "tonalRamp": [
-          "#080706",
-          "#30271b",
-          "#62594e",
-          "#887b69",
-          "#b4a891",
-          "#d6c8b0",
-          "#eadfca",
-          "#faf7f0"
-        ]
-      },
-      "paper": {
-        "role": "neutral",
-        "displayName": "paper",
-        "tonalRamp": [
-          "#080706",
-          "#30271b",
-          "#62594e",
-          "#887b69",
-          "#b4a891",
-          "#d6c8b0",
-          "#eadfca",
-          "#faf7f0"
-        ]
-      },
-      "hero-muted": {
-        "role": "neutral",
-        "displayName": "hero-muted",
-        "tonalRamp": [
-          "#080706",
-          "#30271b",
-          "#62594e",
-          "#887b69",
-          "#b4a891",
-          "#d6c8b0",
-          "#eadfca",
-          "#faf7f0"
-        ]
-      },
-      "black": {
-        "role": "neutral",
-        "displayName": "black",
-        "tonalRamp": [
-          "#080706",
-          "#30271b",
-          "#62594e",
-          "#887b69",
-          "#b4a891",
-          "#d6c8b0",
-          "#eadfca",
-          "#faf7f0"
-        ]
+        "displayName": "Superfície clara fria"
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Título principal",
-        "purpose": "Hero em Bodoni Moda 500."
-      },
-      "headline": {
-        "displayName": "Título de seção",
-        "purpose": "Serifa com escala responsiva."
-      },
-      "title": {
-        "displayName": "Título de cartão",
-        "purpose": "Identificação de serviços em Bodoni Moda 500."
+        "displayName": "Cinzel",
+        "purpose": "Títulos serifados próximos à marca"
       },
       "body": {
-        "displayName": "Leitura",
-        "purpose": "Texto informativo em Manrope."
-      },
-      "label": {
-        "displayName": "Ações",
-        "purpose": "Rótulos compactos de botão em Manrope."
+        "displayName": "Manrope",
+        "purpose": "Leitura e ações"
       }
     },
     "shadows": [
       {
         "name": "card",
-        "value": "0 18px 48px rgba(9, 13, 14, 0.12)",
-        "purpose": "Placas sobrepostas, modal e hover de cartões."
+        "value": "0 18px 48px rgb(19 33 53 / 12%)",
+        "purpose": "Modal e hover de serviços"
       }
     ],
     "motion": [
       {
-        "name": "reveal",
-        "value": "0.68s cubic-bezier(0.22, 1, 0.36, 1)",
-        "purpose": "Variante declarada de opacidade e deslocamento de 24px; conteúdo editorial usa initial=false e permanece visível desde a primeira renderização."
-      },
-      {
-        "name": "stagger",
-        "value": "0.1s; delayChildren: 0.04s",
-        "purpose": "Sequenciamento declarado nos grupos; initial=false preserva sua visibilidade inicial."
-      },
-      {
-        "name": "hero-photo",
-        "value": "0.9s cubic-bezier(0.22, 1, 0.36, 1); delay: 0.16s",
-        "purpose": "Transição declarada do retrato; initial=false mantém a fotografia visível desde a primeira renderização."
-      },
-      {
-        "name": "navigation",
-        "value": "180ms ease",
-        "purpose": "Cor e sublinhado da navegação."
-      },
-      {
-        "name": "button",
-        "value": "200ms",
-        "purpose": "Cor e deslocamento de 2px no botão primário."
-      },
-      {
-        "name": "card-hover",
-        "value": "300ms",
-        "purpose": "Borda, sombra e deslocamento de 4px."
-      },
-      {
-        "name": "mobile-menu",
+        "name": "menu",
         "value": "220ms",
-        "purpose": "Altura e opacidade do menu móvel."
+        "purpose": "Abertura de menu móvel"
       },
       {
         "name": "dialog",
         "value": "240ms",
-        "purpose": "Opacidade, deslocamento e escala do modal."
+        "purpose": "Abertura e fechamento de detalhes"
       }
     ],
     "breakpoints": [
@@ -387,103 +67,36 @@
   },
   "components": [
     {
-      "name": "Botão primário sm",
+      "name": "Botão de contato",
       "kind": "button",
-      "refersTo": "button-primary-sm",
-      "description": "Contato direto em pílula dourada viva com texto preto.",
-      "html": "<button class=\"ds-primary-sm\">Fale pelo WhatsApp <svg aria-hidden=\"true\" width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
-      "css": ".ds-primary-sm{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.75rem 1.25rem;border:1px solid var(--color-gold);border-radius:9999px;background:var(--color-gold);color:var(--brand-ink);font-family:var(--font-body),Manrope,system-ui,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;text-align:center;transition:all 200ms;cursor:pointer}.ds-primary-sm:hover{background:var(--color-brand-400);border-color:var(--color-brand-400);transform:translateY(-2px)}.ds-primary-sm:focus-visible{outline:2px solid var(--color-brand-700);outline-offset:3px}"
-    },
-    {
-      "name": "Botão primário md",
-      "kind": "button",
-      "refersTo": "button-primary-md",
-      "description": "Contato direto em pílula dourada viva com texto preto.",
-      "html": "<button class=\"ds-primary-md\">Fale pelo WhatsApp <svg aria-hidden=\"true\" width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
-      "css": ".ds-primary-md{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.875rem 1.5rem;border:1px solid var(--color-gold);border-radius:9999px;background:var(--color-gold);color:var(--brand-ink);font-family:var(--font-body),Manrope,system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;text-align:center;transition:all 200ms;cursor:pointer}.ds-primary-md:hover{background:var(--color-brand-400);border-color:var(--color-brand-400);transform:translateY(-2px)}.ds-primary-md:focus-visible{outline:2px solid var(--color-brand-700);outline-offset:3px}"
-    },
-    {
-      "name": "Botão primário lg",
-      "kind": "button",
-      "refersTo": "button-primary-lg",
-      "description": "Contato direto em pílula dourada viva com texto preto.",
-      "html": "<button class=\"ds-primary-lg\">Fale pelo WhatsApp <svg aria-hidden=\"true\" width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
-      "css": ".ds-primary-lg{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;padding:1rem 1.75rem;border:1px solid var(--color-gold);border-radius:9999px;background:var(--color-gold);color:var(--brand-ink);font-family:var(--font-body),Manrope,system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;text-align:center;transition:all 200ms;cursor:pointer}.ds-primary-lg:hover{background:var(--color-brand-400);border-color:var(--color-brand-400);transform:translateY(-2px)}.ds-primary-lg:focus-visible{outline:2px solid var(--color-brand-700);outline-offset:3px}"
-    },
-    {
-      "name": "Botão outline",
-      "kind": "button",
-      "refersTo": "button-outline",
-      "description": "Ações auxiliares em painéis claros.",
-      "html": "<button class=\"ds-outline\">Abrir no mapa <svg aria-hidden=\"true\" width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
-      "css": ".ds-outline{display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgb(8 7 6 / 15%);border-radius:9999px;background:transparent;color:var(--brand-ink);padding:0.75rem 1.25rem;font-family:var(--font-body),Manrope,system-ui,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;transition:color 150ms,border-color 150ms;cursor:pointer}.ds-outline:hover{border-color:var(--color-brand-700);color:var(--color-brand-700)}.ds-outline:focus-visible{outline:2px solid var(--color-brand-700);outline-offset:4px}"
-    },
-    {
-      "name": "Botão inverse",
-      "kind": "button",
-      "refersTo": "button-inverse",
-      "description": "Ação branca no encerramento dourado.",
-      "html": "<button class=\"ds-inverse\">Fale pelo WhatsApp <svg aria-hidden=\"true\" width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
-      "css": ".ds-inverse{display:inline-flex;align-items:center;gap:0.75rem;border:0;border-radius:9999px;background:white;color:var(--color-brand-800);padding:1rem 1.5rem;font-family:var(--font-body),Manrope,system-ui,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;transition:transform 150ms;cursor:pointer}.ds-inverse:hover{transform:translateY(-2px)}.ds-inverse:focus-visible{outline:2px solid var(--color-brand-700);outline-offset:4px}"
-    },
-    {
-      "name": "Navegação",
-      "kind": "nav",
-      "description": "Links discretos com sublinhado revelado no hover.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Navegação\"><a href=\"#inicio\">Início</a><a href=\"#atuacao\">Atuação</a><a href=\"#contato\">Contato</a></nav>",
-      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:1.75rem;padding:1.25rem;background:#000000}.ds-nav a{position:relative;color:#ded6ca;padding:0.5rem 0;font-family:var(--font-body),Manrope,system-ui,sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:color 180ms ease}.ds-nav a::after{position:absolute;inset:auto 0 0;height:1px;background:#c1a16f;content:\"\";transform:scaleX(0);transform-origin:left;transition:transform 180ms ease}.ds-nav a:hover{color:#efd2a4}.ds-nav a:hover::after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:2px solid #efd2a4;outline-offset:4px}"
-    },
-    {
-      "name": "Cartão de atuação",
-      "kind": "card",
-      "refersTo": "area-card",
-      "description": "Painel plano com título serifado e ação compacta.",
-      "html": "<article class=\"ds-card\"><span class=\"ds-icon\"><svg aria-hidden=\"true\" width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 3v18M7 21h10M4 7h16M4 7 1 14h6L4 7ZM20 7l-3 7h6l-3-7Z\"/></svg></span><h3>Direito Trabalhista</h3><p>Orientação para compreender seus direitos no trabalho e avaliar os próximos passos com segurança.</p><button type=\"button\">Saiba mais →</button></article>",
-      "css": ".ds-card{display:flex;flex-direction:column;min-height:290px;padding:1.75rem;background:white;border:1px solid rgb(8 7 6 / 10%);color:var(--brand-ink);transition:all 300ms}.ds-card:hover{transform:translateY(-4px);border-color:rgb(160 128 80 / 40%);box-shadow:0 18px 48px rgba(9,13,14,0.12)}.ds-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:9999px;background:var(--color-brand-50);color:var(--color-brand-700)}.ds-card h3{margin:1.75rem 0 0;font-family:var(--font-display),\"Bodoni Moda\",Georgia,serif;font-size:1.8rem;font-weight:500;line-height:1.25}.ds-card p{margin:0.75rem 0 0;font-family:var(--font-body),Manrope,system-ui,sans-serif;font-size:13px;line-height:1.5rem;color:var(--brand-ink-soft)}.ds-card button{align-self:flex-start;margin-top:auto;padding:1.75rem 0 0;border:0;background:transparent;color:var(--color-brand-800);font-family:var(--font-body),Manrope,system-ui,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer}.ds-card button:hover{color:var(--color-brand-700)}.ds-card button:focus-visible{outline:2px solid var(--color-brand-700);outline-offset:4px}@media(min-width:640px){.ds-card{padding:2rem}}"
-    },
-    {
-      "name": "Cartão de avaliação",
-      "kind": "card",
-      "description": "Avaliação completa com cinco estrelas, autor e fonte.",
-      "html": "<figure class=\"ds-review\"><div class=\"ds-stars\" aria-label=\"5 estrelas\"><svg aria-hidden=\"true\" width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z\"/></svg><svg aria-hidden=\"true\" width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z\"/></svg><svg aria-hidden=\"true\" width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z\"/></svg><svg aria-hidden=\"true\" width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z\"/></svg><svg aria-hidden=\"true\" width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z\"/></svg></div><blockquote>“Excelente profissional. Apresenta muito comprometimento e ética jurídica. Transmite clareza aos clientes, recomendo pela seriedade e dedicação ao seu exercício.”</blockquote><figcaption><span class=\"ds-avatar\" aria-hidden=\"true\">C</span><span>Caroline Leal</span></figcaption><a href=\"https://www.google.com/maps?cid=14878382819183384413\">Ver perfil no Google ↗</a></figure>",
-      "css": ".ds-review{display:flex;flex-direction:column;margin:0;padding:1.5rem;border:1px solid rgb(8 7 6 / 10%);background:var(--brand-ivory);color:var(--brand-ink);font-family:var(--font-body),Manrope,system-ui,sans-serif}.ds-stars{display:flex;gap:0.25rem;margin-bottom:1.25rem;color:#785b34}.ds-review blockquote{margin:0;font-size:15px;line-height:1.75rem}.ds-review figcaption{display:flex;align-items:center;gap:0.75rem;margin-top:auto;padding-top:1.75rem;font-size:14px;font-weight:600}.ds-avatar{display:grid;place-items:center;flex-shrink:0;width:40px;height:40px;border-radius:9999px;background:var(--brand-ink);color:var(--color-gold);font-size:14px;font-weight:700}.ds-review a{display:inline-flex;align-items:center;align-self:flex-start;gap:0.5rem;margin-top:0.75rem;padding:0.5rem 0;font-size:12px;color:var(--color-brand-700);text-decoration:underline;text-underline-offset:4px}.ds-review a:hover{color:var(--color-brand-700)}.ds-review a:focus-visible{outline:2px solid var(--color-brand-700);outline-offset:4px}@media(min-width:640px){.ds-review{padding:1.75rem}}"
+      "refersTo": "button-primary",
+      "description": "Contato pelo WhatsApp",
+      "html": "<a class=\"ds-primary\" href=\"#\">Fale pelo WhatsApp</a>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;background:var(--color-brand-500,#40648b);color:var(--color-paper,#fff);border:1px solid var(--color-brand-500,#40648b);border-radius:9999px;padding:14px 24px;font:600 12px Manrope,sans-serif;letter-spacing:.14em;text-decoration:none;transition:background .2s}.ds-primary:hover{background:var(--color-brand-600,#355779);border-color:var(--color-brand-600,#355779)}.ds-primary:focus-visible{outline:2px solid var(--color-brand-700,#2b496b);outline-offset:3px}"
     }
   ],
   "narrative": {
-    "northStar": "Ouro, clareza e proximidade",
-    "overview": "A identidade usa o logo LC original em ouro metálico, com fundo preto, superfícies de leitura em marfim e branco e títulos serifados. Bodoni Moda acompanha o contraste das letras da marca; Manrope mantém a leitura e as ações claras. O logo permanece íntegro nos caminhos de public e nos metadados.",
+    "northStar": "Assessoria com clareza",
+    "overview": "Azul profundo, azul aço e prata extraídos do logo, títulos Cinzel e leitura Manrope para uma identidade profissional coesa.",
     "keyCharacteristics": [
-      "Logo LC metálico original sobre preto.",
-      "Bodoni Moda nos títulos e Manrope na leitura.",
-      "Ouro quente nas ações e bronze profundo em textos claros.",
-      "Fotografias reais e depoimentos com nome e fonte."
+      "Logo original preservado",
+      "Superfícies frias claras e escuras",
+      "Imagens reais e relatos fornecidos"
     ],
     "rules": [
       {
-        "name": "The Contrast Rule",
-        "body": "Use ouro quente com texto preto nas ações e ouro profundo para texto sobre superfícies claras.",
+        "name": "Contraste",
+        "body": "Azul escuro sobre superfícies claras e prata ou azul claro sobre superfícies escuras.",
         "section": "colors"
-      },
-      {
-        "name": "The Serif Rule",
-        "body": "Use Bodoni Moda em peso 500 nos títulos e Manrope na leitura; não simule itálico global nos títulos.",
-        "section": "typography"
-      },
-      {
-        "name": "The Visible Content Rule",
-        "body": "Conteúdo editorial permanece visível desde a primeira renderização; menu e modal animam interações e respeitam movimento reduzido.",
-        "section": "elevation"
       }
     ],
     "dos": [
-      "Do preservar o logo LC original e as fotografias fornecidas.",
-      "Do usar ouro profundo em textos sobre marfim ou branco e ouro claro sobre preto.",
-      "Do manter foco visível, contenção de foco no modal e respeito a movimento reduzido."
+      "Preservar os assets originais",
+      "Centralizar os dados de contato"
     ],
     "donts": [
-      "Don’t inventar resultados, experiência, e-mail, Instagram ou OAB.",
-      "Don’t atribuir atualização em tempo real às avaliações estáticas.",
-      "Don’t substituir os títulos serifados por uma fonte geométrica sem nova orientação de marca."
+      "Inventar dados de contato ou resultados",
+      "Atribuir títulos acadêmicos a partir de fotografia"
     ]
   }
 }

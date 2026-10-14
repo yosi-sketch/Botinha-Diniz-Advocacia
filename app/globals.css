@@ -1,177 +1,91 @@
 @import "tailwindcss";
 
+/* Opaque logo samples: deep navy #132135, steel blue #40648b,
+   metallic silver #d1d1d3. Tailwind v4 theme configuration lives here. */
 :root {
   color-scheme: light;
-  --brand-gold: #c1a16f;
-  --brand-gold-dark: #080706;
-  --brand-gold-deep: #080706;
-  --brand-ink: #080706;
-  --brand-ink-soft: #62594e;
-  --brand-ivory: #faf7f0;
-  --brand-paper: #ffffff;
+  --brand-ink: #132135;
+  --brand-ink-soft: #4b5b6d;
+  --brand-paper: #f5f7fa;
 }
-
 @theme inline {
-  --font-serif: var(--font-display), "Bodoni Moda", Georgia, serif;
+  --font-serif: var(--font-display), "Cinzel", Georgia, serif;
   --font-sans: var(--font-body), "Manrope", system-ui, sans-serif;
-  --color-ink: #080706;
-  --color-ink-soft: #62594e;
-  --color-ivory: #faf7f0;
-  --color-brand-50: #f3ede2;
-  --color-brand-100: #eadfca;
-  --color-brand-200: #efd2a4;
-  --color-brand-300: #dfc092;
-  --color-brand-400: #d4b47f;
-  --color-brand-500: #c1a16f;
-  --color-brand-600: #a08050;
-  --color-brand-700: #785b34;
-  --color-brand-800: #604220;
-  --color-brand-900: #30271b;
-  --color-brand-950: #080706;
-  --color-stone: #c7bba5;
-  --color-marble: #e7decf;
-  --shadow-card: 0 18px 48px rgba(9, 13, 14, 0.12);
+  --color-ink: #132135;
+  --color-ink-soft: #4b5b6d;
+  --color-paper: #ffffff;
+  --color-ivory: #f5f7fa;
+  --color-silver: #d1d1d3;
+  --color-steel: #40648b;
+  --color-brand-50: #edf2f7;
+  --color-brand-100: #dce6ef;
+  --color-brand-200: #c0d1e1;
+  --color-brand-300: #a1bad2;
+  --color-brand-400: #7899bb;
+  --color-brand-500: #40648b;
+  --color-brand-600: #355779;
+  --color-brand-700: #2b496b;
+  --color-brand-800: #203a58;
+  --color-brand-900: #132135;
+  --color-brand-950: #0c1828;
+  --shadow-card: 0 18px 48px rgb(19 33 53 / 12%);
 }
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
-}
-
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
 body {
-  background: var(--brand-ivory);
+  background: var(--brand-paper);
   color: var(--brand-ink);
   font-family: var(--font-body), "Manrope", system-ui, sans-serif;
+  caret-color: #40648b;
 }
-
-::selection {
-  background: #080706;
-  color: #fff;
-}
-
-.eyebrow,
-.eyebrow-light {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.67rem;
-  font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.eyebrow {
-  color: #080706;
-}
-
-.eyebrow-light {
-  color: #efd2a4;
-}
-
-.eyebrow::before,
-.eyebrow-light::before {
-  width: 1.75rem;
-  height: 1px;
-  flex: none;
-  background: currentColor;
-  content: "";
-}
-
+::selection { background: #355779; color: #fff; }
+h1, h2 { text-wrap: balance; }
+.font-serif { font-weight: 500; }
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: #62594e;
-  font-size: 0.68rem;
+  color: #4b5b6d;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
   transition: color 180ms ease;
 }
-
 .nav-link::after {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: auto 0 0;
   height: 1px;
-  background: #080706;
+  background: #2b496b;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 180ms ease;
 }
-
-.nav-link:hover {
-  color: #080706;
+.nav-link:hover { color: #203a58; }
+.nav-link:hover::after { transform: scaleX(1); }
+.footer-link { transition: color 180ms ease; }
+.footer-link:hover { color: #2b496b; }
+:focus-visible { outline: 2px solid #355779; outline-offset: 4px; }
+.brand-hero :focus-visible {
+  outline-color: #c0d1e1;
 }
-
-.nav-link:hover::after {
-  transform: scaleX(1);
-}
-
-.footer-link {
-  transition: color 180ms ease;
-}
-
-.footer-link:hover {
-  color: #efd2a4;
-}
-
-::-webkit-scrollbar {
-  width: 9px;
-}
-
-::-webkit-scrollbar-track {
-  background: #eadfca;
-}
-
+.brand-hero .text-ink-soft { color: #c0d1e1; }
+.brand-hero .text-ink { color: #f5f7fa; }
+.brand-hero .text-brand-700 { color: #a1bad2; }
+.brand-hero .border-ink\/10 { border-color: rgb(209 209 211 / 20%); }
+.brand-hero .bg-ivory { background: #f5f7fa; color: #132135; }
+.brand-hero .border-brand-600\/25 { border-color: rgb(161 186 210 / 40%); }
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-track { background: #edf2f7; }
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #eadfca;
+  border: 2px solid #edf2f7;
   border-radius: 999px;
-  background: #d4b47f;
+  background: #7899bb;
 }
-
-::-webkit-scrollbar-thumb:hover {
-  background: #080706;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-  }
-}
-
-:focus-visible { outline: 2px solid #785b34; outline-offset: 4px; }
-.brand-hero :focus-visible, footer :focus-visible { outline-color: #c1a16f; }
-
-/* Metallic accents sampled from the supplied LC logo; dark gold preserves text contrast. */
-@theme inline { --color-gold: #c1a16f; --color-silver: #c7bba5; }
-h1, h2 { text-wrap: balance; }
-body { caret-color: #d5a83e; }
-
-/* High-contrast serif lettering echoes the supplied metallic wordmark. */
-.font-serif { font-weight: 500; }
-.italic { font-style: normal; }
-
-.brand-hero .text-ink-soft { color: #ded6ca; }
-.brand-hero .text-ink { color: #faf7f0; }
-.brand-hero .text-brand-700 { color: #c1a16f; }
-.brand-hero .border-ink\/10 { border-color: #ffffff26; }
-.brand-hero .bg-ivory { background-color: #faf7f0; color: #080706; }
-.brand-hero .border-brand-600\/25 { border-color: #c1a16f66; }
-.brand-hero a.bg-gold { color: #080706; }
-
-/* Navigation sits on the same black as the supplied logo. */
-header .nav-link { color: #ded6ca; font-size: 0.72rem; }
-header .nav-link:hover { color: #efd2a4; }
-header .nav-link::after { background: #c1a16f; }
-header :focus-visible { outline-color: #efd2a4; }
+::-webkit-scrollbar-thumb:hover { background: #40648b; }
 @media (max-width: 359px) { header img { width: 200px; } }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
