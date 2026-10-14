@@ -1,4 +1,4 @@
-# Dr. Luciano Meni · Advocacia & Assessoria Jurídica
+# Silva & Lopes Advocacia
 
 <!-- impeccable:product-schema 1 -->
 
@@ -6,25 +6,25 @@
 web
 
 ## Users
-Empresários e gestores que procuram assessoria jurídica para seus negócios, em Itajubá e por atendimento remoto.
+Pessoas e empresas que procuram orientação jurídica em Formiga, Minas Gerais.
 
 ## Product Purpose
-Apresentar o escritório e facilitar contato direto pelo WhatsApp.
+Apresentar o escritório, explicar suas áreas de atuação e facilitar contato pelo WhatsApp.
 
 ## Positioning
-Assessoria jurídica empresarial em geral, com atuação em contratos, registro de marcas e patentes. Sede em Itajubá, Minas Gerais.
+Assessoria jurídica nas áreas cível, criminal, previdenciária, empresarial e trabalhista. Prevenção de conflitos e acompanhamento de demandas com análise individual.
 
 ## Operating Context
-Página institucional com navegação por seções, menu móvel, avaliações, perguntas frequentes e detalhes de serviços em modais. Agendamento pelo WhatsApp.
+Página institucional por seções, menu móvel, detalhes dos serviços em modais, perguntas frequentes, link de avaliações no Google e contatos.
 
 ## Capabilities and Constraints
-Next.js 16, React 19, Tailwind CSS 4 e Framer Motion. Usar apenas imagens fornecidas. Preservar responsividade, foco nos modais e movimento reduzido. Não inventar OAB, e-mail, horário fixo, títulos acadêmicos, resultados ou experiência.
+Next.js 16.3.5, React 19, Tailwind CSS 4 e Framer Motion. Preservar os arquivos fornecidos, a responsividade, a navegação por teclado e o movimento reduzido. Não inventar depoimentos, nota do Google, OAB, formação, experiência ou resultados. Sem e-mail, conforme confirmação do cliente. Os telefones são os canais de contato.
 
 ## Brand Commitments
-Logo azul fornecido com monograma NL e nome Luciano Meni Gonçalves, preservando a transparência original e sem fundo adicional. Azul profundo, azul aço e prata. Cinzel nos títulos, com serifas que acompanham o logo; Manrope para leitura. Superfícies claras frias alternadas com azul profundo. Comunicação sóbria, clara e profissional.
+Logo original Silva & Lopes em PNG com transparência preservada. Vinho médio #5e171f e carvão #272625 extraídos dos pixels opacos. Marfim e linho complementam a identidade. Cormorant Garamond nos títulos, com serifas de alto contraste compatíveis com o logo; Manrope na leitura e nos controles. Cabeçalho e rodapé claros, hero vinho escuro, serviços claros e faixa de atendimento escura.
 
 ## Evidence on Hand
-Telefone e WhatsApp: (35) 98881-4505. Endereço: Av. B P S, n. 944 - Pinheirinho, Itajubá - MG, 37500-179. Logo, retrato e fotografia de certificado em public. Nota 5,0 e 103 avaliações fornecidas pelo cliente, como dados estáticos. Perfil Google: cid 1823622625055284594. Depoimentos completos do arquivo enviado. Instagram @drlucianomeni visível na fotografia fornecida. E-mail e OAB não informados.
+WhatsApp principal: (37) 99902-0336. Segundo WhatsApp: (37) 99939-0455. Endereço: R. Campos Altos, nº 276 - Formiga, MG, 35576-172. Instagram: @silvaelopesadvocacia. Google: cid 5097582474649043815; 81 avaliações fornecidas pelo cliente, valor estático. Nenhuma nota ou transcrição de avaliação fornecida. Logo em public/Logo Jurídico Silva & Lopes.png. Imagem institucional dos dois advogados copiada da imagem anexada para public/silva-lopes-equipe.png, sem edição ou recorte.
 
 ## Product Principles
-Contato direto, compreensão do negócio, análise cuidadosa, comunicação clara e experiência acessível.
+Escuta, análise cuidadosa, comunicação clara, prevenção de conflitos e acesso direto à equipe.

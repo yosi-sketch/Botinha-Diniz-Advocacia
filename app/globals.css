@@ -1,50 +1,50 @@
 @import "tailwindcss";
 
-/* Opaque logo samples: deep navy #132135, steel blue #40648b,
-   metallic silver #d1d1d3. Tailwind v4 theme configuration lives here. */
+/* Logo original, pixels opacos: vinho médio #5e171f e carvão #272625.
+   A escala vinho e os neutros quentes complementam as cores extraídas.
+   Tailwind CSS 4 configura o tema neste arquivo. */
 :root {
   color-scheme: light;
-  --brand-ink: #132135;
-  --brand-ink-soft: #4b5b6d;
-  --brand-paper: #f5f7fa;
+  --brand-ink: #272625;
+  --brand-ink-soft: #625954;
+  --brand-paper: #f8f5f0;
 }
 @theme inline {
-  --font-serif: var(--font-display), "Cinzel", Georgia, serif;
+  --font-serif: var(--font-display), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-body), "Manrope", system-ui, sans-serif;
-  --color-ink: #132135;
-  --color-ink-soft: #4b5b6d;
+  --color-ink: #272625;
+  --color-ink-soft: #625954;
   --color-paper: #ffffff;
-  --color-ivory: #f5f7fa;
-  --color-silver: #d1d1d3;
-  --color-steel: #40648b;
-  --color-brand-50: #edf2f7;
-  --color-brand-100: #dce6ef;
-  --color-brand-200: #c0d1e1;
-  --color-brand-300: #a1bad2;
-  --color-brand-400: #7899bb;
-  --color-brand-500: #40648b;
-  --color-brand-600: #355779;
-  --color-brand-700: #2b496b;
-  --color-brand-800: #203a58;
-  --color-brand-900: #132135;
-  --color-brand-950: #0c1828;
-  --shadow-card: 0 18px 48px rgb(19 33 53 / 12%);
+  --color-ivory: #f8f5f0;
+  --color-linen: #e9e1d8;
+  --color-brand-50: #faf2f2;
+  --color-brand-100: #f1dddd;
+  --color-brand-200: #e0baba;
+  --color-brand-300: #cb9496;
+  --color-brand-400: #ac666b;
+  --color-brand-500: #853740;
+  --color-brand-600: #702630;
+  --color-brand-700: #5e171f;
+  --color-brand-800: #4d1019;
+  --color-brand-900: #3c0e15;
+  --color-brand-950: #280b10;
+  --shadow-card: 0 18px 48px rgb(60 14 21 / 12%);
 }
-html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
 body {
   background: var(--brand-paper);
   color: var(--brand-ink);
   font-family: var(--font-body), "Manrope", system-ui, sans-serif;
-  caret-color: #40648b;
+  caret-color: var(--color-brand-700);
 }
-::selection { background: #355779; color: #fff; }
+::selection { background: var(--color-brand-700); color: #fff; }
 h1, h2 { text-wrap: balance; }
 .font-serif { font-weight: 500; }
 .nav-link {
   position: relative;
-  padding-block: 0.5rem;
-  color: #4b5b6d;
-  font-size: 0.72rem;
+  padding-block: 0.75rem;
+  color: var(--brand-ink-soft);
+  font-size: 0.8rem;
   font-weight: 600;
   transition: color 180ms ease;
 }
@@ -52,35 +52,31 @@ h1, h2 { text-wrap: balance; }
   position: absolute;
   inset: auto 0 0;
   height: 1px;
-  background: #2b496b;
+  background: var(--color-brand-700);
   content: "";
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 180ms ease;
 }
-.nav-link:hover { color: #203a58; }
+.nav-link:hover { color: var(--color-brand-700); }
 .nav-link:hover::after { transform: scaleX(1); }
 .footer-link { transition: color 180ms ease; }
-.footer-link:hover { color: #2b496b; }
-:focus-visible { outline: 2px solid #355779; outline-offset: 4px; }
-.brand-hero :focus-visible {
-  outline-color: #c0d1e1;
-}
-.brand-hero .text-ink-soft { color: #c0d1e1; }
-.brand-hero .text-ink { color: #f5f7fa; }
-.brand-hero .text-brand-700 { color: #a1bad2; }
-.brand-hero .border-ink\/10 { border-color: rgb(209 209 211 / 20%); }
-.brand-hero .bg-ivory { background: #f5f7fa; color: #132135; }
-.brand-hero .border-brand-600\/25 { border-color: rgb(161 186 210 / 40%); }
+.footer-link:hover { color: var(--color-brand-700); }
+:focus-visible { outline: 2px solid var(--color-brand-600); outline-offset: 4px; }
+.brand-hero :focus-visible { outline-color: var(--color-brand-200); }
+.brand-hero .text-ink-soft { color: var(--color-brand-100); }
+.brand-hero .text-ink { color: var(--color-ivory); }
+.brand-hero .text-brand-700 { color: var(--color-brand-200); }
+.brand-hero .border-ink\/10 { border-color: rgb(241 221 221 / 20%); }
+.brand-hero a:hover { color: #fff; }
 ::-webkit-scrollbar { width: 9px; }
-::-webkit-scrollbar-track { background: #edf2f7; }
+::-webkit-scrollbar-track { background: var(--color-brand-50); }
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #edf2f7;
+  border: 2px solid var(--color-brand-50);
   border-radius: 999px;
-  background: #7899bb;
+  background: var(--color-brand-400);
 }
-::-webkit-scrollbar-thumb:hover { background: #40648b; }
-@media (max-width: 359px) { header img { width: 200px; } }
+::-webkit-scrollbar-thumb:hover { background: var(--color-brand-700); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {

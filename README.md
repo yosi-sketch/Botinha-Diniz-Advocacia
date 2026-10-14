@@ -1,22 +1,26 @@
-# Dr. Luciano Meni · Advocacia & Assessoria Jurídica
+# Silva & Lopes Advocacia
 
-Site institucional com foco em assessoria jurídica empresarial, contratos, registro de marcas e patentes. Sede em Itajubá, MG, com atendimento presencial e remoto.
+Site institucional do escritório em Formiga, MG. Apresenta as áreas cível, criminal, previdenciária, empresarial e trabalhista, com contato pelos dois WhatsApps fornecidos.
 
 ## Desenvolvimento
-Instale com npm install e inicie com npm run dev.
-Validação da aplicação: npx eslint app, npx tsc --noEmit e npm run build.
+Instale com `npm install` e inicie com `npm run dev`.
+Validação: `npm run lint -- app`, `node node_modules/typescript/bin/tsc --noEmit` e `npm run build`.
+Os scripts executam os arquivos das ferramentas diretamente para funcionar em caminhos Windows que contêm `&`.
 
 ## Identidade e conteúdo
-Tema Tailwind CSS 4 em app/globals.css, configurado com @theme inline. Azul profundo #132135, azul aço #40648b e prata #d1d1d3 são médias das regiões opacas do logo, excluindo transparência. Neutros frios complementam a paleta.
-Fontes Cinzel e Manrope são carregadas por next/font/google e servidas pela aplicação.
-Dados de contato, caminhos de assets e depoimentos em app/lib/brand.ts. Áreas de atuação, modais e seções em app/page.tsx; metadados em app/layout.tsx.
+Tailwind CSS 4 usa `@theme inline` em `app/globals.css`. Vinho médio #5e171f e carvão #272625 foram extraídos por amostragem dos pixels opacos do logo original. Marfim #f8f5f0 e linho #e9e1d8 complementam a paleta.
+Cormorant Garamond nos títulos e Manrope no corpo são carregadas por `next/font/google` e servidas pela aplicação.
+Contatos, links e arquivos estão centralizados em `app/lib/brand.ts`. Seções e modais estão em `app/page.tsx`; metadados em `app/layout.tsx`.
 
 ## Dados do escritório
-WhatsApp e telefone: (35) 98881-4505.
-Endereço: Av. B P S, n. 944 - Pinheirinho, Itajubá - MG, 37500-179.
-Instagram: @drlucianomeni, identificado na imagem fornecida.
-E-mail, OAB e horários regulares não foram informados e não são exibidos.
-Nota 5,0 e 103 avaliações são dados estáticos enviados pelo cliente. Os seis relatos usam os trechos completos fornecidos, sem completar avaliações truncadas.
-O perfil Google usa cid 1823622625055284594.
-Configure NEXT_PUBLIC_SITE_URL com o domínio de produção para as imagens de compartilhamento.
-Logo atual: public/Logotipo Jurídico Azul com Monograma NL.png. Os arquivos originais de public são usados sem alterações.
+WhatsApp principal: (37) 99902-0336.
+Segundo WhatsApp: (37) 99939-0455.
+Endereço: R. Campos Altos, nº 276 - Formiga, MG, 35576-172.
+Instagram: @silvaelopesadvocacia.
+Sem e-mail, conforme confirmação do cliente. OAB, formação, resultados e tempo de experiência não foram informados.
+As 81 avaliações são um dado estático fornecido pelo cliente. O site direciona ao perfil Google de cid 5097582474649043815 para os relatos e dados atuais; não apresenta nota ou depoimentos não fornecidos.
+Configure `NEXT_PUBLIC_SITE_URL` com o domínio de produção para habilitar as imagens de compartilhamento com endereço absoluto.
+
+## Arquivos
+- `public/Logo Jurídico Silva & Lopes.png`: logo original transparente, intacto, em cabeçalho, sobre, rodapé e ícones.
+- `public/silva-lopes-equipe.png`: imagem institucional anexada pelo cliente, copiada integralmente, em hero e compartilhamento.

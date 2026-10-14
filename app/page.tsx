@@ -16,14 +16,15 @@ import {
   Menu,
   Scale,
   BriefcaseBusiness,
-  FileText,
-  Lightbulb,
+  ShieldCheck,
+  HeartHandshake,
+  Users,
   Camera,
   Star,
   X,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
-import { brand, contact, whatsapp, telephone, maps, reviews, testimonials } from "./lib/brand";
+import { brand, contact, whatsapp, secondWhatsapp, whatsappFor, maps, reviews } from "./lib/brand";
 
 function WhatsAppMark({size = 16, strokeWidth = 1.8}: {size?: number; strokeWidth?: number}) { return <Phone size={size} strokeWidth={strokeWidth} aria-hidden="true" />; }
 
@@ -43,28 +44,34 @@ const stagger: Variants = {
 
 const areas = [
   {
-    title: "Assessoria empresarial", icon: BriefcaseBusiness,
-    summary: "Apoio jurídico para as decisões, as relações comerciais e os desafios do dia a dia da sua empresa.",
-    details: "A assessoria começa pela compreensão do negócio e das suas necessidades. O Dr. Luciano Meni analisa documentos e questões jurídicas para orientar decisões e acompanhar as demandas da empresa, com comunicação clara em cada etapa.",
-    topics: ["Consultoria para decisões empresariais", "Análise de documentos e relações comerciais", "Orientação jurídica preventiva", "Acompanhamento de demandas da empresa"],
+    title: "Direito cível", icon: Scale,
+    summary: "Cuidado com o seu patrimônio, suas relações e os direitos que fazem parte da sua vida.",
+    details: "A Silva & Lopes oferece orientação para prevenir conflitos e acompanhar demandas cíveis. Cada situação é analisada com atenção aos documentos, às responsabilidades envolvidas e aos caminhos possíveis para a defesa de seus direitos.",
+    topics: ["Proteção do patrimônio e das relações civis", "Análise de contratos e obrigações", "Orientação para prevenção de conflitos", "Acompanhamento de demandas e reparações, quando cabíveis"],
   },
   {
-    title: "Contratos", icon: FileText,
-    summary: "Elaboração e revisão cuidadosa de contratos, alinhadas às particularidades de cada negócio.",
-    details: "Relações comerciais bem definidas começam com documentos que refletem a realidade do negócio. O atendimento abrange a elaboração, a análise e a revisão de contratos, com orientação sobre cláusulas, responsabilidades e os pontos que merecem atenção.",
-    topics: ["Elaboração de contratos empresariais", "Revisão de cláusulas e responsabilidades", "Análise de riscos contratuais", "Orientação em negociações comerciais"],
+    title: "Direito criminal", icon: ShieldCheck,
+    summary: "Assessoria estratégica para a defesa de direitos fundamentais e a proteção da liberdade.",
+    details: "Questões criminais exigem uma análise responsável e atenção a cada etapa. O escritório orienta sobre os direitos envolvidos e acompanha a demanda, com uma atuação voltada à defesa e à proteção das garantias fundamentais.",
+    topics: ["Orientação e assessoria em questões criminais", "Defesa de direitos e garantias fundamentais", "Análise da demanda e da documentação", "Acompanhamento das etapas da defesa"],
   },
   {
-    title: "Registro de marcas", icon: Scale,
-    summary: "Orientação e acompanhamento para cuidar da identidade que sua empresa está construindo.",
-    details: "O nome e a identidade da empresa fazem parte da sua trajetória. O Dr. Luciano Meni oferece assessoria em registro de marcas, desde a análise inicial até o acompanhamento do pedido, esclarecendo as etapas e as particularidades de cada demanda.",
-    topics: ["Análise inicial da marca", "Orientação sobre o pedido de registro", "Acompanhamento do processo", "Assessoria sobre a proteção da identidade empresarial"],
+    title: "Direito previdenciário", icon: HeartHandshake,
+    summary: "Orientação para compreender benefícios previdenciários e assistenciais e os requisitos do seu pedido.",
+    details: "A assessoria considera sua situação, o histórico e os documentos disponíveis para esclarecer as possibilidades relativas a benefícios. O atendimento ajuda a organizar a demanda e acompanhar as etapas necessárias, conforme as particularidades de cada caso.",
+    topics: ["Orientação sobre benefícios previdenciários", "Análise de benefícios assistenciais", "Organização e avaliação de documentos", "Acompanhamento de pedidos e demandas"],
   },
   {
-    title: "Patentes", icon: Lightbulb,
-    summary: "Assessoria para compreender os caminhos de proteção de invenções e projetos inovadores.",
-    details: "Cada projeto exige uma avaliação própria. A assessoria em patentes ajuda a compreender a demanda, organizar as informações disponíveis e avaliar os próximos passos relacionados à proteção de invenções.",
-    topics: ["Análise da demanda e da documentação", "Orientação sobre propriedade intelectual", "Assessoria em pedidos de patente", "Acompanhamento das etapas do processo"],
+    title: "Direito empresarial", icon: BriefcaseBusiness,
+    summary: "Apoio às decisões do seu negócio, com atenção à prevenção de riscos e às relações comerciais.",
+    details: "A Silva & Lopes acompanha questões jurídicas da atividade empresarial, buscando compreender a realidade de cada negócio. A orientação preventiva auxilia na análise de documentos, contratos e decisões, com clareza sobre responsabilidades e riscos.",
+    topics: ["Assessoria jurídica preventiva", "Análise de contratos e relações comerciais", "Orientação para decisões empresariais", "Acompanhamento de demandas da empresa"],
+  },
+  {
+    title: "Direito trabalhista", icon: Users,
+    summary: "Assessoria nas relações de trabalho, com atenção aos direitos, às obrigações e à prevenção de conflitos.",
+    details: "As relações de trabalho envolvem direitos e responsabilidades que merecem acompanhamento cuidadoso. O escritório analisa a demanda, esclarece dúvidas e orienta sobre os próximos passos, considerando os documentos e o contexto de cada situação.",
+    topics: ["Orientação sobre direitos e obrigações laborais", "Análise de documentos e relações de trabalho", "Prevenção de riscos e conflitos", "Acompanhamento de demandas trabalhistas"],
   },
 ];
 
@@ -93,7 +100,7 @@ function Heading({
         <p
           className={
             light
-              ? "mt-5 max-w-xl text-[15px] leading-7 text-white/68"
+              ? "mt-5 max-w-xl text-[15px] leading-7 text-brand-100"
               : "mt-5 max-w-xl text-[15px] leading-7 text-ink-soft"
           }
         >
@@ -111,6 +118,15 @@ export default function Home() {
 
   const dialogRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [menuOpen]);
 
   useEffect(() => {
     if (!activeArea) return;
@@ -151,18 +167,18 @@ export default function Home() {
           <div className="mx-auto flex h-[84px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[104px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Dr. Luciano Meni — início"
+              aria-label="Silva & Lopes Advocacia — início"
               onClick={closeMenu}
               className="shrink-0"
             >
               <Image
                 src={brand.logo}
-                width={2172}
-                height={724}
-                alt="Dr. Luciano Meni · Advocacia & Assessoria Jurídica"
+                width={1774}
+                height={886}
+                alt={brand.businessName}
                 preload
-                className="h-auto w-[230px] sm:w-[300px]"
-                sizes="(max-width: 640px) 230px, 300px"
+                className="h-auto w-[140px] sm:w-[180px]"
+                sizes="(max-width: 640px) 140px, 180px"
               />
             </a>
             <nav
@@ -190,7 +206,7 @@ export default function Home() {
                 href={contact}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp de Dr. Luciano Meni"
+                aria-label="WhatsApp da Silva & Lopes Advocacia"
                 className="grid size-10 place-items-center rounded-full border border-ink/20 text-brand-700 transition-colors hover:border-brand-700 hover:text-brand-800"
               >
                 <WhatsAppMark size={17} strokeWidth={1.7} />
@@ -260,7 +276,7 @@ export default function Home() {
 
         <section
           id="inicio"
-          className="brand-hero relative isolate overflow-hidden scroll-mt-24 border-b border-ink/10 bg-ink"
+          className="brand-hero relative isolate overflow-hidden scroll-mt-24 border-b border-ink/10 bg-brand-900"
         >
           <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-12 px-5 py-14 sm:px-8 sm:py-20 lg:min-h-[710px] lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:px-12 lg:py-20">
             <motion.div
@@ -271,16 +287,16 @@ export default function Home() {
             >
               <motion.h1
                 variants={reveal}
-                className="max-w-[720px] font-serif text-[2.2rem] leading-[1.18] tracking-[-0.025em] text-white sm:text-[2.8rem] lg:text-[3.2rem]"
+                className="max-w-[720px] font-serif text-[2.75rem] leading-[1.06] tracking-[-0.025em] text-white sm:text-[3.5rem] lg:text-[4.2rem]"
               >
-                Seu negócio, bem assessorado.{" "}<br />
-                <span className="text-brand-700">Decisões com clareza.</span>
+                Proteção jurídica.{" "}<br />
+                <span className="text-brand-700">Segurança para seguir.</span>
               </motion.h1>
               <motion.p
                 variants={reveal}
                 className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft sm:text-base sm:leading-8"
               >
-                Assessoria jurídica empresarial com o Dr. Luciano Meni. Orientação em contratos, marcas e patentes para acompanhar sua empresa, com análise cuidadosa e clareza em cada decisão.
+                Do cível ao criminal, uma parceria para cuidar dos seus direitos. A Silva & Lopes Advocacia orienta pessoas e empresas na prevenção de conflitos e na condução de demandas, com atenção a cada situação.
               </motion.p>
               <motion.div
                 variants={reveal}
@@ -311,14 +327,14 @@ export default function Home() {
               >
                 <span className="inline-flex items-center gap-2">
                   <MapPin size={15} className="text-brand-700" />
-                  Itajubá · Minas Gerais
+                  Formiga · Minas Gerais
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <Phone size={15} className="text-brand-700" />
                   {brand.phone}
                 </span>
                 <a href="#avaliacoes" className="inline-flex items-center gap-2 py-2 text-sm text-brand-200 underline underline-offset-4">
-                  <Star size={15} fill="currentColor" aria-hidden="true" /> Leia os depoimentos
+                  <Star size={15} aria-hidden="true" /> Avaliações no Google
                 </a>
               </motion.div>
             </motion.div>
@@ -332,30 +348,15 @@ export default function Home() {
               }}
               className="relative mx-auto w-full max-w-[460px] lg:ml-auto lg:mr-3"
             >
-              <div className="relative aspect-[4/5] overflow-hidden bg-brand-100">
+              <div className="relative aspect-[5/6] overflow-hidden bg-brand-800">
                 <Image
                   src={brand.portrait}
-                  alt="Dr. Luciano Meni, advogado com atuação em assessoria jurídica empresarial em Itajubá"
+                  alt="Equipe da Silva & Lopes Advocacia em material institucional sobre parceria jurídica especializada"
                   fill
                   preload
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 40vw"
-                  className="object-cover object-[50%_35%]"
+                  className="object-contain"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-950/90 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
-                  <div>
-                    <p className="font-serif text-xl">Dr. Luciano Meni</p>
-                    <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-white/80">
-                      Advocacia & Assessoria Jurídica
-                    </p>
-                  </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-full border border-white/60">
-                    <ArrowUpRight size={18} />
-                  </span>
-                </div>
-              </div>
-              <div className="absolute -left-3 top-[15%] border border-ink/10 bg-ivory px-4 py-3 text-[10px] font-medium tracking-[0.1em] text-ink shadow-card sm:-left-10 sm:px-5">
-                ASSESSORIA PARA SUA EMPRESA
               </div>
             </motion.div>
           </div>
@@ -367,9 +368,9 @@ export default function Home() {
         >
           <div className="mx-auto grid max-w-7xl gap-6 px-5 py-7 sm:grid-cols-3 sm:gap-4 sm:px-8 lg:px-12">
             {[
-              ["Empresas", "Assessoria jurídica para o seu negócio"],
-              ["Contratos", "Elaboração, análise e revisão"],
-              ["Marcas e patentes", "Orientação em propriedade intelectual"],
+              ["Prevenção", "Orientação antes de decidir"],
+              ["Defesa", "Atenção aos seus direitos"],
+              ["Assessoria", "Cuidado com pessoas e empresas"],
             ].map(([value, label], index) => (
               <div
                 key={value}
@@ -404,10 +405,10 @@ export default function Home() {
             >
               <Heading
 
-                description="Do planejamento às demandas do dia a dia: orientação jurídica alinhada à realidade da sua empresa."
+                description="Questões pessoais e empresariais merecem análise cuidadosa. Conheça as áreas em que podemos orientar você."
               >
-                Apoio jurídico para quem{" "}
-                <span className="text-brand-700">empreende.</span>
+                Seus direitos, nossa{" "}
+                <span className="text-brand-700">atenção.</span>
               </Heading>
               <p className="max-w-[250px] pb-1 text-xs leading-6 text-ink-soft">
                 Selecione uma área para conhecer os temas atendidos.
@@ -418,7 +419,7 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.12 }}
               variants={stagger}
-              className="mt-12 grid gap-4 sm:grid-cols-2"
+              className="mt-12 divide-y divide-ink/15 border-y border-ink/15"
             >
               {areas.map((area) => {
                 const Icon = area.icon;
@@ -426,25 +427,27 @@ export default function Home() {
                   <motion.article
                     key={area.title}
                     variants={reveal}
-                    className="group flex min-h-[290px] flex-col border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-600/40 hover:shadow-card sm:p-8"
+                    className="group grid items-start gap-5 py-8 sm:grid-cols-[48px_1fr_auto] sm:gap-7 sm:py-9"
                   >
                     <div className="flex items-start justify-between">
                       <span className="grid size-12 place-items-center rounded-full bg-brand-50 text-brand-700">
                         <Icon size={21} strokeWidth={1.5} />
                       </span>
                     </div>
-                    <h3 className="mt-7 max-w-sm font-serif text-[1.8rem] leading-tight text-ink">
+                    <div>
+                    <h3 className="max-w-sm font-serif text-[1.8rem] leading-tight text-ink">
                       {area.title}
                     </h3>
                     <p className="mt-3 max-w-xl text-[13px] leading-6 text-ink-soft">
                       {area.summary}
                     </p>
+                    </div>
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
                       aria-haspopup="dialog"
                       aria-label={`Saiba mais sobre ${area.title.toLowerCase()}`}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-7 text-[10px] font-semibold uppercase tracking-[0.15em] text-brand-800 hover:text-brand-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-700"
+                      className="group/link inline-flex min-h-11 w-fit items-center gap-2 text-xs font-semibold text-brand-800 hover:text-brand-700 sm:self-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-700"
                     >
                       Saiba mais{" "}
                       <ArrowRight
@@ -464,11 +467,11 @@ export default function Home() {
           className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-24 lg:px-12">
-            <figure className="mx-auto w-full max-w-[330px]">
-              <div className="relative aspect-[9/16] overflow-hidden bg-brand-50">
-                <Image src={brand.certificate} alt="Registro de formação de Luciano Meni compartilhado pelo escritório" fill sizes="(max-width: 640px) 85vw, 330px" className="object-contain" />
+            <figure className="mx-auto w-full max-w-[460px]">
+              <div className="relative aspect-[6/5] bg-ivory p-8 sm:p-10">
+                <Image src={brand.logo} alt={brand.businessName} fill sizes="(max-width: 640px) 90vw, 460px" className="object-contain p-8 sm:p-10" />
               </div>
-              <figcaption className="mt-4 text-xs leading-6 text-ink-soft">Formação e atualização fazem parte da trajetória profissional.</figcaption>
+              <figcaption className="mt-4 text-sm leading-6 text-ink-soft">Silva & Lopes Advocacia · Formiga, Minas Gerais.</figcaption>
             </figure>
             <motion.div
               initial={false}
@@ -480,20 +483,20 @@ export default function Home() {
                 variants={reveal}
                 className="mt-4 max-w-2xl font-serif text-4xl leading-[1.08] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.45rem]"
               >
-                Conhecimento jurídico.{" "}
-                <span className="text-brand-700">Atenção ao seu negócio.</span>
+                Uma parceria jurídica.{" "}
+                <span className="text-brand-700">Um cuidado próximo.</span>
               </motion.h2>
               <motion.p
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                Com sede em Itajubá, Minas Gerais, o Dr. Luciano Meni Gonçalves atua em advocacia e assessoria jurídica para empresas. Contratos, registro de marcas e patentes integram uma atuação voltada às necessidades de cada negócio.
+                Com sede em Formiga, Minas Gerais, a Silva & Lopes Advocacia oferece assessoria jurídica a pessoas e empresas. A atuação abrange as áreas cível, criminal, previdenciária, empresarial e trabalhista, com atenção à prevenção de conflitos e à defesa de direitos.
               </motion.p>
               <motion.p
                 variants={reveal}
                 className="mt-4 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                O atendimento começa com uma conversa sobre sua empresa e a análise das informações disponíveis. A proposta é traduzir questões jurídicas em orientações claras, com atenção aos documentos, às relações comerciais e aos próximos passos. Atendimento presencial e remoto, mediante agendamento.
+                Mais do que acompanhar uma demanda, a proposta é ajudar você a compreender sua situação e tomar decisões com segurança. O atendimento começa pela escuta e pela análise das informações disponíveis, para orientar os próximos passos com clareza e responsabilidade.
               </motion.p>
               <motion.a
                 variants={reveal}
@@ -502,7 +505,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="group mt-8 inline-flex items-center gap-2 border-b border-brand-700/40 pb-2 text-xs font-semibold uppercase tracking-[0.13em] text-brand-800 transition-colors hover:border-brand-700 hover:text-brand-700"
               >
-                Converse com o Dr. Luciano{" "}
+                Converse com nossa equipe{" "}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -517,7 +520,7 @@ export default function Home() {
             <Heading
 
               light
-              description="Entender a empresa, avaliar documentos e explicar os caminhos possíveis faz parte de uma assessoria próxima e responsável."
+              description="Ouvir sua situação, analisar as informações e explicar os caminhos possíveis são partes de uma assessoria próxima e responsável."
             >
               Clareza para compreender cada{" "}
               <span className="text-brand-200">etapa.</span>
@@ -531,8 +534,8 @@ export default function Home() {
             >
               {[
                 [
-                  "Compreensão do negócio",
-                  "Conhecer a realidade da empresa é o ponto de partida para uma orientação jurídica pertinente.",
+                  "Escuta e compreensão",
+                  "Conhecer sua situação e suas dúvidas é o ponto de partida para uma orientação jurídica pertinente.",
                 ],
                 [
                   "Comunicação clara",
@@ -540,7 +543,7 @@ export default function Home() {
                 ],
                 [
                   "Análise cuidadosa",
-                  "Cada contrato, marca ou demanda recebe atenção às particularidades do negócio.",
+                  "Cada documento e demanda recebe atenção às particularidades do caso, com foco na prevenção de riscos e na defesa de direitos.",
                 ],
               ].map(([title, description]) => (
                 <motion.div
@@ -550,7 +553,7 @@ export default function Home() {
                 >
                   <div>
                     <h3 className="font-serif text-2xl">{title}</h3>
-                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-white/65">
+                    <p className="mt-2 max-w-lg text-[13px] leading-6 text-brand-100">
                       {description}
                     </p>
                   </div>
@@ -565,9 +568,9 @@ export default function Home() {
             <h2 id="questions-title" className="font-serif text-3xl leading-tight text-ink sm:text-4xl">Antes da nossa primeira conversa.</h2>
             <div className="divide-y divide-ink/15 border-y border-ink/15">
               {[
-                ["Como funciona o primeiro contato?", "Envie uma mensagem pelo WhatsApp e conte brevemente a necessidade da sua empresa. O escritório orientará sobre disponibilidade, agendamento e informações iniciais."],
-                ["O atendimento pode ser remoto?", "Sim. Além do atendimento presencial em Itajubá, o contato e a orientação podem ocorrer de forma remota. Consulte pelo WhatsApp o formato adequado à sua demanda."],
-                ["Quais documentos devo separar?", "Tenha em mãos os documentos relacionados à sua questão, como contratos, informações da empresa ou materiais da marca. A documentação necessária será indicada conforme a análise inicial."],
+                ["Como funciona o primeiro contato?", "Envie uma mensagem para um dos nossos WhatsApps e conte brevemente sua necessidade. A equipe orientará sobre disponibilidade, agendamento e informações iniciais."],
+                ["Onde fica o escritório?", "Estamos na Rua Campos Altos, nº 276, em Formiga, Minas Gerais. Entre em contato pelo WhatsApp para combinar sua visita e consultar o formato de atendimento adequado à sua demanda."],
+                ["Quais documentos devo separar?", "Separe os documentos relacionados à sua questão, como contratos, comunicações ou documentos de benefícios. A equipe indicará o que será necessário conforme a análise inicial."],
               ].map(([question, answer]) => (
                 <details key={question} className="group py-6">
                   <summary className="cursor-pointer text-base font-semibold text-ink marker:text-brand-700">{question}</summary>
@@ -587,8 +590,8 @@ export default function Home() {
 
               description="Conheça as experiências compartilhadas no Google por quem foi atendido."
             >
-              O que dizem sobre{" "}
-              <span className="text-brand-700">Dr. Luciano Meni.</span>
+              Experiências compartilhadas.{" "}
+              <span className="text-brand-700">Conheça no Google.</span>
             </Heading>
             <div className="relative flex min-h-[245px] flex-col justify-between overflow-hidden border border-ink/10 bg-ivory p-7 sm:p-9">
 
@@ -597,17 +600,14 @@ export default function Home() {
                   <MapPin size={20} strokeWidth={1.6} />
                 </span>
                 <div>
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.17em] text-ink-soft">
-                    Avaliações no Google
-                  </span>
-                  <p className="mt-1 font-serif text-2xl text-ink">
-                    {brand.googleRating} · {brand.googleReviewCount} avaliações no Google
+                  <p className="font-serif text-2xl text-ink">
+                    {brand.googleReviewCount} avaliações no Google
                   </p>
                 </div>
               </div>
               <div className="relative mt-8 flex flex-wrap items-end justify-between gap-5">
                 <p className="max-w-xs text-[13px] leading-6 text-ink-soft">
-                  Nota e quantidade de avaliações podem mudar. Consulte o perfil no Google para informações atualizadas.
+                  Conheça os relatos sobre a Silva & Lopes Advocacia. A quantidade de avaliações pode mudar; consulte o perfil para informações atualizadas.
                 </p>
                 <a
                   href={reviews}
@@ -621,16 +621,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mx-auto mt-12 grid max-w-7xl gap-5 px-5 sm:px-8 md:grid-cols-2 lg:grid-cols-3 lg:px-12">
-            {testimonials.map(({ name, quote }) => (
-              <figure key={name} className="flex flex-col border border-ink/10 bg-ivory p-6 sm:p-7">
-                <div className="mb-5 flex items-center gap-1 text-brand-700" role="img" aria-label="5 estrelas">{[0,1,2,3,4].map(star => <Star key={star} size={17} fill="currentColor" strokeWidth={1.5} aria-hidden="true" />)}</div>
-                <blockquote className="text-[15px] leading-7 text-ink">“{quote}”</blockquote>
-                <figcaption className="mt-auto flex items-center gap-3 pt-7"><span className="grid size-10 shrink-0 place-items-center rounded-full bg-ink text-sm font-bold text-silver" aria-hidden="true">{name.charAt(0)}</span><span className="text-sm font-semibold text-ink">{name}</span></figcaption>
-                <a href={reviews} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-2 py-2 text-xs text-brand-700 underline underline-offset-4">Ver perfil no Google <ArrowUpRight size={14} /></a>
-              </figure>
-            ))}
-          </div>
         </section>
 
         <section
@@ -641,7 +631,7 @@ export default function Home() {
             <div>
               <Heading
 
-                description="Sede em Itajubá, Minas Gerais. Entre em contato para consultar a disponibilidade e agendar seu atendimento."
+                description="Sede em Formiga, Minas Gerais. Converse com nossa equipe pelo WhatsApp para consultar a disponibilidade e combinar seu atendimento."
               >
                 Um primeiro contato com{" "}
                 <span className="text-brand-700">tranquilidade.</span>
@@ -655,9 +645,9 @@ export default function Home() {
                 >
                   <Phone size={16} /> Fale pelo WhatsApp
                 </GlowingButton>
-                <a href={telephone} className="text-sm text-ink-soft hover:text-brand-700">Telefone: {brand.phone}</a>
-                <a href={contact} target="_blank" rel="noreferrer" className="text-[11px] text-ink-soft hover:text-brand-700">WhatsApp: {brand.phone}</a>
-                <a href={brand.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 py-2 text-sm text-brand-700 hover:text-brand-800"><Camera size={16} /> @drlucianomeni</a>
+                <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 text-sm text-brand-700 hover:text-brand-800"><WhatsAppMark size={16} /> WhatsApp principal: {brand.phone}</a>
+                <a href={secondWhatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 text-sm text-brand-700 hover:text-brand-800"><WhatsAppMark size={16} /> Outro WhatsApp: {brand.secondPhone}</a>
+                <a href={brand.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 py-2 text-sm text-brand-700 hover:text-brand-800"><Camera size={16} /> {brand.instagramHandle}</a>
               </div>
             </div>
             <div className="relative overflow-hidden border border-ink/10 bg-white p-7 sm:p-10">
@@ -667,20 +657,11 @@ export default function Home() {
                   <MapPin size={21} strokeWidth={1.6} />
                 </span>
                 <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-700">
-                    Endereço
-                  </p>
-                  <p className="mt-1 font-serif text-2xl text-ink">
-                    Itajubá · MG
-                  </p>
+                  <h3 className="font-serif text-2xl text-ink">Nosso escritório em Formiga</h3>
                 </div>
               </div>
               <address className="mt-7 max-w-md not-italic text-[14px] leading-7 text-ink-soft">
-                Av. B P S, n. 944
-                <br />
-                Pinheirinho, Itajubá — MG
-                <br />
-                37500-179, Brasil
+                {brand.address}
               </address>
               <div className="my-7 h-px bg-ink/10" />
               <div className="flex flex-wrap items-center justify-between gap-4">
@@ -700,11 +681,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-silver px-5 py-14 text-ink sm:px-8 sm:py-16 lg:px-12">
+        <section className="bg-linen px-5 py-14 text-ink sm:px-8 sm:py-16 lg:px-12">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl">
-                Vamos conversar sobre o próximo passo da sua empresa.
+                Seus direitos merecem uma conversa com atenção.
               </h2>
             </div>
             <a
@@ -724,15 +705,15 @@ export default function Home() {
               <div className="inline-flex px-3 py-2">
                 <Image
                   src={brand.logo}
-                  width={2172}
-                  height={724}
-                  alt="Dr. Luciano Meni · Advocacia & Assessoria Jurídica"
-                  className="h-auto w-[240px]"
-                  sizes="240px"
+                  width={1774}
+                  height={886}
+                  alt={brand.businessName}
+                  className="h-auto w-[200px]"
+                  sizes="200px"
                 />
               </div>
               <p className="mt-4 max-w-xs text-xs leading-6 text-ink-soft">
-                Assessoria jurídica empresarial em Itajubá, MG. Atendimento presencial e remoto.
+                Advocacia e assessoria jurídica em Formiga, MG. Cuidado com seus direitos e com as decisões do seu negócio.
               </p>
             </div>
             <div>
@@ -774,15 +755,16 @@ export default function Home() {
                   className="footer-link inline-flex items-start gap-2"
                 >
                   <MapPin size={14} className="mt-0.5 shrink-0" />
-                  Av. B P S, n. 944 — Pinheirinho
+                  {brand.address}
                 </a>
-                <a href={brand.instagram} target="_blank" rel="noopener noreferrer" className="footer-link inline-flex items-center gap-2"><Camera size={14} /> @drlucianomeni</a>
+                <a href={secondWhatsapp} target="_blank" rel="noopener noreferrer" className="footer-link inline-flex items-center gap-2"><WhatsAppMark size={14} /> WhatsApp: {brand.secondPhone}</a>
+                <a href={brand.instagram} target="_blank" rel="noopener noreferrer" className="footer-link inline-flex items-center gap-2"><Camera size={14} /> {brand.instagramHandle}</a>
               </div>
             </div>
           </div>
           <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-3 border-t border-ink/15 pt-5 text-[10px] text-ink-soft sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} Dr. Luciano Meni · Advocacia & Assessoria Jurídica. Todos os direitos
+              © {new Date().getFullYear()} {brand.businessName}. Todos os direitos
               reservados.
             </p>
             <p>
@@ -844,7 +826,7 @@ export default function Home() {
                   ))}
                 </ul>
                 <GlowingButton
-                  href={contact + "?text=" + encodeURIComponent(`Olá, Dr. Luciano! Gostaria de conversar sobre ${activeArea.title.toLowerCase()}.`)}
+                  href={whatsappFor(activeArea.title.toLowerCase())}
                   target="_blank"
                   size="md"
                   className="mt-8 rounded-full"

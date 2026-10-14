@@ -1,30 +1,49 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-13T22:14:46.241Z",
-  "title": "Design System: Dr. Luciano Meni · Advocacia & Assessoria Jurídica",
+  "generatedAt": "2026-10-14T05:22:21.138Z",
+  "title": "Design System: Silva & Lopes Advocacia",
   "extensions": {
     "colorMeta": {
+      "brand-700": {
+        "role": "primary",
+        "displayName": "Vinho da marca",
+        "canonical": "#5e171f",
+        "tonalRamp": [
+          "#280b10",
+          "#3c0e15",
+          "#4d1019",
+          "#5e171f",
+          "#853740",
+          "#ac666b",
+          "#e0baba",
+          "#faf2f2"
+        ]
+      },
+      "brand-500": {
+        "role": "primary",
+        "displayName": "Vinho dos botões",
+        "canonical": "#853740"
+      },
       "ink": {
         "role": "neutral",
-        "displayName": "Azul profundo"
-      },
-      "steel": {
-        "role": "primary",
-        "displayName": "Azul aço"
-      },
-      "silver": {
-        "role": "secondary",
-        "displayName": "Prata metálica"
+        "displayName": "Carvão do logo",
+        "canonical": "#272625"
       },
       "ivory": {
         "role": "neutral",
-        "displayName": "Superfície clara fria"
+        "displayName": "Marfim quente",
+        "canonical": "#f8f5f0"
+      },
+      "linen": {
+        "role": "neutral",
+        "displayName": "Linho",
+        "canonical": "#e9e1d8"
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Cinzel",
-        "purpose": "Títulos serifados próximos à marca"
+        "displayName": "Cormorant Garamond",
+        "purpose": "Títulos serifados compatíveis com a marca"
       },
       "body": {
         "displayName": "Manrope",
@@ -34,20 +53,25 @@
     "shadows": [
       {
         "name": "card",
-        "value": "0 18px 48px rgb(19 33 53 / 12%)",
-        "purpose": "Modal e hover de serviços"
+        "value": "0 18px 48px rgb(60 14 21 / 12%)",
+        "purpose": "Modal de detalhes"
       }
     ],
     "motion": [
       {
         "name": "menu",
         "value": "220ms",
-        "purpose": "Abertura de menu móvel"
+        "purpose": "Menu móvel"
       },
       {
         "name": "dialog",
         "value": "240ms",
-        "purpose": "Abertura e fechamento de detalhes"
+        "purpose": "Detalhes de serviços"
+      },
+      {
+        "name": "controls",
+        "value": "200ms",
+        "purpose": "Cores dos botões"
       }
     ],
     "breakpoints": [
@@ -71,32 +95,49 @@
       "kind": "button",
       "refersTo": "button-primary",
       "description": "Contato pelo WhatsApp",
-      "html": "<a class=\"ds-primary\" href=\"#\">Fale pelo WhatsApp</a>",
-      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;background:var(--color-brand-500,#40648b);color:var(--color-paper,#fff);border:1px solid var(--color-brand-500,#40648b);border-radius:9999px;padding:14px 24px;font:600 12px Manrope,sans-serif;letter-spacing:.14em;text-decoration:none;transition:background .2s}.ds-primary:hover{background:var(--color-brand-600,#355779);border-color:var(--color-brand-600,#355779)}.ds-primary:focus-visible{outline:2px solid var(--color-brand-700,#2b496b);outline-offset:3px}"
+      "html": "<a class=\"ds-primary\" href=\"https://wa.me/5537999020336\">Fale pelo WhatsApp</a>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;background:var(--color-brand-500,#853740);color:var(--color-paper,#fff);border:1px solid var(--color-brand-500,#853740);border-radius:9999px;padding:14px 24px;font:600 12px Manrope,sans-serif;letter-spacing:.14em;text-decoration:none;transition:background .2s}.ds-primary:hover{background:var(--color-brand-600,#702630);border-color:var(--color-brand-600,#702630)}.ds-primary:focus-visible{outline:2px solid var(--color-brand-700,#5e171f);outline-offset:3px}"
+    },
+    {
+      "name": "Link de navegação",
+      "kind": "nav",
+      "description": "Navegação entre seções",
+      "html": "<a class=\"ds-nav\" href=\"#atuacao\">Atuação</a>",
+      "css": ".ds-nav{position:relative;display:inline-block;padding:12px 0;font:600 12.8px Manrope,sans-serif;color:var(--color-ink-soft,#625954);text-decoration:none;transition:color .18s}.ds-nav:after{position:absolute;inset:auto 0 0;height:1px;background:var(--color-brand-700,#5e171f);content:\"\";transform:scaleX(0);transform-origin:left;transition:transform .18s}.ds-nav:hover{color:var(--color-brand-700,#5e171f)}.ds-nav:hover:after{transform:scaleX(1)}.ds-nav:focus-visible{outline:2px solid var(--color-brand-600,#702630);outline-offset:4px}"
+    },
+    {
+      "name": "Pergunta frequente",
+      "kind": "custom",
+      "description": "Expansão nativa de informação",
+      "html": "<details class=\"ds-faq\"><summary>Onde fica o escritório?</summary><p>Rua Campos Altos, nº 276, Formiga, MG.</p></details>",
+      "css": ".ds-faq{padding:24px 0;border-top:1px solid rgb(39 38 37 / 15%);color:var(--color-ink,#272625);font:400 14px/28px Manrope,sans-serif}.ds-faq summary{cursor:pointer;font-size:16px;font-weight:600}.ds-faq summary::marker{color:var(--color-brand-700,#5e171f)}.ds-faq summary:hover{color:var(--color-brand-700,#5e171f)}.ds-faq summary:focus-visible{outline:2px solid var(--color-brand-600,#702630);outline-offset:4px}.ds-faq p{margin-top:16px;color:var(--color-ink-soft,#625954)}"
     }
   ],
   "narrative": {
-    "northStar": "Assessoria com clareza",
-    "overview": "Azul profundo, azul aço e prata extraídos do logo, títulos Cinzel e leitura Manrope para uma identidade profissional coesa.",
+    "northStar": "Proteção com clareza",
+    "overview": "Vinho e carvão extraídos do logo, títulos Cormorant Garamond e leitura Manrope formam uma identidade profissional coesa. A marca fornecida orienta o contraste entre superfícies claras quentes e vinho escuro.",
     "keyCharacteristics": [
-      "Logo original preservado",
-      "Superfícies frias claras e escuras",
-      "Imagens reais e relatos fornecidos"
+      "Logo e imagem institucional originais preservados.",
+      "Superfícies claras quentes alternadas com vinho escuro.",
+      "Serifas de alto contraste nos títulos e leitura simples nos controles."
     ],
     "rules": [
       {
-        "name": "Contraste",
-        "body": "Azul escuro sobre superfícies claras e prata ou azul claro sobre superfícies escuras.",
+        "name": "The Contrast Rule",
+        "body": "Texto escuro nas superfícies claras; branco, brand-100 e brand-200 nas superfícies vinho. Os pares principais foram verificados com contraste superior a 4,5:1. Seleção, cursor de texto, foco e scrollbar seguem a paleta.",
         "section": "colors"
       }
     ],
     "dos": [
-      "Preservar os assets originais",
-      "Centralizar os dados de contato"
+      "Preservar os assets originais.",
+      "Centralizar os dados de contato.",
+      "Usar os dois WhatsApps fornecidos, sem e-mail.",
+      "Manter contraste e navegação por teclado."
     ],
     "donts": [
-      "Inventar dados de contato ou resultados",
-      "Atribuir títulos acadêmicos a partir de fotografia"
+      "Inventar dados de contato, nota do Google, depoimentos ou resultados.",
+      "Atribuir nomes completos, formação, OAB ou experiência não fornecidos.",
+      "Alterar as cores ou a transparência do logo original.\r"
     ]
   }
 }

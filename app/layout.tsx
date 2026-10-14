@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Cinzel, Manrope } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { brand } from "./lib/brand";
 import "./globals.css";
 
-const displayFont = Cinzel({
+const displayFont = Cormorant_Garamond({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -19,16 +19,16 @@ const bodyFont = Manrope({
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 const metadataBase = siteUrl ? new URL(siteUrl) : undefined;
-const shareImage = brand.logo;
-const title = "Dr. Luciano Meni | Advocacia & Assessoria Jurídica Empresarial | Itajubá, MG";
-const description = "Assessoria jurídica empresarial, contratos, registro de marcas e patentes em Itajubá, MG. Fale com o Dr. Luciano Meni: (35) 98881-4505.";
+const shareImage = brand.portrait;
+const title = "Silva & Lopes Advocacia | Assessoria Jurídica em Formiga, MG";
+const description = "Advocacia cível, criminal, previdenciária, empresarial e trabalhista em Formiga, MG. Converse com a Silva & Lopes pelo WhatsApp: (37) 99902-0336.";
 
 export const metadata: Metadata = {
   ...(metadataBase ? { metadataBase } : {}),
   title,
   description,
-  keywords: ["Dr. Luciano Meni", "advogado em Itajubá", "assessoria jurídica empresarial", "contratos", "registro de marcas", "patentes", "Itajubá MG"],
-  icons: { icon: [{ url: shareImage, type: "image/png" }], apple: [{ url: shareImage, type: "image/png" }] },
+  keywords: ["Silva & Lopes Advocacia", "advogado em Formiga", "direito cível", "direito criminal", "direito previdenciário", "direito empresarial", "direito trabalhista", "Formiga MG"],
+  icons: { icon: [{ url: brand.logo, type: "image/png" }], apple: [{ url: brand.logo, type: "image/png" }] },
   openGraph: {
     title,
     description,
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
       ? [
           {
             url: shareImage,
-            width: 2172,
-            height: 724,
+            width: 675,
+            height: 810,
             alt: brand.businessName,
           },
         ]
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#132135",
+  themeColor: "#5e171f",
 };
 
 export default function RootLayout({
