@@ -1,33 +1,32 @@
 // Informações e avaliações fornecidas pelo cliente; não são dados ao vivo.
 export const brand = {
-  name: "Eduardo Cury",
-  businessName: "Eduardo Cury Advogado Criminalista",
-  phone: "(34) 99111-6365",
-  phoneDigits: "5534991116365",
-  address: "Av. 13, 658 — Sala 801 — Centro, Ituiutaba — MG, 38300-140",
-  building: "Edifício Ituiutaba",
-  hours: "Atendimento 24 horas",
-  logo: "/Logotipo Dourado Eduardo Cury Advocacia.png",
-  portrait: "/eduardo-cury-advogado.png",
-  office: "/eduardo-cury-escritorio.png",
-  googleReviewCount: 45,
-  googleRating: "5,0",
-  googleProfile: "https://www.google.com/maps?cid=8361611520771558648",
-  instagram: "https://www.instagram.com/eduardocuryadv/",
-  instagramHandle: "@eduardocuryadv",
+  name: "Raynne Lopes",
+  businessName: "Raynne Lopes Advocacia Especializada",
+  phone: "(31) 98497-3275",
+  phoneDigits: "5531984973275",
+  address: "R. Goiás, 750 — Boa Vista, Sete Lagoas — MG, 35700-030",
+  location: "Sete Lagoas · Minas Gerais",
+  // Cópia idêntica com caminho simples, compatível com o otimizador de imagens.
+  logo: "/raynne-lopes-logo.png",
+  portrait: "/raynne-lopes-advogada.png",
+  googleReviewCount: 29,
+  googleRating: "4,9",
+  instagram: "https://www.instagram.com/raynnelopes.adv/",
+  instagramHandle: "@raynnelopes.adv",
+  threads: "https://www.threads.com/@raynnelopes.adv",
 };
 
-// Transcrições integrais dos relatos selecionados no material enviado.
+// Trechos literais de avaliações do material enviado, sem promessas de resultado.
 export const testimonials = [
-  { name: "Ana Paula Resende", text: "Dr. Eduardo, superou em excelência todas minhas expectativas. De total confiança e profissionalismo...super indico!!!" },
-  { name: "Moriza Araújo", text: "O profissional é excelente, ético, responsável e muito comprometido com seus casos e seus clientes. Recomendo muitíssimo!" },
-  { name: "Marcella Barbieri", text: "Compartilho minha experiência extremamente positiva com o advogado Eduardo Cury. Contratei seus serviços para lidar com um caso e fiquei muito satisfeita com sua competência, dedicação e profissionalismo." },
+  { name: "Júlia Rodrigues", text: "A Dra Raynne é extremamente competente, atenciosa e demonstra um conhecimento incrível no que faz." },
+  { name: "Paulo de Andrade", text: "Atendimento de excelência, com muita atenção e profissionalismo. Equipe sempre prestativa e comprometida em oferecer o melhor suporte aos clientes." },
+  { name: "GEORGE DAUT", text: "Excelente profissional! A Dra. Raynne e toda a sua equipe foram muito atenciosas, competentes e transparentes durante todo o processo." },
 ];
 
 export function whatsappFor(subject?: string) {
   const message = subject
-    ? `Olá, Dr. Eduardo Cury! Gostaria de conversar sobre ${subject}.`
-    : "Olá, Dr. Eduardo Cury! Gostaria de orientação sobre uma questão criminal.";
+    ? `Olá, Dra. Raynne Lopes! Gostaria de conversar sobre ${subject}.`
+    : "Olá, Dra. Raynne Lopes! Gostaria de orientação sobre o meu caso.";
   return `https://wa.me/${brand.phoneDigits}?text=${encodeURIComponent(message)}`;
 }
 
@@ -35,4 +34,4 @@ export const whatsapp = whatsappFor();
 export const contact = whatsapp;
 export const telephone = `tel:+${brand.phoneDigits}`;
 export const maps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${brand.businessName}, ${brand.address}`)}`;
-export const reviews = brand.googleProfile;
+export const reviews = maps;

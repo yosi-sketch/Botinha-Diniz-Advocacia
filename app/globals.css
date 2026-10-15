@@ -1,35 +1,35 @@
 @import "tailwindcss";
 
-/* Tailwind CSS 4 configura o tema aqui. Dourado #e0b060 e bronze #a07030
-   extraídos dos pixels opacos do logo; escala e neutros quentes derivados. */
+/* Tailwind CSS 4: amostras quantizadas do logo R&L (pixels opacos).
+   Dourado #f0b040, bronze #b07020 e luz #ffd060; escala e neutros derivados. */
 :root {
   color-scheme: light;
-  --brand-ink: #26221b;
-  --brand-ink-soft: #685f50;
-  --brand-paper: #f8f5ee;
+  --brand-ink: #2b2118;
+  --brand-ink-soft: #6b5c4b;
+  --brand-paper: #faf6ef;
 }
 @theme inline {
   --font-display: var(--font-display-face), "Cinzel", Georgia, serif;
   --font-sans: var(--font-body), "Manrope", system-ui, sans-serif;
-  --color-ink: #26221b;
-  --color-ink-soft: #685f50;
+  --color-ink: #2b2118;
+  --color-ink-soft: #6b5c4b;
   --color-paper: #ffffff;
-  --color-ivory: #f8f5ee;
-  --color-linen: #ede6d9;
-  --color-brand-50: #faf5e9;
-  --color-brand-100: #f5e8cd;
-  --color-brand-200: #f0c880;
-  --color-brand-300: #e0b060;
-  --color-brand-400: #c89850;
-  --color-brand-500: #a07030;
-  --color-brand-600: #8b6029;
-  --color-brand-700: #795324;
-  --color-brand-800: #5c401f;
-  --color-brand-900: #29241b;
-  --color-brand-950: #191711;
-  --shadow-card: 0 18px 48px rgb(38 34 27 / 18%);
+  --color-ivory: #faf6ef;
+  --color-linen: #eee4d5;
+  --color-brand-50: #fcf5e7;
+  --color-brand-100: #f9e7c4;
+  --color-brand-200: #ffd060;
+  --color-brand-300: #f0b040;
+  --color-brand-400: #d09030;
+  --color-brand-500: #b07020;
+  --color-brand-600: #925b1b;
+  --color-brand-700: #784b18;
+  --color-brand-800: #603000;
+  --color-brand-900: #302319;
+  --color-brand-950: #1c1712;
+  --shadow-card: 0 18px 48px rgb(43 33 24 / 18%);
 }
-html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+html { scroll-padding-top: 2rem; }
 body {
   background: var(--brand-paper);
   color: var(--brand-ink);
@@ -66,7 +66,7 @@ h1, h2 { text-wrap: balance; }
 .brand-hero .text-ink-soft { color: var(--color-brand-100); }
 .brand-hero .text-ink { color: var(--color-ivory); }
 .brand-hero .text-brand-700 { color: var(--color-brand-300); }
-.brand-hero .border-ink\/10 { border-color: rgb(224 176 96 / 22%); }
+.brand-hero .border-ink\/10 { border-color: rgb(240 176 64 / 22%); }
 
 ::-webkit-scrollbar { width: 9px; }
 ::-webkit-scrollbar-track { background: var(--color-brand-50); }
@@ -88,7 +88,7 @@ h1, h2 { text-wrap: balance; }
 
 .brand-footer .text-ink-soft { color: var(--color-brand-100); }
 .brand-footer .text-brand-700 { color: var(--color-brand-300); }
-.brand-footer .border-ink\/15 { border-color: rgb(224 176 96 / 22%); }
+.brand-footer .border-ink\/15 { border-color: rgb(240 176 64 / 22%); }
 .hero-portrait { position: relative; padding: 14px 14px 0 0; }
 .hero-portrait::before {
   position: absolute;

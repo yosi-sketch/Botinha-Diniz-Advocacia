@@ -17,9 +17,9 @@ import {
   Menu,
   Scale,
   ShieldCheck,
-  Gavel,
-  Clock3,
-  LockKeyhole,
+  Plane,
+  HeartHandshake,
+  Accessibility,
   ScrollText,
   Camera,
   Star,
@@ -46,28 +46,28 @@ const stagger: Variants = {
 
 const areas = [
   {
-    title: "Defesa criminal", icon: ShieldCheck,
-    summary: "Acompanhamento de processos criminais, com atenção aos fatos, às provas e aos seus direitos.",
-    details: "A defesa criminal começa pela compreensão da situação e pela análise dos documentos disponíveis. O acompanhamento envolve orientação sobre o processo, preparação da defesa e comunicação sobre cada etapa, respeitando as particularidades do caso.",
-    topics: ["Análise da situação e dos documentos", "Orientação ao longo do processo criminal", "Preparação e acompanhamento da defesa", "Atenção aos direitos e garantias individuais"],
+    title: "Direito Previdenciário", icon: ScrollText,
+    summary: "Orientação sobre aposentadorias e benefícios do INSS, com atenção à sua trajetória e aos seus documentos.",
+    details: "Cada história de trabalho e contribuição merece uma análise individual. O escritório orienta sobre aposentadorias, salário-maternidade, pensão por morte e benefícios por incapacidade, desde a organização dos documentos até o acompanhamento da demanda.",
+    topics: ["Aposentadorias e análise de contribuições", "Benefícios por incapacidade e auxílio-acidente", "Salário-maternidade e pensão por morte", "Análise de benefícios negados pelo INSS"],
   },
   {
-    title: "Investigação e inquérito", icon: ScrollText,
-    summary: "Orientação desde os primeiros esclarecimentos, intimações e atos da investigação.",
-    details: "Receber uma intimação ou tomar conhecimento de uma investigação pode gerar dúvidas. A orientação jurídica ajuda a compreender o contexto, organizar as informações e acompanhar os atos pertinentes à apuração, com cuidado e confidencialidade.",
-    topics: ["Análise de intimações e documentos", "Orientação para depoimentos", "Acompanhamento de inquéritos", "Esclarecimento das etapas da investigação"],
+    title: "Benefícios assistenciais", icon: Accessibility,
+    summary: "Atenção às famílias que precisam de orientação sobre o BPC/LOAS para pessoas idosas ou com deficiência.",
+    details: "O atendimento considera a realidade de cada família e os documentos disponíveis para analisar uma solicitação de benefício assistencial. A equipe esclarece as etapas, orienta a organização das informações e avalia os caminhos possíveis diante de uma negativa.",
+    topics: ["Análise individual para o BPC/LOAS", "Orientação a pessoas idosas e com deficiência", "Organização de documentos e relatórios", "Acompanhamento de pedidos e negativas"],
   },
   {
-    title: "Prisão e audiência de custódia", icon: LockKeyhole,
-    summary: "Atendimento para situações urgentes, com análise da prisão e orientação aos familiares.",
-    details: "Em uma situação de prisão, o primeiro contato permite compreender os fatos e identificar as providências adequadas. Cada situação exige análise individual das informações, das condições da prisão e dos direitos da pessoa envolvida.",
-    topics: ["Orientação em situações de prisão", "Análise de documentos relacionados à custódia", "Acompanhamento de audiência de custódia", "Comunicação e orientação aos familiares"],
+    title: "Direito do Consumidor", icon: ShieldCheck,
+    summary: "Análise de cobranças indevidas, problemas com produtos e serviços e situações que possam gerar reparação de danos.",
+    details: "Problemas nas relações de consumo exigem atenção aos fatos, contratos e registros de atendimento. O escritório analisa a situação para orientar sobre as medidas adequadas, seja na busca de uma solução extrajudicial, seja no acompanhamento de uma demanda.",
+    topics: ["Cobranças e negativações indevidas", "Problemas com produtos e serviços", "Análise de danos materiais e morais", "Orientação e acompanhamento de demandas"],
   },
   {
-    title: "Recursos e execução penal", icon: Gavel,
-    summary: "Análise de decisões e acompanhamento jurídico durante o cumprimento da pena.",
-    details: "A atuação criminal também abrange a análise de decisões e o acompanhamento da execução penal. A orientação considera os documentos do processo e a situação individual para avaliar os caminhos cabíveis, sem antecipar resultados.",
-    topics: ["Análise de decisões judiciais", "Avaliação de recursos cabíveis", "Acompanhamento da execução penal", "Orientação sobre direitos durante o cumprimento da pena"],
+    title: "Direito Aéreo", icon: Plane,
+    summary: "Orientação para passageiros em casos de voos atrasados ou cancelados, problemas com bagagem e perda de conexão.",
+    details: "Quando uma viagem não acontece como o planejado, a análise dos comprovantes e dos registros da ocorrência ajuda a compreender os próximos passos. O escritório acompanha demandas envolvendo companhias aéreas e avalia a possibilidade de reparação conforme cada caso.",
+    topics: ["Atrasos, cancelamentos e perda de conexão", "Bagagem extraviada, danificada ou atrasada", "Negativas de reembolso", "Análise dos prejuízos e da documentação da viagem"],
   },
 ];
 
@@ -160,21 +160,21 @@ export default function Home() {
         <div ref={contentRef}>
         <a href="#inicio" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-sm focus:bg-white focus:p-4 focus:text-ink">Ir para o conteúdo</a>
         <header className="brand-header sticky top-0 z-40 border-b border-brand-300/20 bg-brand-950 text-brand-100">
-          <div className="mx-auto flex h-[84px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[104px] sm:px-8 lg:px-12">
+          <div className="mx-auto flex h-[104px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[120px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Eduardo Cury — início"
+              aria-label="Raynne Lopes — início"
               onClick={closeMenu}
               className="shrink-0"
             >
               <Image
                 src={brand.logo}
-                width={1961}
-                height={802}
+                width={1774}
+                height={887}
                 alt={brand.businessName}
                 preload
-                className="h-auto w-[155px] sm:w-[190px]"
-                sizes="(max-width: 640px) 155px, 190px"
+                className="h-auto w-[176px] sm:w-[208px]"
+                sizes="(max-width: 640px) 176px, 208px"
               />
             </a>
             <nav
@@ -202,7 +202,7 @@ export default function Home() {
                 href={contact}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp do Eduardo Cury"
+                aria-label="WhatsApp da Raynne Lopes"
                 className="grid size-10 place-items-center rounded-full border border-brand-300/40 text-brand-200 transition-colors hover:border-brand-300 hover:text-brand-300"
               >
                 <WhatsAppMark size={17} strokeWidth={1.7} />
@@ -236,9 +236,9 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-ink/10 bg-ivory px-6 lg:hidden"
+                className="absolute inset-x-0 top-full overflow-hidden border-b border-ink/10 bg-ivory px-6 lg:hidden"
               >
-                <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
+                <div className="mx-auto flex max-h-[calc(100dvh-104px)] max-w-7xl flex-col gap-1 overflow-y-auto py-4 sm:max-h-[calc(100dvh-120px)]">
                   {[
                     ["Início", "#inicio"],
                     ["Atuação", "#atuacao"],
@@ -285,14 +285,14 @@ export default function Home() {
                 variants={reveal}
                 className="max-w-[720px] font-display text-[2.4rem] leading-[1.16] tracking-[-0.025em] text-ivory sm:text-[3.3rem] lg:text-[3.65rem]"
               >
-                Sua liberdade merece{" "}
-                <span className="text-brand-300">uma defesa à altura.</span>
+                Seus direitos merecem{" "}
+                <span className="text-brand-300">uma atenção especial.</span>
               </motion.h1>
               <motion.p
                 variants={reveal}
                 className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft sm:text-base sm:leading-8"
               >
-                Advocacia criminal em Ituiutaba, Minas Gerais. Eduardo Cury oferece orientação e defesa com escuta, sigilo e atenção a cada detalhe do seu caso.
+                Benefícios do INSS, direitos do consumidor e problemas com viagens aéreas. Raynne Lopes e sua equipe oferecem orientação clara e cuidado com cada detalhe da sua história.
               </motion.p>
               <motion.div
                 variants={reveal}
@@ -304,7 +304,7 @@ export default function Home() {
                   size="lg"
                   className="rounded-sm"
                 >
-                  <WhatsAppMark size={17} /> Fale com Eduardo Cury
+                  <WhatsAppMark size={17} /> Fale com a Dra. Raynne
                 </GlowingButton>
                 <a
                   href="#atuacao"
@@ -323,11 +323,11 @@ export default function Home() {
               >
                 <span className="inline-flex items-center gap-2">
                   <MapPin size={15} className="text-brand-700" />
-                  Ituiutaba · Minas Gerais
+                  {brand.location}
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <Clock3 size={15} className="text-brand-700" />
-                  {brand.hours}
+                  <HeartHandshake size={15} className="text-brand-700" />
+                  Atendimento com atenção e sigilo
                 </span>
                 <a href="#avaliacoes" className="inline-flex items-center gap-2 py-2 text-sm text-brand-200 underline underline-offset-4">
                   <Star size={15} aria-hidden="true" /> Avaliações no Google
@@ -345,10 +345,10 @@ export default function Home() {
               className="relative mx-auto w-full max-w-[408px] lg:ml-auto lg:mr-0"
             >
               <figure className="hero-portrait">
-              <div className="relative aspect-[408/510] overflow-hidden bg-brand-900">
+              <div className="relative aspect-[614/803] overflow-hidden bg-brand-900">
                 <Image
                   src={brand.portrait}
-                  alt="Eduardo Cury, advogado criminalista em Ituiutaba"
+                  alt="Raynne Lopes, advogada em Sete Lagoas, com terno vinho e camisa branca"
                   fill
                   preload
                   sizes="(max-width: 450px) 90vw, 408px"
@@ -356,8 +356,8 @@ export default function Home() {
                 />
               </div>
               <figcaption className="relative flex items-center justify-between gap-4 bg-brand-950 pb-1 pt-5 text-brand-100">
-                <span className="font-display text-lg text-brand-300">Eduardo Cury</span>
-                <span className="text-[10px] uppercase tracking-[0.12em]">Advogado criminalista</span>
+                <span className="font-display text-lg text-brand-300">Raynne Lopes</span>
+                <span className="text-[10px] uppercase tracking-[0.12em]">Advogada</span>
               </figcaption>
               </figure>
             </motion.div>
@@ -370,7 +370,7 @@ export default function Home() {
         >
           <div className="mx-auto grid max-w-7xl gap-6 px-5 py-7 sm:grid-cols-3 sm:gap-4 sm:px-8 lg:px-12">
             {[
-              ["Defesa", "Atenção aos seus direitos"],
+              ["Escuta", "Atenção à sua história"],
               ["Sigilo", "Respeito à sua história"],
               ["Presença", "Orientação em cada etapa"],
             ].map(([value, label], index) => (
@@ -407,13 +407,13 @@ export default function Home() {
             >
               <Heading
 
-                description="Da investigação ao acompanhamento do processo, uma atuação voltada à proteção dos seus direitos."
+                description="Do benefício do INSS aos imprevistos de uma viagem, orientação jurídica para momentos que importam na sua vida."
               >
-                Defesa em cada{" "}
-                <span className="text-brand-700">etapa.</span>
+                Cuidado com o que é{" "}
+                <span className="text-brand-700">seu por direito.</span>
               </Heading>
               <p className="max-w-[250px] pb-1 text-xs leading-6 text-ink-soft">
-                Conheça os temas da atuação criminal e saiba como iniciar o atendimento.
+                Conheça nossas áreas de atuação e converse com a equipe sobre a sua situação.
               </p>
             </motion.div>
             <motion.div
@@ -466,19 +466,19 @@ export default function Home() {
 
         <section id="sobre" className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32">
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24 lg:px-12">
-            <figure className="mx-auto w-full max-w-[340px] lg:ml-0">
-              <Image src={brand.office} alt="Eduardo Cury em seu escritório, com o logo dourado da marca na parede" width={282} height={506} sizes="(max-width: 390px) 88vw, 340px" className="h-auto w-full" />
-              <figcaption className="mt-4 text-xs leading-6 text-ink-soft">Escritório Eduardo Cury · Ituiutaba, Minas Gerais.</figcaption>
+            <figure className="mx-auto w-full max-w-[420px] bg-brand-950 px-7 py-12 sm:px-10 sm:py-16 lg:ml-0">
+              <Image src={brand.logo} alt={brand.businessName} width={1774} height={887} sizes="(max-width: 450px) 80vw, 340px" className="h-auto w-full" />
+              <figcaption className="mt-10 border-t border-brand-300/25 pt-6 text-center text-xs leading-6 text-brand-100">Direito Previdenciário, do Consumidor e Aéreo.<br />Sete Lagoas, Minas Gerais.</figcaption>
             </figure>
             <div>
-              <h2 className="max-w-2xl font-display text-4xl leading-[1.16] text-ink sm:text-5xl">Conheça quem cuida da <span className="text-brand-700">sua defesa.</span></h2>
-              <p className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft">Eduardo Cury é advogado criminalista em Ituiutaba, Minas Gerais. Seu trabalho parte de uma convicção: cada pessoa merece ser ouvida e compreender os caminhos da própria defesa.</p>
-              <p className="mt-4 max-w-xl text-[15px] leading-7 text-ink-soft">A proposta é unir análise cuidadosa, comunicação acessível e respeito à confidencialidade. Do primeiro contato ao acompanhamento da demanda, a atenção está nas particularidades do caso e nos direitos de quem precisa de orientação.</p>
+              <h2 className="max-w-2xl font-display text-4xl leading-[1.16] text-ink sm:text-5xl">Ao seu lado, com técnica e <span className="text-brand-700">sensibilidade.</span></h2>
+              <p className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft">Raynne Lopes é advogada e professora de Prática Previdenciária. À frente do escritório Raynne Lopes Advocacia Especializada, em Sete Lagoas, une sua atuação em benefícios do INSS à defesa dos direitos de consumidores e passageiros aéreos.</p>
+              <p className="mt-4 max-w-xl text-[15px] leading-7 text-ink-soft">Por trás de cada pedido, existe uma história. Por isso, o atendimento parte da escuta e da análise cuidadosa dos documentos, com explicações acessíveis sobre as possibilidades e os próximos passos de cada demanda.</p>
               <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4 border-y border-ink/15 py-5 text-sm text-brand-800">
-                <span className="inline-flex items-center gap-2"><Scale size={18} strokeWidth={1.5} /> Advocacia criminal</span>
-                <span className="inline-flex items-center gap-2"><Clock3 size={18} strokeWidth={1.5} /> {brand.hours}</span>
+                <span className="inline-flex items-center gap-2"><Scale size={18} strokeWidth={1.5} /> Advocacia especializada</span>
+                <span className="inline-flex items-center gap-2"><HeartHandshake size={18} strokeWidth={1.5} /> Atenção individual</span>
               </div>
-              <a href={contact} target="_blank" rel="noopener noreferrer" className="group mt-7 inline-flex min-h-11 items-center gap-2 border-b border-brand-700/40 py-2 text-sm font-semibold text-brand-800 transition-colors hover:text-brand-700">Converse com Eduardo Cury <ArrowUpRight size={16} /></a>
+              <a href={contact} target="_blank" rel="noopener noreferrer" className="group mt-7 inline-flex min-h-11 items-center gap-2 border-b border-brand-700/40 py-2 text-sm font-semibold text-brand-800 transition-colors hover:text-brand-700">Converse com a nossa equipe <ArrowUpRight size={16} /></a>
             </div>
           </div>
         </section>
@@ -488,7 +488,7 @@ export default function Home() {
             <Heading
 
               light
-              description="Quando uma questão criminal afeta sua vida, compreender o que acontece e quais são os próximos passos faz diferença."
+              description="Buscar um benefício ou lidar com um direito desrespeitado pode trazer insegurança. Entender as possibilidades é o primeiro passo para decidir com tranquilidade."
             >
               Clareza para compreender cada{" "}
               <span className="text-brand-200">etapa.</span>
@@ -507,11 +507,11 @@ export default function Home() {
                 ],
                 [
                   "Comunicação clara",
-                  "Explicações acessíveis sobre a situação, as possibilidades da defesa e o andamento da demanda.",
+                  "Explicações acessíveis sobre a situação, os caminhos possíveis e o andamento da demanda.",
                 ],
                 [
                   "Análise cuidadosa",
-                  "Atenção aos fatos e aos documentos, com respeito ao sigilo e às particularidades de cada defesa.",
+                  "Atenção aos fatos e aos documentos, com respeito ao sigilo e às particularidades de cada caso.",
                 ],
               ].map(([title, description]) => (
                 <motion.div
@@ -536,10 +536,10 @@ export default function Home() {
             <h2 id="questions-title" className="font-display text-3xl leading-tight text-ink sm:text-4xl">Antes da nossa primeira conversa.</h2>
             <div className="divide-y divide-ink/15 border-y border-ink/15">
               {[
-                ["Como funciona o primeiro contato?", "Envie uma mensagem pelo WhatsApp ou ligue para (34) 99111-6365. Conte brevemente sua situação para receber orientação sobre o atendimento e as informações iniciais necessárias."],
-                ["Onde fica o escritório?", "O escritório fica no Edifício Ituiutaba, na Av. 13, 658, sala 801, Centro, Ituiutaba, MG, CEP 38300-140. Entre em contato para combinar sua visita."],
-                ["O atendimento funciona 24 horas?", "Sim. O contato para atendimento criminal está disponível 24 horas pelo telefone e WhatsApp (34) 99111-6365. Para visitas ao escritório, combine o atendimento previamente."],
-                ["Quais documentos devo separar?", "Tenha em mãos um documento de identificação e, se disponíveis, intimações, boletins de ocorrência, decisões ou o número do processo. Os documentos necessários serão indicados conforme sua situação."],
+                ["Como funciona o primeiro contato?", `Envie uma mensagem pelo WhatsApp ou ligue para ${brand.phone}. Conte brevemente sua situação para receber informações sobre o atendimento e os documentos iniciais necessários.`],
+                ["Onde fica o escritório?", `Estamos na ${brand.address}. Entre em contato com a equipe para combinar sua visita.`],
+                ["Meu benefício foi negado. Posso conversar com a equipe?", "Sim. Informe qual benefício você solicitou e separe a resposta recebida do INSS, caso tenha acesso a ela. A equipe poderá explicar como funciona a análise individual da sua situação."],
+                ["Tive um problema com meu voo. Como iniciar o atendimento?", "Conte o que aconteceu pelo WhatsApp e informe se possui passagens, comprovantes de despesas e registros de atendimento da companhia aérea. A equipe indicará os documentos necessários para analisar o caso."],
               ].map(([question, answer]) => (
                 <details key={question} className="group py-6">
                   <summary className="cursor-pointer text-base font-semibold text-ink marker:text-brand-700">{question}</summary>
@@ -556,7 +556,7 @@ export default function Home() {
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
-              <Heading description="Relatos de quem conhece o atendimento do Eduardo Cury, publicados no Google.">
+              <Heading description="Relatos de quem conhece o atendimento da Dra. Raynne e de sua equipe, publicados no Google.">
                 Confiança que se{" "}
                 <span className="text-brand-700">compartilha.</span>
               </Heading>
@@ -565,7 +565,7 @@ export default function Home() {
                   {brand.googleRating}
                 </p>
                 <div>
-                  <span className="flex gap-1" role="img" aria-label="5 de 5 estrelas">
+                  <span className="flex gap-1" role="img" aria-label={`Avaliação média de ${brand.googleRating} de 5 estrelas`}>
                     {[0, 1, 2, 3, 4].map((star) => <Star key={star} size={16} fill="currentColor" aria-hidden="true" />)}
                   </span>
                   <p className="mt-2 text-xs text-ink-soft">{brand.googleReviewCount} avaliações no Google</p>
@@ -580,14 +580,14 @@ export default function Home() {
                   </blockquote>
                   <figcaption>
                     <p className="font-display text-xl text-brand-700">{testimonial.name}</p>
-                    <p className="mt-1 text-xs text-ink-soft">Avaliação no Google</p>
+                    <p className="mt-1 text-xs text-ink-soft">Trecho de avaliação no Google</p>
                   </figcaption>
                 </figure>
               ))}
             </div>
             <div className="mt-7 flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
               <p className="max-w-xl text-xs leading-6 text-ink-soft">
-                Seleção de avaliações publicadas no Google. Nota e quantidade conforme os dados fornecidos; consulte o perfil para informações atualizadas.
+                Trechos de avaliações publicadas no Google. Nota e quantidade conforme o material fornecido; consulte o Google Maps para informações atualizadas.
               </p>
               <a
                 href={reviews}
@@ -595,7 +595,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex min-h-11 w-fit shrink-0 items-center gap-2 rounded-full border border-ink/15 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.13em] text-ink transition-colors hover:border-brand-700 hover:text-brand-700"
               >
-                Ver todas as avaliações <ArrowUpRight size={14} />
+                Consultar no Google Maps <ArrowUpRight size={14} />
               </a>
             </div>
           </div>
@@ -610,7 +610,7 @@ export default function Home() {
             <div>
               <Heading
 
-                description="Em uma situação urgente ou para esclarecer uma dúvida, fale com Eduardo Cury. Atendimento criminal 24 horas por telefone e WhatsApp."
+                description="Conte sua história para a nossa equipe e saiba como iniciar o atendimento. Converse sobre benefícios do INSS, relações de consumo ou problemas com viagens aéreas."
               >
                 Um primeiro contato com{" "}
                 <span className="text-brand-700">tranquilidade.</span>
@@ -622,10 +622,11 @@ export default function Home() {
                   size="lg"
                   className="rounded-sm"
                 >
-                  <WhatsAppMark size={17} /> Fale com Eduardo Cury
+                  <WhatsAppMark size={17} /> Fale com a Dra. Raynne
                 </GlowingButton>
                 <a href={telephone} className="inline-flex min-h-11 items-center gap-2 text-sm text-brand-700 hover:text-brand-800"><Phone size={16} /> Ligue: {brand.phone}</a>
                 <a href={brand.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 py-2 text-sm text-brand-700 hover:text-brand-800"><Camera size={16} /> {brand.instagramHandle}</a>
+                <a href={brand.threads} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 py-2 text-sm text-brand-700 hover:text-brand-800"><MessageCircle size={16} /> Acompanhe também no Threads <ArrowUpRight size={14} /></a>
               </div>
             </div>
             <div className="relative overflow-hidden border border-ink/10 bg-white p-7 sm:p-10">
@@ -635,10 +636,10 @@ export default function Home() {
                   <MapPin size={21} strokeWidth={1.6} />
                 </span>
                 <div>
-                  <h3 className="font-display text-2xl text-ink">Escritório em Ituiutaba</h3>
+                  <h3 className="font-display text-2xl text-ink">Escritório em Sete Lagoas</h3>
                 </div>
               </div>
-              <p className="mt-6 text-sm font-semibold text-brand-700">{brand.building}</p>
+              <p className="mt-6 text-sm font-semibold text-brand-700">{brand.businessName}</p>
               <address className="mt-2 max-w-md not-italic text-[14px] leading-7 text-ink-soft">
                 {brand.address}
               </address>
@@ -664,7 +665,7 @@ export default function Home() {
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
               <h2 className="mt-3 max-w-2xl font-display text-3xl leading-tight sm:text-4xl">
-                Sua defesa começa com uma conversa.
+                O primeiro passo é conversar.
               </h2>
             </div>
             <a
@@ -684,15 +685,15 @@ export default function Home() {
               <div className="inline-flex px-3 py-2">
                 <Image
                   src={brand.logo}
-                  width={1961}
-                  height={802}
+                  width={1774}
+                  height={887}
                   alt={brand.businessName}
                   className="h-auto w-[200px]"
                   sizes="200px"
                 />
               </div>
               <p className="mt-4 max-w-xs text-xs leading-6 text-ink-soft">
-                Advocacia criminal em Ituiutaba, MG. Defesa, orientação e atenção a cada detalhe do seu caso.
+                Direito Previdenciário, do Consumidor e Aéreo em Sete Lagoas, MG. Orientação clara e atenção à sua história.
               </p>
             </div>
             <div>

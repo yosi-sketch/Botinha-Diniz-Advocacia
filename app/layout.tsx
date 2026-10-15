@@ -20,14 +20,14 @@ const bodyFont = Manrope({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 const metadataBase = siteUrl ? new URL(siteUrl) : undefined;
 const shareImage = brand.portrait;
-const title = "Eduardo Cury | Advogado Criminalista em Ituiutaba, MG";
-const description = "Advocacia criminal em Ituiutaba, MG. Orientação e defesa com atenção, sigilo e responsabilidade. Atendimento 24 horas: (34) 99111-6365.";
+const title = "Raynne Lopes | Advocacia Previdenciária e do Consumidor em Sete Lagoas";
+const description = "Raynne Lopes Advocacia Especializada em Sete Lagoas, MG. Direito Previdenciário, benefícios do INSS, Direito do Consumidor e Aéreo. WhatsApp: (31) 98497-3275.";
 
 export const metadata: Metadata = {
   ...(metadataBase ? { metadataBase } : {}),
   title,
   description,
-  keywords: ["Eduardo Cury", "advogado criminalista em Ituiutaba", "advocacia criminal", "defesa criminal", "Ituiutaba MG", "advogado 24 horas"],
+  keywords: ["Raynne Lopes", "advogada em Sete Lagoas", "direito previdenciário", "benefícios do INSS", "direito do consumidor", "direito aéreo"],
   icons: { icon: [{ url: brand.logo, type: "image/png" }], apple: [{ url: brand.logo, type: "image/png" }] },
   openGraph: {
     title,
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
       ? [
           {
             url: shareImage,
-            width: 408,
-            height: 510,
+            width: 614,
+            height: 803,
             alt: brand.businessName,
           },
         ]
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#191711",
+  themeColor: "#1c1712",
 };
 
 export default function RootLayout({

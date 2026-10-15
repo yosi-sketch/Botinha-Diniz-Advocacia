@@ -1,8 +1,43 @@
 {
-  "description": "Assets originais fornecidos pelo usuário. Arquivos preservados integralmente; origem registrada fora dos PNGs para não alterar os anexos.",
+  "description": "Ativos fornecidos pelo usuário. Origem e integridade registradas externamente; nenhum PNG modificado nesta documentação.",
+  "verifiedAt": "2026-10-15T11:54:42.392Z",
+  "hashAlgorithm": "SHA-256",
   "assets": [
-    { "path": "public/Logotipo Dourado Eduardo Cury Advocacia.png", "origin": "Logo dourado de Eduardo Cury fornecido pelo usuário na pasta public." },
-    { "path": "public/eduardo-cury-advogado.png", "origin": "Anexo do usuário codex-clipboard-964a610d-ec77-4e02-98fd-22dea95d71ce.png; cópia integral, verificada por SHA-256." },
-    { "path": "public/eduardo-cury-escritorio.png", "origin": "Anexo do usuário codex-clipboard-5c4f3c6e-dd04-439d-87f7-91e1566bf3a6.png; cópia integral, verificada por SHA-256." }
+    {
+      "path": "public/Logotipo Jurídico Dourado R&L.png",
+      "origin": "Logo original R&L fornecido pelo usuário na pasta public; preservado integralmente.",
+      "width": 1774,
+      "height": 887,
+      "colorType": 6,
+      "format": "PNG RGBA",
+      "sha256": "0996cb6731efe49b0a102c587f1a0d190dfe9242aa0d764511c7e11d1da96688",
+      "usage": "Original de referência da marca."
+    },
+    {
+      "path": "public/raynne-lopes-logo.png",
+      "origin": "Cópia byte a byte do logo original fornecido pelo usuário.",
+      "sourcePath": "public/Logotipo Jurídico Dourado R&L.png",
+      "width": 1774,
+      "height": 887,
+      "colorType": 6,
+      "format": "PNG RGBA",
+      "sha256": "0996cb6731efe49b0a102c587f1a0d190dfe9242aa0d764511c7e11d1da96688",
+      "identicalToSource": true,
+      "usage": "Caminho de brand.logo para cabeçalho, painel do Sobre, rodapé e ícones.",
+      "compatibilityReason": "Durante a verificação da implementação, o otimizador Next retornou HTTP 400 para o caminho original com &. A cópia de nome simples preserva o original e evita esse problema."
+    },
+    {
+      "path": "public/raynne-lopes-advogada.png",
+      "origin": "Retrato anexado pelo usuário; cópia exata verificada por SHA-256.",
+      "sourcePath": "C:/Users/matheus/AppData/Local/Temp/codex-clipboard-8b7613b4-0941-4f3c-9f44-954dcbd42923.png",
+      "width": 614,
+      "height": 803,
+      "colorType": 6,
+      "format": "PNG",
+      "sha256": "3771913eee6a0e74c44f02fc7a0622084d862416efd0f78ad8861d01a66de97c",
+      "sourceSha256": "3771913eee6a0e74c44f02fc7a0622084d862416efd0f78ad8861d01a66de97c",
+      "identicalToSource": true,
+      "usage": "Hero com proporção 614/803 e object-contain; imagem de compartilhamento."
+    }
   ]
 }
