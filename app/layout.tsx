@@ -20,14 +20,14 @@ const bodyFont = Manrope({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 const metadataBase = siteUrl ? new URL(siteUrl) : undefined;
 const shareImage = brand.portrait;
-const title = "Raynne Lopes | Advocacia Previdenciária e do Consumidor em Sete Lagoas";
-const description = "Raynne Lopes Advocacia Especializada em Sete Lagoas, MG. Direito Previdenciário, benefícios do INSS, Direito do Consumidor e Aéreo. WhatsApp: (31) 98497-3275.";
+const title = "Dr. Murilo Alvarenga Nunes | Advogado em Piumhi, MG";
+const description = "Advocacia em Piumhi e Capitólio, MG. Direito Ambiental, Previdenciário, Agronegócio, Bancário, Cível, Empresarial e Trabalhista. WhatsApp: (37) 99983-6911.";
 
 export const metadata: Metadata = {
   ...(metadataBase ? { metadataBase } : {}),
   title,
   description,
-  keywords: ["Raynne Lopes", "advogada em Sete Lagoas", "direito previdenciário", "benefícios do INSS", "direito do consumidor", "direito aéreo"],
+  keywords: ["Murilo Alvarenga Nunes", "advogado em Piumhi", "advogado em Capitólio", "direito ambiental", "aposentadorias", "agronegócio", "direito bancário", "direito cível", "direito empresarial", "direito trabalhista"],
   icons: { icon: [{ url: brand.logo, type: "image/png" }], apple: [{ url: brand.logo, type: "image/png" }] },
   openGraph: {
     title,
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
       ? [
           {
             url: shareImage,
-            width: 614,
-            height: 803,
+            width: 617,
+            height: 788,
             alt: brand.businessName,
           },
         ]
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1c1712",
+  themeColor: "#141310",
 };
 
 export default function RootLayout({

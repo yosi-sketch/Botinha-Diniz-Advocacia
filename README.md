@@ -1,49 +1,73 @@
-# Raynne Lopes Advocacia Especializada
+# Dr. Murilo Alvarenga Nunes
 
-Site institucional em português brasileiro para Raynne Lopes, advogada e professora de Prática Previdenciária, em Sete Lagoas, MG. Apresenta Previdenciário/INSS, benefícios assistenciais BPC/LOAS, Consumidor e Aéreo, com detalhes em modais, apresentação profissional, perguntas frequentes, avaliações e contato direto.
+Site institucional pt-BR de Murilo Alvarenga Nunes — Advogado, OAB/MG 102.602, com atendimento em Piumhi e Capitólio, MG. Apresenta sete áreas com detalhes em modais, perfil profissional, perguntas frequentes, avaliações e contato direto.
 
 ## Desenvolvimento
 
-Instale as dependências com npm install e inicie com npm run dev. A aplicação usa Next.js 16.3.5, React 19.2.8, Tailwind CSS 4, Framer Motion e Lucide. Antes de alterar código Next.js, leia os guias pertinentes em node_modules/next/dist/docs/, conforme AGENTS.md.
+Instale as dependências com npm install e inicie com npm run dev. A aplicação usa Next.js, React, Tailwind CSS 4, Framer Motion e Lucide. Antes de alterar código Next.js, leia os guias pertinentes em node_modules/next/dist/docs/, conforme AGENTS.md.
 
-Verificações: npm run lint -- app; node node_modules/typescript/bin/tsc --noEmit; npm run build.
+Preview da implementação atual: [localhost:3015](http://localhost:3015). Para iniciar explicitamente nessa porta, use npm run dev -- --port 3015 quando ela estiver disponível.
 
-Status informado pelo responsável pela implementação em 15/10/2026: lint, TypeScript e build de produção aprovados; build novamente aprovado após a troca do caminho do logo. Revisão final independente aprovada em 15/10/2026, conforme resultado informado abaixo.
+Comandos de verificação da aplicação: npm run lint -- app; node node_modules/typescript/bin/tsc --noEmit; npm run build. Os resultados já informados estão na seção de validação; a atualização documental não executa novamente build ou detector.
 
-QA informado pelo agente principal em 15/10/2026: quatro modais funcionam; Tab e Shift+Tab mantêm o foco no diálogo, Escape fecha e restaura o botão de origem. Sem overflow horizontal em 320px, 390px, 768px e 1440px. Contrastes medidos: texto secundário #6b5c4b / marfim #faf6ef = 5,98:1; bronze #784b18 / marfim = 6,92:1; texto #1c1712 / dourado #f0b040 = 9,31:1; claro #f9e7c4 / escuro #1c1712 = 14,61:1. Revisão final independente concluída por impeccable_finish_reviewer em 15/10/2026: disposição ship, aprovado no escopo solicitado, sem achados materiais no código nem pendências. Foram examinadas nove capturas obrigatórias e capturas extras de FAQ/contato; trechos de fonte e hashes confirmados. Rodapé revisado em código; verificações de navegador, teclado, overflow, contraste, fontes, lint e build realizadas pelo executor. As capturas JPEG do IAB com blur limitam a avaliação de nitidez fina. QA nativo final informado pelo executor: âncoras #sobre a 128px e #contato a 127px, abaixo do cabeçalho de 104px; FAQ abre e fecha com contato correto; todas as âncoras existentes e quatro imagens carregadas.
+## Configuração e implementação
 
-Previews locais da implementação: desenvolvimento em http://localhost:3012 e produção em http://localhost:3013.
+Configure NEXT_PUBLIC_SITE_URL com a URL absoluta do domínio de produção. O domínio ainda não foi fornecido. app/layout.tsx usa essa variável como base dos metadados e habilita as imagens Open Graph/Twitter quando ela está definida. O retrato institucional de 617 × 788 é a imagem de compartilhamento. O layout também define idioma pt-BR, ícones e cor do navegador.
 
-## Identidade e implementação
+Dados de marca, links, nota e três trechos literais de avaliações ficam em app/lib/brand.ts. A página, as sete áreas e os modais ficam em app/page.tsx; os CTAs reutilizáveis em app/components/GlowingButton.tsx; o tema em app/globals.css.
 
-O tema em app/globals.css usa @theme inline. Amostragem do logo com sharp, ignorando alpha < 240, selecionando pixels coloridos quentes e quantizando em passos de 16, encontrou bronze #b07020 (16.699 pixels), dourado #f0b040 (12.680), luz #ffd060 (8.104), #d09030 (13.535) e #603000 (11.761). Os demais passos e os neutros são derivados: marfim #faf6ef e escuro #1c1712 estruturam as superfícies.
-
-Cinzel nos títulos complementa as serifas romanas do logo; Manrope serve leitura e controles. Ambas são carregadas por next/font/google em app/layout.tsx, que também define metadados pt-BR, ícones e cor do navegador. Configure NEXT_PUBLIC_SITE_URL com a URL absoluta de produção para habilitar as imagens de compartilhamento. O retrato de 614 × 803 é usado para compartilhamento.
-
-Dados, três trechos literais de avaliações e links ficam em app/lib/brand.ts. A página e os modais ficam em app/page.tsx; os CTAs reutilizáveis em app/components/GlowingButton.tsx. Os componentes e CTAs foram preservados no rebranding, com destinos atualizados. O botão principal tem fundo dourado, texto escuro e raio pequeno.
-
-O cabeçalho mede 104px no celular e 120px a partir de sm; o logo mede 176px/208px de largura. O retrato tem largura máxima de 408px e mantém a proporção 614/803 com object-contain. A seção Sobre usa um painel da marca. Menu móvel em overlay absoluto, inset-x-0 e top-full, ancorado abaixo do cabeçalho, sem empurrar o conteúdo. Interior com altura máxima calc(100dvh - 104px), ou calc(100dvh - 120px) em sm, e overflow-y-auto. O padrão evita deslocamento das âncoras ao fechar o menu durante a rolagem. Modais, foco visível e movimento reduzido permanecem implementados.
+A paleta usa dourado #e0b060, bronze #c09050 e luz #f0d080 extraídos do logo MA; marfim #faf7f0, carvão #141310 e os demais passos são derivados. A amostragem informada com sharp, alpha ≥ 240 e quantização 16 encontrou respectivamente 5.846, 5.850 e 5.324 pixels. Cinzel nos títulos e Manrope nos textos e controles são carregadas por next/font/google.
 
 ## Dados confirmados
 
-- Raynne Lopes, advogada e professora de Prática Previdenciária, conforme bio fornecida pelo usuário.
-- Atuação: Previdenciário/INSS, BPC/LOAS, Consumidor e Aéreo.
-- Telefone: (31) 98497-3275; WhatsApp: https://wa.me/5531984973275; ligação: tel:+5531984973275.
-- Endereço: R. Goiás, 750 — Boa Vista, Sete Lagoas — MG, 35700-030.
-- Instagram: [@raynnelopes.adv](https://www.instagram.com/raynnelopes.adv/); [Threads](https://www.threads.com/@raynnelopes.adv).
-- Google: nota 4,9 e 29 avaliações, interpretadas do material colado pelo usuário como “4,929 avaliações”. São dados estáticos, sem integração. Os links de mapa e avaliações usam busca do Google Maps pelo nome e endereço; não há identificador de perfil confirmado.
-- Trechos literais de Júlia Rodrigues, Paulo de Andrade e GEORGE DAUT em app/lib/brand.ts; preservar texto e autoria.
+- Dr. Murilo Alvarenga Nunes; OAB/MG 102.602, conforme o logo.
+- Áreas: Direito Previdenciário, Ambiental, do Agronegócio, Bancário, Cível, Empresarial e Trabalhista.
+- Telefone: (37) 99983-6911; [WhatsApp](https://wa.me/5537999836911); ligação: tel:+5537999836911. Os links dos modais incluem mensagem referente à área escolhida.
+- Piumhi: R. Dom Pedro II, 86 — Centro, Piumhi — MG, 37925-000.
+- Capitólio: Rua Arcemino Rodrigues da Cunha, 123 — Capitólio — MG.
+- Instagram: [@murilo_alvarenga_nunes](https://www.instagram.com/murilo_alvarenga_nunes/).
+- Google: nota 5,0 e 134 avaliações fornecidas pelo usuário, estáticas; [perfil com CID fornecido](https://www.google.com/maps?cid=2448691614492770861). Os mapas usam buscas específicas dos dois endereços.
+- Depoimentos: trechos literais de João Marcos Oliveira, Altarf Engenharia e Consultoria e Kerlon Moura Pureza em app/lib/brand.ts, sem promessas de resultado.
 
-E-mail, OAB e horário de atendimento não foram fornecidos. Não presumir essas informações, outras credenciais ou resultados.
+E-mail e horários não foram fornecidos. Não inventar esses dados, outras credenciais, experiência ou resultados.
 
-## Ativos e documentação
+## Imagens e proveniência
 
-| Arquivo em public/ | Dimensões | Origem e uso |
+| Caminho | Dimensões | Uso |
 | --- | --- | --- |
-| Logotipo Jurídico Dourado R&L.png | 1774 × 887, RGBA | Original do usuário, preservado integralmente |
-| raynne-lopes-logo.png | 1774 × 887, RGBA | Cópia idêntica usada por brand.logo, cabeçalho, Sobre, rodapé e ícones |
-| raynne-lopes-advogada.png | 614 × 803 | Cópia exata do retrato anexado; hero e compartilhamento |
+| public/murilo-alvarenga-logo.png | 1774 × 887 | Logo MA no cabeçalho, Sobre, rodapé e ícones |
+| public/murilo-alvarenga-advogado.png | 617 × 788 | Material institucional BNI completo no hero e compartilhamento |
+| public/verbas-rescisorias.png | 632 × 839 | Arte sobre verbas rescisórias no modal trabalhista |
 
-O caminho original com & retornou HTTP 400 no otimizador Next durante a verificação da implementação. A cópia com nome simples resolve a compatibilidade sem modificar o original; os dois logos têm o mesmo SHA-256. O retrato também tem SHA-256 igual ao anexo. Origens, dimensões e hashes ficam em .impeccable/asset-origins.json, externamente aos PNGs.
+As três imagens são idênticas aos anexos, conforme dimensões e SHA-256 em [.impeccable/asset-origins.json](.impeccable/asset-origins.json). Preservar esse registro externo e os PNGs, sem recorte, reexportação, recoloração ou metadados embutidos. O material BNI mantém todo o conteúdo original, incluindo o texto tributário; as áreas editoriais continuam sendo as sete solicitadas.
 
-PRODUCT.md registra fatos e restrições. DESIGN.md documenta tokens reais e padrões do código. .impeccable/design.json preserva schemaVersion 2, com ramps atualizadas e exemplos independentes de framework. .impeccable/raynne-lopes-direction.md registra a direção autorizada para a página e o estado de validação.
+## Responsividade e acessibilidade
+
+Cabeçalho de 104px no celular e 120px a partir de sm; logo com largura de 176px/208px. O retrato mantém proporção 617/788, largura máxima de 408px e object-contain. A arte trabalhista tem largura máxima de 280px e altura proporcional. A seção Sobre usa painel da marca.
+
+Menu móvel sobreposto e ancorado abaixo do cabeçalho, sem deslocar o conteúdo; altura interna máxima calc(100dvh - 104px), ou calc(100dvh - 120px) em sm, e rolagem própria. Fecha por Escape ou seleção de link. As âncoras usam rolagem nativa imediata.
+
+Preservar link de salto, foco visível, nomes acessíveis dos controles, aria-expanded/aria-controls no menu, diálogos com título associado, aria-modal, foco inicial, ciclo Tab/Shift+Tab, Escape, retorno do foco, fundo inert e bloqueio/restauração da rolagem. FAQ usa details/summary nativos. MotionConfig respeita movimento reduzido; o CSS reduz transições e animações e desativa a animação da moldura.
+
+## Validação em 15/10/2026
+
+**Executor:** lint de app, TypeScript e build de produção passaram, conforme informado. Sete modais, links específicos, carregamento das imagens, ciclo Tab/Shift+Tab, Escape e retorno do foco confirmados. Sem overflow horizontal em 320px, 390px, 768px e 1440px. Ao clicar Contato, o menu móvel fecha e a seção inicia 127,8px abaixo do topo, com cabeçalho de 104px.
+
+| Texto / fundo | Contraste |
+| --- | --- |
+| #695e4e / #faf7f0 | 5,93:1 |
+| #775225 / #faf7f0 | 6,50:1 |
+| #141310 / #e0b060 | 9,33:1 |
+| #f5e6c8 / #141310 | 15,07:1 |
+
+**Revisão independente:** disposition **ship**, sem achado material impeditivo no escopo pedido, conforme atualização do usuário. O reviewer leu o código, examinou sete capturas, conferiu três depoimentos no anexo e SHA-256 das três imagens. Confirmou os contrastes independentemente. O blur JPEG do IAB nas capturas em .impeccable/review/ limita a avaliação de nitidez fina; lint, TypeScript, build e operações do navegador foram informados pelo executor e não repetidos pelo reviewer.
+
+O detector já havia sido executado uma vez pelo principal, com dois advisories relativos à divisória dourada semitransparente. Sua cor agora consta nos tokens documentados; não houve nova execução nem se presume um novo resultado do detector.
+
+## Documentação do projeto
+
+- [PRODUCT.md](PRODUCT.md): fatos, público, limites e evidências.
+- [DESIGN.md](DESIGN.md): tokens reais no frontmatter e padrões visuais/acessíveis.
+- [.impeccable/design.json](.impeccable/design.json): extensões schemaVersion 2 e exemplos de componentes independentes de framework.
+- [.impeccable/murilo-alvarenga-direction.md](.impeccable/murilo-alvarenga-direction.md): direção da página, materiais, escopo e veredito da revisão.
+- [.impeccable/asset-origins.json](.impeccable/asset-origins.json): origem e integridade das três imagens; registro preservado.

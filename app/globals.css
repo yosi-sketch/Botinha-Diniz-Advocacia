@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
-/* Tailwind CSS 4: amostras quantizadas do logo R&L (pixels opacos).
-   Dourado #f0b040, bronze #b07020 e luz #ffd060; escala e neutros derivados. */
+/* Tailwind CSS 4: cores extraídas do logo MA original, pixels com alpha >= 240.
+   Dourado #e0b060, bronze #c09050 e luz #f0d080; neutros derivados. */
 :root {
   color-scheme: light;
-  --brand-ink: #2b2118;
-  --brand-ink-soft: #6b5c4b;
-  --brand-paper: #faf6ef;
+  --brand-ink: #28231c;
+  --brand-ink-soft: #695e4e;
+  --brand-paper: #faf7f0;
 }
 @theme inline {
   --font-display: var(--font-display-face), "Cinzel", Georgia, serif;
   --font-sans: var(--font-body), "Manrope", system-ui, sans-serif;
-  --color-ink: #2b2118;
-  --color-ink-soft: #6b5c4b;
+  --color-ink: #28231c;
+  --color-ink-soft: #695e4e;
   --color-paper: #ffffff;
-  --color-ivory: #faf6ef;
-  --color-linen: #eee4d5;
-  --color-brand-50: #fcf5e7;
-  --color-brand-100: #f9e7c4;
-  --color-brand-200: #ffd060;
-  --color-brand-300: #f0b040;
-  --color-brand-400: #d09030;
-  --color-brand-500: #b07020;
-  --color-brand-600: #925b1b;
-  --color-brand-700: #784b18;
-  --color-brand-800: #603000;
-  --color-brand-900: #302319;
-  --color-brand-950: #1c1712;
-  --shadow-card: 0 18px 48px rgb(43 33 24 / 18%);
+  --color-ivory: #faf7f0;
+  --color-linen: #eee5d6;
+  --color-brand-50: #f8f1e3;
+  --color-brand-100: #f5e6c8;
+  --color-brand-200: #f0d080;
+  --color-brand-300: #e0b060;
+  --color-brand-400: #d0a060;
+  --color-brand-500: #c09050;
+  --color-brand-600: #90652e;
+  --color-brand-700: #775225;
+  --color-brand-800: #63421f;
+  --color-brand-900: #29231b;
+  --color-brand-950: #141310;
+  --shadow-card: 0 18px 48px rgb(40 35 28 / 18%);
 }
 html { scroll-padding-top: 2rem; }
 body {
@@ -66,7 +66,7 @@ h1, h2 { text-wrap: balance; }
 .brand-hero .text-ink-soft { color: var(--color-brand-100); }
 .brand-hero .text-ink { color: var(--color-ivory); }
 .brand-hero .text-brand-700 { color: var(--color-brand-300); }
-.brand-hero .border-ink\/10 { border-color: rgb(240 176 64 / 22%); }
+.brand-hero .border-ink\/10 { border-color: rgb(224 176 96 / 22%); }
 
 ::-webkit-scrollbar { width: 9px; }
 ::-webkit-scrollbar-track { background: var(--color-brand-50); }
@@ -88,7 +88,7 @@ h1, h2 { text-wrap: balance; }
 
 .brand-footer .text-ink-soft { color: var(--color-brand-100); }
 .brand-footer .text-brand-700 { color: var(--color-brand-300); }
-.brand-footer .border-ink\/15 { border-color: rgb(240 176 64 / 22%); }
+.brand-footer .border-ink\/15 { border-color: rgb(224 176 96 / 22%); }
 .hero-portrait { position: relative; padding: 14px 14px 0 0; }
 .hero-portrait::before {
   position: absolute;

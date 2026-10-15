@@ -1,43 +1,40 @@
 {
-  "description": "Ativos fornecidos pelo usuário. Origem e integridade registradas externamente; nenhum PNG modificado nesta documentação.",
-  "verifiedAt": "2026-10-15T11:54:42.392Z",
+  "description": "Origem e integridade dos ativos do cliente atual, registradas externamente para preservar os PNGs.",
+  "verifiedAt": "2026-10-15T20:06:27.471Z",
   "hashAlgorithm": "SHA-256",
   "assets": [
     {
-      "path": "public/Logotipo Jurídico Dourado R&L.png",
-      "origin": "Logo original R&L fornecido pelo usuário na pasta public; preservado integralmente.",
+      "path": "public/murilo-alvarenga-logo.png",
+      "origin": "Anexo fornecido pelo usuário, copiado sem alterações.",
+      "sourcePath": "C:/Users/matheus/Desktop/Logotipo Jurídico Dourado MA、】【.png",
       "width": 1774,
       "height": 887,
-      "colorType": 6,
-      "format": "PNG RGBA",
-      "sha256": "0996cb6731efe49b0a102c587f1a0d190dfe9242aa0d764511c7e11d1da96688",
-      "usage": "Original de referência da marca."
+      "sha256": "4faf5417bb40e22e50d495c139987598e4bd7071331297c171e619f3020d34f2",
+      "sourceSha256": "4faf5417bb40e22e50d495c139987598e4bd7071331297c171e619f3020d34f2",
+      "identicalToSource": true,
+      "usage": "Logo original MA; cabeçalho, Sobre, rodapé e ícones."
     },
     {
-      "path": "public/raynne-lopes-logo.png",
-      "origin": "Cópia byte a byte do logo original fornecido pelo usuário.",
-      "sourcePath": "public/Logotipo Jurídico Dourado R&L.png",
-      "width": 1774,
-      "height": 887,
-      "colorType": 6,
-      "format": "PNG RGBA",
-      "sha256": "0996cb6731efe49b0a102c587f1a0d190dfe9242aa0d764511c7e11d1da96688",
+      "path": "public/murilo-alvarenga-advogado.png",
+      "origin": "Anexo fornecido pelo usuário, copiado sem alterações.",
+      "sourcePath": "C:/Users/matheus/AppData/Local/Temp/codex-clipboard-d18b08f1-4d07-4395-922a-bf51170a5eea.png",
+      "width": 617,
+      "height": 788,
+      "sha256": "d733fc38034e4b38398d32bc73cde3bce5961f48a1fa8f889e501374dd0b5f6b",
+      "sourceSha256": "d733fc38034e4b38398d32bc73cde3bce5961f48a1fa8f889e501374dd0b5f6b",
       "identicalToSource": true,
-      "usage": "Caminho de brand.logo para cabeçalho, painel do Sobre, rodapé e ícones.",
-      "compatibilityReason": "Durante a verificação da implementação, o otimizador Next retornou HTTP 400 para o caminho original com &. A cópia de nome simples preserva o original e evita esse problema."
+      "usage": "Material institucional original no hero, completo e proporcional; compartilhamento."
     },
     {
-      "path": "public/raynne-lopes-advogada.png",
-      "origin": "Retrato anexado pelo usuário; cópia exata verificada por SHA-256.",
-      "sourcePath": "C:/Users/matheus/AppData/Local/Temp/codex-clipboard-8b7613b4-0941-4f3c-9f44-954dcbd42923.png",
-      "width": 614,
-      "height": 803,
-      "colorType": 6,
-      "format": "PNG",
-      "sha256": "3771913eee6a0e74c44f02fc7a0622084d862416efd0f78ad8861d01a66de97c",
-      "sourceSha256": "3771913eee6a0e74c44f02fc7a0622084d862416efd0f78ad8861d01a66de97c",
+      "path": "public/verbas-rescisorias.png",
+      "origin": "Anexo fornecido pelo usuário, copiado sem alterações.",
+      "sourcePath": "C:/Users/matheus/AppData/Local/Temp/codex-clipboard-ae221918-0c4e-49e3-bc61-3812c5319d85.png",
+      "width": 632,
+      "height": 839,
+      "sha256": "a0e3918b2c6a72f8f09074917082038dd201d9887655aa3df64d0982bf4104b4",
+      "sourceSha256": "a0e3918b2c6a72f8f09074917082038dd201d9887655aa3df64d0982bf4104b4",
       "identicalToSource": true,
-      "usage": "Hero com proporção 614/803 e object-contain; imagem de compartilhamento."
+      "usage": "Material original no modal Direito Trabalhista."
     }
   ]
 }
