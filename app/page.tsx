@@ -16,16 +16,17 @@ import {
   MapPin,
   Menu,
   Scale,
-  BriefcaseBusiness,
   ShieldCheck,
-  House,
+  Gavel,
+  Clock3,
+  LockKeyhole,
   ScrollText,
   Camera,
   Star,
   X,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
-import { brand, partners, testimonials, contact, whatsapp, telephone, whatsappFor, maps, reviews } from "./lib/brand";
+import { brand, testimonials, contact, whatsapp, telephone, whatsappFor, maps, reviews } from "./lib/brand";
 
 function WhatsAppMark({size = 16, strokeWidth = 1.8}: {size?: number; strokeWidth?: number}) { return <MessageCircle size={size} strokeWidth={strokeWidth} aria-hidden="true" />; }
 
@@ -45,34 +46,28 @@ const stagger: Variants = {
 
 const areas = [
   {
-    title: "Direito Empresarial", icon: BriefcaseBusiness,
-    summary: "Orientação para as relações do seu negócio, com atenção aos contratos e à prevenção de riscos.",
-    details: "A RAS Advogados assessora questões jurídicas da atividade empresarial. O atendimento considera a realidade do negócio, os documentos apresentados e as responsabilidades envolvidas para orientar decisões com clareza.",
-    topics: ["Assessoria jurídica empresarial", "Análise de contratos comerciais", "Orientação sobre relações societárias", "Prevenção de conflitos e acompanhamento de demandas"],
+    title: "Defesa criminal", icon: ShieldCheck,
+    summary: "Acompanhamento de processos criminais, com atenção aos fatos, às provas e aos seus direitos.",
+    details: "A defesa criminal começa pela compreensão da situação e pela análise dos documentos disponíveis. O acompanhamento envolve orientação sobre o processo, preparação da defesa e comunicação sobre cada etapa, respeitando as particularidades do caso.",
+    topics: ["Análise da situação e dos documentos", "Orientação ao longo do processo criminal", "Preparação e acompanhamento da defesa", "Atenção aos direitos e garantias individuais"],
   },
   {
-    title: "Direito Civil", icon: Scale,
-    summary: "Cuidado com os contratos, o patrimônio e os direitos presentes nas suas relações pessoais.",
-    details: "A atuação civil envolve a análise de contratos, obrigações e conflitos entre pessoas e empresas. Cada demanda é avaliada a partir de seu contexto e dos documentos disponíveis, com orientação sobre os caminhos possíveis.",
-    topics: ["Contratos e obrigações civis", "Responsabilidade civil", "Proteção de direitos e patrimônio", "Orientação e acompanhamento de conflitos"],
+    title: "Investigação e inquérito", icon: ScrollText,
+    summary: "Orientação desde os primeiros esclarecimentos, intimações e atos da investigação.",
+    details: "Receber uma intimação ou tomar conhecimento de uma investigação pode gerar dúvidas. A orientação jurídica ajuda a compreender o contexto, organizar as informações e acompanhar os atos pertinentes à apuração, com cuidado e confidencialidade.",
+    topics: ["Análise de intimações e documentos", "Orientação para depoimentos", "Acompanhamento de inquéritos", "Esclarecimento das etapas da investigação"],
   },
   {
-    title: "Penal Empresarial e Financeiro", icon: ShieldCheck,
-    summary: "Análise responsável de questões penais no contexto das atividades empresariais e financeiras.",
-    details: "Questões penais empresariais e financeiras exigem atenção ao contexto e às garantias de cada pessoa envolvida. A RAS Advogados analisa a situação e orienta a condução da demanda, com cuidado técnico e respeito à confidencialidade.",
-    topics: ["Orientação em questões penais empresariais", "Análise de demandas penais financeiras", "Defesa de direitos e garantias", "Acompanhamento de investigações e processos"],
+    title: "Prisão e audiência de custódia", icon: LockKeyhole,
+    summary: "Atendimento para situações urgentes, com análise da prisão e orientação aos familiares.",
+    details: "Em uma situação de prisão, o primeiro contato permite compreender os fatos e identificar as providências adequadas. Cada situação exige análise individual das informações, das condições da prisão e dos direitos da pessoa envolvida.",
+    topics: ["Orientação em situações de prisão", "Análise de documentos relacionados à custódia", "Acompanhamento de audiência de custódia", "Comunicação e orientação aos familiares"],
   },
   {
-    title: "Direito Imobiliário", icon: House,
-    summary: "Assessoria nas decisões sobre imóveis, da análise de documentos às relações contratuais.",
-    details: "A orientação imobiliária ajuda a compreender os documentos e as responsabilidades relacionados ao imóvel. O escritório analisa a demanda e acompanha as questões jurídicas pertinentes à negociação, à propriedade e aos contratos.",
-    topics: ["Análise de contratos imobiliários", "Orientação em compra, venda e locação", "Questões de propriedade e documentação", "Prevenção e acompanhamento de conflitos imobiliários"],
-  },
-  {
-    title: "Planejamento Sucessório", icon: ScrollText,
-    summary: "Organização patrimonial com atenção à família, à continuidade e às próximas gerações.",
-    details: "O planejamento sucessório parte da compreensão da realidade familiar e patrimonial. A análise individual permite discutir alternativas de organização e transmissão do patrimônio, observando a vontade dos envolvidos e os requisitos aplicáveis.",
-    topics: ["Análise do contexto familiar e patrimonial", "Orientação sobre organização da sucessão", "Avaliação de instrumentos de planejamento", "Acompanhamento de questões sucessórias"],
+    title: "Recursos e execução penal", icon: Gavel,
+    summary: "Análise de decisões e acompanhamento jurídico durante o cumprimento da pena.",
+    details: "A atuação criminal também abrange a análise de decisões e o acompanhamento da execução penal. A orientação considera os documentos do processo e a situação individual para avaliar os caminhos cabíveis, sem antecipar resultados.",
+    topics: ["Análise de decisões judiciais", "Avaliação de recursos cabíveis", "Acompanhamento da execução penal", "Orientação sobre direitos durante o cumprimento da pena"],
   },
 ];
 
@@ -164,11 +159,11 @@ export default function Home() {
       <main className="bg-ivory text-ink">
         <div ref={contentRef}>
         <a href="#inicio" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-sm focus:bg-white focus:p-4 focus:text-ink">Ir para o conteúdo</a>
-        <header className="sticky top-0 z-40 border-b border-ink/10 bg-ivory text-ink">
+        <header className="brand-header sticky top-0 z-40 border-b border-brand-300/20 bg-brand-950 text-brand-100">
           <div className="mx-auto flex h-[84px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[104px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="RAS Advogados — início"
+              aria-label="Eduardo Cury — início"
               onClick={closeMenu}
               className="shrink-0"
             >
@@ -178,8 +173,8 @@ export default function Home() {
                 height={802}
                 alt={brand.businessName}
                 preload
-                className="h-auto w-[140px] sm:w-[180px]"
-                sizes="(max-width: 640px) 140px, 180px"
+                className="h-auto w-[155px] sm:w-[190px]"
+                sizes="(max-width: 640px) 155px, 190px"
               />
             </a>
             <nav
@@ -195,9 +190,6 @@ export default function Home() {
               <a className="nav-link" href="#sobre">
                 Sobre
               </a>
-              <a className="nav-link" href="#socios">
-                Sócios
-              </a>
               <a className="nav-link" href="#avaliacoes">
                 Avaliações
               </a>
@@ -210,8 +202,8 @@ export default function Home() {
                 href={contact}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp da RAS Advogados"
-                className="grid size-10 place-items-center rounded-full border border-ink/20 text-brand-700 transition-colors hover:border-brand-700 hover:text-brand-800"
+                aria-label="WhatsApp do Eduardo Cury"
+                className="grid size-10 place-items-center rounded-full border border-brand-300/40 text-brand-200 transition-colors hover:border-brand-300 hover:text-brand-300"
               >
                 <WhatsAppMark size={17} strokeWidth={1.7} />
               </a>
@@ -219,7 +211,7 @@ export default function Home() {
                 href={whatsapp}
                 target="_blank"
                 size="sm"
-                className="rounded-full"
+                className="rounded-sm"
               >
                 WhatsApp <ArrowUpRight size={14} />
               </GlowingButton>
@@ -229,7 +221,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-full border border-ink/20 lg:hidden"
+              className="grid size-11 place-items-center rounded-sm border border-brand-300/40 lg:hidden"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -251,7 +243,6 @@ export default function Home() {
                     ["Início", "#inicio"],
                     ["Atuação", "#atuacao"],
                     ["Sobre", "#sobre"],
-                    ["Sócios", "#socios"],
                     ["Avaliações no Google", "#avaliacoes"],
                     ["Contato", "#contato"],
                   ].map(([label, href]) => (
@@ -265,7 +256,7 @@ export default function Home() {
                     </a>
                   ))}
                   <a
-                    className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-5 py-3.5 text-xs font-semibold text-white"
+                    className="mt-3 inline-flex items-center justify-center gap-2 rounded-sm bg-brand-300 px-5 py-3.5 text-xs font-semibold text-brand-950"
                     href={whatsapp}
                     target="_blank"
                     rel="noreferrer"
@@ -281,9 +272,9 @@ export default function Home() {
 
         <section
           id="inicio"
-          className="brand-hero relative isolate overflow-hidden scroll-mt-24 border-b border-ink/10 bg-brand-900"
+          className="brand-hero relative isolate overflow-hidden scroll-mt-24 border-b border-ink/10 bg-brand-950"
         >
-          <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-12 px-5 py-14 sm:px-8 sm:py-20 lg:min-h-[710px] lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:px-12 lg:py-20">
+          <div className="mx-auto grid min-h-[640px] max-w-7xl items-center gap-12 px-5 py-14 sm:px-8 sm:py-20 lg:min-h-[680px] lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:px-12 lg:py-20">
             <motion.div
               initial={false}
               animate="visible"
@@ -292,16 +283,16 @@ export default function Home() {
             >
               <motion.h1
                 variants={reveal}
-                className="max-w-[720px] font-display text-[2.65rem] leading-[1.08] tracking-[-0.035em] text-white sm:text-[3.5rem] lg:text-[3.9rem]"
+                className="max-w-[720px] font-display text-[2.4rem] leading-[1.16] tracking-[-0.025em] text-ivory sm:text-[3.3rem] lg:text-[3.65rem]"
               >
-                Decisões seguras.{" "}<br />
-                <span className="text-brand-700">Direitos protegidos.</span>
+                Sua liberdade merece{" "}
+                <span className="text-brand-300">uma defesa à altura.</span>
               </motion.h1>
               <motion.p
                 variants={reveal}
                 className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft sm:text-base sm:leading-8"
               >
-                Assessoria jurídica para cuidar do seu negócio, do seu patrimônio e das decisões que importam. Em Sete Lagoas, a RAS Advogados alia análise cuidadosa e orientação clara em cada etapa.
+                Advocacia criminal em Ituiutaba, Minas Gerais. Eduardo Cury oferece orientação e defesa com escuta, sigilo e atenção a cada detalhe do seu caso.
               </motion.p>
               <motion.div
                 variants={reveal}
@@ -311,9 +302,9 @@ export default function Home() {
                   href={whatsapp}
                   target="_blank"
                   size="lg"
-                  className="rounded-full"
+                  className="rounded-sm"
                 >
-                  <Phone size={16} /> Fale pelo WhatsApp
+                  <WhatsAppMark size={17} /> Fale com Eduardo Cury
                 </GlowingButton>
                 <a
                   href="#atuacao"
@@ -328,15 +319,15 @@ export default function Home() {
               </motion.div>
               <motion.div
                 variants={reveal}
-                className="mt-11 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-ink/10 pt-6 text-xs text-ink-soft"
+                className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-ink/10 pt-5 text-xs text-ink-soft"
               >
                 <span className="inline-flex items-center gap-2">
                   <MapPin size={15} className="text-brand-700" />
-                  Sete Lagoas · Minas Gerais
+                  Ituiutaba · Minas Gerais
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <Phone size={15} className="text-brand-700" />
-                  {brand.phone}
+                  <Clock3 size={15} className="text-brand-700" />
+                  {brand.hours}
                 </span>
                 <a href="#avaliacoes" className="inline-flex items-center gap-2 py-2 text-sm text-brand-200 underline underline-offset-4">
                   <Star size={15} aria-hidden="true" /> Avaliações no Google
@@ -351,18 +342,24 @@ export default function Home() {
                 delay: 0.16,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="relative mx-auto w-full max-w-[460px] lg:ml-auto lg:mr-3"
+              className="relative mx-auto w-full max-w-[408px] lg:ml-auto lg:mr-0"
             >
-              <div className="relative aspect-[681/840] overflow-hidden bg-brand-800">
+              <figure className="hero-portrait">
+              <div className="relative aspect-[408/510] overflow-hidden bg-brand-900">
                 <Image
                   src={brand.portrait}
-                  alt="Sócios da RAS Advogados: Cleiton Silva, Denilson Rodrigues e Willian Rangel"
+                  alt="Eduardo Cury, advogado criminalista em Ituiutaba"
                   fill
                   preload
-                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 40vw"
+                  sizes="(max-width: 450px) 90vw, 408px"
                   className="object-contain"
                 />
               </div>
+              <figcaption className="relative flex items-center justify-between gap-4 bg-brand-950 pb-1 pt-5 text-brand-100">
+                <span className="font-display text-lg text-brand-300">Eduardo Cury</span>
+                <span className="text-[10px] uppercase tracking-[0.12em]">Advogado criminalista</span>
+              </figcaption>
+              </figure>
             </motion.div>
           </div>
         </section>
@@ -373,9 +370,9 @@ export default function Home() {
         >
           <div className="mx-auto grid max-w-7xl gap-6 px-5 py-7 sm:grid-cols-3 sm:gap-4 sm:px-8 lg:px-12">
             {[
-              ["Prevenção", "Orientação antes de decidir"],
               ["Defesa", "Atenção aos seus direitos"],
-              ["Assessoria", "Cuidado com pessoas e empresas"],
+              ["Sigilo", "Respeito à sua história"],
+              ["Presença", "Orientação em cada etapa"],
             ].map(([value, label], index) => (
               <div
                 key={value}
@@ -410,13 +407,13 @@ export default function Home() {
             >
               <Heading
 
-                description="Questões pessoais e empresariais merecem análise cuidadosa. Conheça as áreas em que podemos orientar você."
+                description="Da investigação ao acompanhamento do processo, uma atuação voltada à proteção dos seus direitos."
               >
-                Seus direitos, nossa{" "}
-                <span className="text-brand-700">atenção.</span>
+                Defesa em cada{" "}
+                <span className="text-brand-700">etapa.</span>
               </Heading>
               <p className="max-w-[250px] pb-1 text-xs leading-6 text-ink-soft">
-                Selecione uma área para conhecer os temas atendidos.
+                Conheça os temas da atuação criminal e saiba como iniciar o atendimento.
               </p>
             </motion.div>
             <motion.div
@@ -440,7 +437,7 @@ export default function Home() {
                       </span>
                     </div>
                     <div>
-                    <h3 className="max-w-sm font-display text-[1.8rem] leading-tight text-ink">
+                    <h3 className="max-w-xl font-display text-[1.55rem] sm:text-[1.8rem] leading-tight text-ink">
                       {area.title}
                     </h3>
                     <p className="mt-3 max-w-xl text-[13px] leading-6 text-ink-soft">
@@ -467,75 +464,21 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          id="sobre"
-          className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
-        >
-          <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-24 lg:px-12">
-            <figure className="mx-auto w-full max-w-[460px]">
-              <div className="relative aspect-[6/5] bg-ivory p-8 sm:p-10">
-                <Image src={brand.logo} alt={brand.businessName} fill sizes="(max-width: 640px) 90vw, 460px" className="object-contain p-8 sm:p-10" />
-              </div>
-              <figcaption className="mt-4 text-sm leading-6 text-ink-soft">RAS Advogados · Sete Lagoas, Minas Gerais.</figcaption>
+        <section id="sobre" className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32">
+          <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24 lg:px-12">
+            <figure className="mx-auto w-full max-w-[340px] lg:ml-0">
+              <Image src={brand.office} alt="Eduardo Cury em seu escritório, com o logo dourado da marca na parede" width={282} height={506} sizes="(max-width: 390px) 88vw, 340px" className="h-auto w-full" />
+              <figcaption className="mt-4 text-xs leading-6 text-ink-soft">Escritório Eduardo Cury · Ituiutaba, Minas Gerais.</figcaption>
             </figure>
-            <motion.div
-              initial={false}
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={stagger}
-            >
-              <motion.h2
-                variants={reveal}
-                className="mt-4 max-w-2xl font-display text-4xl leading-[1.08] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.45rem]"
-              >
-                Três trajetórias.{" "}
-                <span className="text-brand-700">Um compromisso com você.</span>
-              </motion.h2>
-              <motion.p
-                variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-7 text-ink-soft"
-              >
-                Em Sete Lagoas, Minas Gerais, a RAS Advogados reúne Willian Rangel, Denilson Rodrigues e Cleiton Silva. A atuação dos sócios conecta o Direito Empresarial e Civil, o Penal Empresarial e Financeiro, o Direito Imobiliário e o Planejamento Sucessório.
-              </motion.p>
-              <motion.p
-                variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-7 text-ink-soft"
-              >
-                Mais do que acompanhar uma demanda, a proposta é ajudar você a compreender sua situação e tomar decisões com segurança. O atendimento começa pela escuta e pela análise das informações disponíveis, para orientar os próximos passos com clareza e responsabilidade.
-              </motion.p>
-              <motion.a
-                variants={reveal}
-                href={contact}
-                target="_blank"
-                rel="noreferrer"
-                className="group mt-8 inline-flex items-center gap-2 border-b border-brand-700/40 pb-2 text-xs font-semibold uppercase tracking-[0.13em] text-brand-800 transition-colors hover:border-brand-700 hover:text-brand-700"
-              >
-                Converse com nossa equipe{" "}
-                <ArrowUpRight
-                  size={15}
-                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                />
-              </motion.a>
-            </motion.div>
-          </div>
-        </section>
-
-        <section id="socios" aria-labelledby="partners-title" className="scroll-mt-28 bg-ivory pb-20 pt-16 sm:pb-28 sm:pt-20">
-          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-            <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-              <h2 id="partners-title" className="max-w-xl font-display text-4xl leading-[1.1] tracking-[-0.03em] text-brand-700 sm:text-5xl">Conheça os sócios<br className="hidden sm:block" /> da RAS Advogados.</h2>
-              <p className="max-w-sm text-sm leading-7 text-ink-soft">Conhecimentos que se complementam para orientar pessoas, famílias e empresas.</p>
-            </div>
-            <div className="grid gap-x-7 gap-y-12 md:grid-cols-3">
-              {partners.map((partner) => (
-                <figure key={partner.name}>
-                  <Image src={partner.image} alt={"Retrato institucional de " + partner.name + ", advogado da RAS Advogados"} width={partner.width} height={partner.height} sizes="(max-width: 767px) 90vw, 33vw" className="h-auto w-full" />
-                  <figcaption className="mt-5 border-t border-brand-700/20 pt-4">
-                    <h3 className="font-display text-2xl text-brand-700">{partner.name}</h3>
-                    <p className="mt-2 text-[13px] leading-6 text-ink-soft">{partner.area}</p>
-                  </figcaption>
-                </figure>
-              ))}
+            <div>
+              <h2 className="max-w-2xl font-display text-4xl leading-[1.16] text-ink sm:text-5xl">Conheça quem cuida da <span className="text-brand-700">sua defesa.</span></h2>
+              <p className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft">Eduardo Cury é advogado criminalista em Ituiutaba, Minas Gerais. Seu trabalho parte de uma convicção: cada pessoa merece ser ouvida e compreender os caminhos da própria defesa.</p>
+              <p className="mt-4 max-w-xl text-[15px] leading-7 text-ink-soft">A proposta é unir análise cuidadosa, comunicação acessível e respeito à confidencialidade. Do primeiro contato ao acompanhamento da demanda, a atenção está nas particularidades do caso e nos direitos de quem precisa de orientação.</p>
+              <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4 border-y border-ink/15 py-5 text-sm text-brand-800">
+                <span className="inline-flex items-center gap-2"><Scale size={18} strokeWidth={1.5} /> Advocacia criminal</span>
+                <span className="inline-flex items-center gap-2"><Clock3 size={18} strokeWidth={1.5} /> {brand.hours}</span>
+              </div>
+              <a href={contact} target="_blank" rel="noopener noreferrer" className="group mt-7 inline-flex min-h-11 items-center gap-2 border-b border-brand-700/40 py-2 text-sm font-semibold text-brand-800 transition-colors hover:text-brand-700">Converse com Eduardo Cury <ArrowUpRight size={16} /></a>
             </div>
           </div>
         </section>
@@ -545,7 +488,7 @@ export default function Home() {
             <Heading
 
               light
-              description="Ouvir sua situação, analisar as informações e explicar os caminhos possíveis são partes de uma assessoria próxima e responsável."
+              description="Quando uma questão criminal afeta sua vida, compreender o que acontece e quais são os próximos passos faz diferença."
             >
               Clareza para compreender cada{" "}
               <span className="text-brand-200">etapa.</span>
@@ -560,15 +503,15 @@ export default function Home() {
               {[
                 [
                   "Escuta e compreensão",
-                  "Conhecer sua situação e suas dúvidas é o ponto de partida para uma orientação jurídica pertinente.",
+                  "Um atendimento que começa ouvindo sua história, suas dúvidas e as circunstâncias do caso.",
                 ],
                 [
                   "Comunicação clara",
-                  "Orientações acessíveis ajudam a compreender documentos, responsabilidades e decisões.",
+                  "Explicações acessíveis sobre a situação, as possibilidades da defesa e o andamento da demanda.",
                 ],
                 [
                   "Análise cuidadosa",
-                  "Cada documento e demanda recebe atenção às particularidades do caso, com foco na prevenção de riscos e na defesa de direitos.",
+                  "Atenção aos fatos e aos documentos, com respeito ao sigilo e às particularidades de cada defesa.",
                 ],
               ].map(([title, description]) => (
                 <motion.div
@@ -593,9 +536,10 @@ export default function Home() {
             <h2 id="questions-title" className="font-display text-3xl leading-tight text-ink sm:text-4xl">Antes da nossa primeira conversa.</h2>
             <div className="divide-y divide-ink/15 border-y border-ink/15">
               {[
-                ["Como funciona o primeiro contato?", "Envie uma mensagem pelo WhatsApp ou ligue para (31) 3177-0100 e conte brevemente sua necessidade. A equipe orientará sobre disponibilidade, agendamento e informações iniciais."],
-                ["Onde fica o escritório?", "Estamos na Praça Vo Fina, nº 124, no Centro de Sete Lagoas, Minas Gerais. Entre em contato pelo WhatsApp para combinar sua visita e consultar o formato de atendimento adequado à sua demanda."],
-                ["Quais documentos devo separar?", "Separe os documentos relacionados à sua questão, como contratos, comunicações, escrituras ou documentos da empresa. A equipe indicará o que será necessário conforme a análise inicial."],
+                ["Como funciona o primeiro contato?", "Envie uma mensagem pelo WhatsApp ou ligue para (34) 99111-6365. Conte brevemente sua situação para receber orientação sobre o atendimento e as informações iniciais necessárias."],
+                ["Onde fica o escritório?", "O escritório fica no Edifício Ituiutaba, na Av. 13, 658, sala 801, Centro, Ituiutaba, MG, CEP 38300-140. Entre em contato para combinar sua visita."],
+                ["O atendimento funciona 24 horas?", "Sim. O contato para atendimento criminal está disponível 24 horas pelo telefone e WhatsApp (34) 99111-6365. Para visitas ao escritório, combine o atendimento previamente."],
+                ["Quais documentos devo separar?", "Tenha em mãos um documento de identificação e, se disponíveis, intimações, boletins de ocorrência, decisões ou o número do processo. Os documentos necessários serão indicados conforme sua situação."],
               ].map(([question, answer]) => (
                 <details key={question} className="group py-6">
                   <summary className="cursor-pointer text-base font-semibold text-ink marker:text-brand-700">{question}</summary>
@@ -612,9 +556,9 @@ export default function Home() {
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
-              <Heading description="Experiências compartilhadas no Google por quem conhece nosso atendimento.">
-                O que dizem{" "}
-                <span className="text-brand-700">sobre a RAS.</span>
+              <Heading description="Relatos de quem conhece o atendimento do Eduardo Cury, publicados no Google.">
+                Confiança que se{" "}
+                <span className="text-brand-700">compartilha.</span>
               </Heading>
               <div className="flex shrink-0 items-center gap-4 text-brand-700">
                 <p className="font-display text-5xl leading-none tabular-nums" aria-label={`Nota ${brand.googleRating} de 5 no Google`}>
@@ -666,7 +610,7 @@ export default function Home() {
             <div>
               <Heading
 
-                description="Sede em Sete Lagoas, Minas Gerais. Converse com nossa equipe pelo WhatsApp para consultar a disponibilidade e combinar seu atendimento."
+                description="Em uma situação urgente ou para esclarecer uma dúvida, fale com Eduardo Cury. Atendimento criminal 24 horas por telefone e WhatsApp."
               >
                 Um primeiro contato com{" "}
                 <span className="text-brand-700">tranquilidade.</span>
@@ -676,9 +620,9 @@ export default function Home() {
                   href={whatsapp}
                   target="_blank"
                   size="lg"
-                  className="rounded-full"
+                  className="rounded-sm"
                 >
-                  <Phone size={16} /> Fale pelo WhatsApp
+                  <WhatsAppMark size={17} /> Fale com Eduardo Cury
                 </GlowingButton>
                 <a href={telephone} className="inline-flex min-h-11 items-center gap-2 text-sm text-brand-700 hover:text-brand-800"><Phone size={16} /> Ligue: {brand.phone}</a>
                 <a href={brand.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 py-2 text-sm text-brand-700 hover:text-brand-800"><Camera size={16} /> {brand.instagramHandle}</a>
@@ -691,10 +635,11 @@ export default function Home() {
                   <MapPin size={21} strokeWidth={1.6} />
                 </span>
                 <div>
-                  <h3 className="font-display text-2xl text-ink">Nosso escritório em Sete Lagoas</h3>
+                  <h3 className="font-display text-2xl text-ink">Escritório em Ituiutaba</h3>
                 </div>
               </div>
-              <address className="mt-7 max-w-md not-italic text-[14px] leading-7 text-ink-soft">
+              <p className="mt-6 text-sm font-semibold text-brand-700">{brand.building}</p>
+              <address className="mt-2 max-w-md not-italic text-[14px] leading-7 text-ink-soft">
                 {brand.address}
               </address>
               <div className="my-7 h-px bg-ink/10" />
@@ -719,7 +664,7 @@ export default function Home() {
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
               <h2 className="mt-3 max-w-2xl font-display text-3xl leading-tight sm:text-4xl">
-                Seus direitos merecem uma conversa com atenção.
+                Sua defesa começa com uma conversa.
               </h2>
             </div>
             <a
@@ -733,7 +678,7 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="bg-brand-50 px-5 py-12 text-ink sm:px-8 lg:px-12">
+        <footer className="brand-footer bg-brand-950 px-5 py-12 text-brand-100 sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.1fr_0.9fr_1fr]">
             <div>
               <div className="inline-flex px-3 py-2">
@@ -747,7 +692,7 @@ export default function Home() {
                 />
               </div>
               <p className="mt-4 max-w-xs text-xs leading-6 text-ink-soft">
-                Advocacia e assessoria jurídica em Sete Lagoas, MG. Cuidado com seus direitos e com as decisões do seu negócio.
+                Advocacia criminal em Ituiutaba, MG. Defesa, orientação e atenção a cada detalhe do seu caso.
               </p>
             </div>
             <div>
@@ -760,9 +705,6 @@ export default function Home() {
                 </a>
                 <a className="footer-link" href="#sobre">
                   Sobre o escritório
-                </a>
-                <a className="footer-link" href="#socios">
-                  Conheça os sócios
                 </a>
                 <a className="footer-link" href="#avaliacoes">
                   Perfil no Google
@@ -841,7 +783,7 @@ export default function Home() {
 
                 <h2
                   id="area-dialog-title"
-                  className="mt-4 max-w-sm pr-10 font-display text-4xl leading-tight text-ink"
+                  className="mt-4 max-w-sm pr-10 font-display text-[1.7rem] leading-tight text-ink sm:text-3xl"
                 >
                   {activeArea.title}
                 </h2>
@@ -863,7 +805,7 @@ export default function Home() {
                   href={whatsappFor(activeArea.title.toLowerCase())}
                   target="_blank"
                   size="md"
-                  className="mt-8 rounded-full"
+                  className="mt-8 w-full rounded-sm sm:w-auto"
                 >
                   <Phone size={15} /> Conversar sobre esta área
                   <ArrowUpRight size={15} />

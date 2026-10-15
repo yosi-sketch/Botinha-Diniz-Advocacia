@@ -1,0 +1,8 @@
+{
+  "description": "Assets originais fornecidos pelo usuário. Arquivos preservados integralmente; origem registrada fora dos PNGs para não alterar os anexos.",
+  "assets": [
+    { "path": "public/Logotipo Dourado Eduardo Cury Advocacia.png", "origin": "Logo dourado de Eduardo Cury fornecido pelo usuário na pasta public." },
+    { "path": "public/eduardo-cury-advogado.png", "origin": "Anexo do usuário codex-clipboard-964a610d-ec77-4e02-98fd-22dea95d71ce.png; cópia integral, verificada por SHA-256." },
+    { "path": "public/eduardo-cury-escritorio.png", "origin": "Anexo do usuário codex-clipboard-5c4f3c6e-dd04-439d-87f7-91e1566bf3a6.png; cópia integral, verificada por SHA-256." }
+  ]
+}

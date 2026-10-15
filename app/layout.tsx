@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Outfit, Manrope } from "next/font/google";
+import { Cinzel, Manrope } from "next/font/google";
 import { brand } from "./lib/brand";
 import "./globals.css";
 
-const displayFont = Outfit({
+const displayFont = Cinzel({
   variable: "--font-display-face",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -20,14 +20,14 @@ const bodyFont = Manrope({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 const metadataBase = siteUrl ? new URL(siteUrl) : undefined;
 const shareImage = brand.portrait;
-const title = "RAS Advogados | Advocacia em Sete Lagoas, MG";
-const description = "Assessoria jurídica em Direito Empresarial e Civil, Penal Empresarial e Financeiro, Imobiliário e Planejamento Sucessório. RAS Advogados em Sete Lagoas: (31) 3177-0100.";
+const title = "Eduardo Cury | Advogado Criminalista em Ituiutaba, MG";
+const description = "Advocacia criminal em Ituiutaba, MG. Orientação e defesa com atenção, sigilo e responsabilidade. Atendimento 24 horas: (34) 99111-6365.";
 
 export const metadata: Metadata = {
   ...(metadataBase ? { metadataBase } : {}),
   title,
   description,
-  keywords: ["RAS Advogados", "advogado em Sete Lagoas", "direito civil", "direito penal empresarial", "direito financeiro", "direito empresarial", "direito imobiliário", "planejamento sucessório", "Sete Lagoas MG"],
+  keywords: ["Eduardo Cury", "advogado criminalista em Ituiutaba", "advocacia criminal", "defesa criminal", "Ituiutaba MG", "advogado 24 horas"],
   icons: { icon: [{ url: brand.logo, type: "image/png" }], apple: [{ url: brand.logo, type: "image/png" }] },
   openGraph: {
     title,
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
       ? [
           {
             url: shareImage,
-            width: 681,
-            height: 840,
+            width: 408,
+            height: 510,
             alt: brand.businessName,
           },
         ]
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0e3b55",
+  themeColor: "#191711",
 };
 
 export default function RootLayout({
@@ -65,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={bodyFont.variable + " " + displayFont.variable}>
-      <body className="min-h-screen bg-ivory font-sans text-ink antialiased selection:bg-brand-700 selection:text-white">
+      <body className="min-h-screen bg-ivory font-sans text-ink antialiased">
         {children}
       </body>
     </html>
