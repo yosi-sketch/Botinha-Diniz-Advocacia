@@ -16,11 +16,10 @@ import {
   MapPin,
   Menu,
   Scale,
-  Leaf,
-  Sprout,
   Landmark,
   Building2,
-  BriefcaseBusiness,
+  House,
+  Users,
   HeartHandshake,
   ScrollText,
   Camera,
@@ -28,7 +27,7 @@ import {
   X,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
-import { brand, testimonials, contact, whatsapp, telephone, whatsappFor, maps, secondaryMaps, reviews } from "./lib/brand";
+import { brand, team, testimonials, contact, whatsapp, telephone, whatsappFor, maps, reviews } from "./lib/brand";
 
 function WhatsAppMark({size = 16, strokeWidth = 1.8}: {size?: number; strokeWidth?: number}) { return <MessageCircle size={size} strokeWidth={strokeWidth} aria-hidden="true" />; }
 
@@ -48,28 +47,28 @@ const stagger: Variants = {
 
 const areas = [
   {
+    title: "Direito de Família", icon: Users,
+    summary: "Escuta e orientação nos momentos que envolvem sua família, seus vínculos e suas decisões.",
+    details: "Questões familiares pedem cuidado com as pessoas e com as particularidades de cada história. A equipe orienta sobre direitos e responsabilidades, analisa os documentos e acompanha as medidas judiciais ou extrajudiciais pertinentes à situação.",
+    topics: ["Divórcio e dissolução de união estável", "Guarda e convivência familiar", "Pensão alimentícia", "Partilha de bens"],
+  },
+  {
+    title: "Inventários e Sucessões", icon: ScrollText,
+    summary: "Cuidado com a organização e a transmissão do patrimônio, respeitando a história de cada família.",
+    details: "O inventário exige atenção aos bens, aos documentos e às relações entre os herdeiros. O escritório analisa cada caso para explicar as alternativas e acompanhar a organização da sucessão, com clareza em cada etapa.",
+    topics: ["Inventário judicial e extrajudicial", "Orientação a herdeiros", "Partilha e documentação patrimonial", "Análise de questões sucessórias"],
+  },
+  {
+    title: "Direito Imobiliário", icon: House,
+    summary: "Orientação para cuidar do seu imóvel, dos contratos e das relações que envolvem seu patrimônio.",
+    details: "A atuação imobiliária parte da análise dos documentos e das condições de cada imóvel. A equipe orienta sobre contratos, regularização e conflitos, buscando esclarecer os direitos, as obrigações e os próximos passos possíveis.",
+    topics: ["Análise de contratos de compra e venda", "Locação e relações entre as partes", "Regularização de imóveis", "Questões de posse e propriedade"],
+  },
+  {
     title: "Direito Previdenciário", icon: ScrollText,
     summary: "Orientação sobre aposentadorias e benefícios do INSS, com atenção à sua trajetória e aos seus documentos.",
     details: "Cada história de trabalho e contribuição merece uma análise individual. O escritório orienta sobre aposentadorias, salário-maternidade, pensão por morte e benefícios por incapacidade, desde a organização dos documentos até o acompanhamento da demanda.",
     topics: ["Aposentadorias e análise de contribuições", "Benefícios por incapacidade e auxílio-acidente", "Salário-maternidade e pensão por morte", "Análise de benefícios negados pelo INSS"],
-  },
-  {
-    title: "Direito Ambiental", icon: Leaf,
-    summary: "Orientação em questões ambientais para pessoas, empresas e produtores rurais, com análise de cada demanda.",
-    details: "A atuação ambiental começa pela compreensão da atividade desenvolvida e dos documentos relacionados ao caso. O escritório orienta sobre regularização, processos administrativos e conflitos ambientais, avaliando os caminhos adequados para cada situação.",
-    topics: ["Regularização e licenciamento ambiental", "Análise de autos de infração e multas", "Defesa em processos administrativos", "Orientação em conflitos ambientais"],
-  },
-  {
-    title: "Direito do Agronegócio", icon: Sprout,
-    summary: "Apoio jurídico nas relações do campo, nos contratos rurais e nas questões ligadas à atividade produtiva.",
-    details: "O escritório analisa os contratos, documentos e circunstâncias que envolvem a atividade rural. A orientação considera as particularidades do produtor e do negócio, tanto na prevenção quanto no acompanhamento de conflitos.",
-    topics: ["Análise e elaboração de contratos rurais", "Arrendamento e parceria rural", "Questões relacionadas ao crédito rural", "Prevenção e acompanhamento de conflitos"],
-  },
-  {
-    title: "Direito Bancário", icon: Landmark,
-    summary: "Análise de contratos bancários, cobranças e relações com instituições financeiras.",
-    details: "Contratos, extratos e registros de atendimento ajudam a compreender uma demanda bancária. O escritório avalia as condições pactuadas, as cobranças e os documentos disponíveis para esclarecer as medidas possíveis em cada caso.",
-    topics: ["Análise de contratos e financiamentos", "Cobranças e descontos questionados", "Negociação e revisão de obrigações", "Demandas envolvendo instituições financeiras"],
   },
   {
     title: "Direito Cível", icon: Scale,
@@ -78,16 +77,10 @@ const areas = [
     topics: ["Elaboração e análise de contratos", "Responsabilidade civil e reparação de danos", "Cobranças e obrigações", "Soluções judiciais e extrajudiciais"],
   },
   {
-    title: "Direito Empresarial", icon: Building2,
-    summary: "Assessoria para decisões empresariais, relações contratuais e prevenção de conflitos nos negócios.",
-    details: "A orientação jurídica acompanha as necessidades da empresa e as particularidades de sua atividade. O escritório analisa contratos e relações empresariais para apoiar decisões e conduzir demandas com atenção à realidade do negócio.",
-    topics: ["Assessoria jurídica para empresas", "Contratos e relações comerciais", "Questões societárias", "Prevenção e acompanhamento de litígios"],
-  },
-  {
-    title: "Direito Trabalhista", icon: BriefcaseBusiness,
-    summary: "Análise de direitos e obrigações nas relações de trabalho, da contratação ao encerramento do vínculo.",
-    details: "Cada relação de trabalho exige atenção à rotina, aos documentos e às condições do vínculo. O escritório orienta sobre questões trabalhistas e verbas rescisórias, com análise individual e acompanhamento das medidas pertinentes.",
-    topics: ["Análise de verbas rescisórias", "Contratos e condições de trabalho", "Direitos e obrigações trabalhistas", "Acompanhamento de reclamações e defesas"],
+    title: "Direito Constitucional", icon: Landmark,
+    summary: "Análise de questões que envolvem garantias constitucionais e a proteção dos seus direitos.",
+    details: "A Constituição orienta a proteção de direitos fundamentais. O escritório analisa os fatos e documentos para esclarecer as garantias aplicáveis e avaliar as medidas adequadas às particularidades de cada demanda.",
+    topics: ["Orientação sobre direitos fundamentais", "Análise de garantias constitucionais", "Questões envolvendo atos do poder público", "Avaliação das medidas cabíveis ao caso"],
   },
 ];
 
@@ -183,7 +176,7 @@ export default function Home() {
           <div className="mx-auto flex h-[104px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[120px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Dr. Murilo Alvarenga Nunes — início"
+              aria-label="Botinha & Diniz Advocacia — início"
               onClick={closeMenu}
               className="shrink-0"
             >
@@ -222,7 +215,7 @@ export default function Home() {
                 href={contact}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp do Dr. Murilo Alvarenga Nunes"
+                aria-label="WhatsApp da Botinha & Diniz Advocacia"
                 className="grid size-10 place-items-center rounded-full border border-brand-300/40 text-brand-200 transition-colors hover:border-brand-300 hover:text-brand-300"
               >
                 <WhatsAppMark size={17} strokeWidth={1.7} />
@@ -305,14 +298,14 @@ export default function Home() {
                 variants={reveal}
                 className="max-w-[720px] font-display text-[2.4rem] leading-[1.16] tracking-[-0.025em] text-ivory sm:text-[3.3rem] lg:text-[3.65rem]"
               >
-                Seus direitos. Seu patrimônio.{" "}
-                <span className="text-brand-300">Nossa dedicação.</span>
+                Direito com clareza.{" "}
+                <span className="text-brand-300">Cuidado com você.</span>
               </motion.h1>
               <motion.p
                 variants={reveal}
                 className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft sm:text-base sm:leading-8"
               >
-                Orientação jurídica para a sua vida, o seu trabalho e os seus negócios. Dr. Murilo Alvarenga Nunes, em Piumhi e Capitólio, com atenção a cada detalhe do seu caso.
+                Sua família, seu patrimônio e sua história merecem atenção. Na Botinha & Diniz Advocacia, você encontra escuta e orientação jurídica para compreender seus direitos e decidir os próximos passos, em Ibirité, Minas Gerais.
               </motion.p>
               <motion.div
                 variants={reveal}
@@ -324,7 +317,7 @@ export default function Home() {
                   size="lg"
                   className="rounded-sm"
                 >
-                  <WhatsAppMark size={17} /> Fale com o Dr. Murilo
+                  <WhatsAppMark size={17} /> Converse com as advogadas
                 </GlowingButton>
                 <a
                   href="#atuacao"
@@ -362,22 +355,22 @@ export default function Home() {
                 delay: 0.16,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="relative mx-auto w-full max-w-[408px] lg:ml-auto lg:mr-0"
+              className="relative mx-auto w-full max-w-[460px] lg:ml-auto lg:mr-0"
             >
-              <figure className="hero-portrait">
-              <div className="relative aspect-[617/788] overflow-hidden bg-brand-900">
+              <figure className="hero-signature">
+              <div className="px-5 py-10 sm:px-8 sm:py-16">
                 <Image
-                  src={brand.portrait}
-                  alt="Dr. Murilo Alvarenga Nunes, advogado em Piumhi, em material institucional fornecido pelo escritório"
-                  fill
-                  preload
-                  sizes="(max-width: 450px) 90vw, 408px"
-                  className="object-contain"
+                  src={brand.logo}
+                  alt="Monograma BD e assinatura Botinha & Diniz Advocacia em marfim e dourado"
+                  width={1774}
+                  height={887}
+                  sizes="(max-width: 640px) 80vw, 396px"
+                  className="h-auto w-full"
                 />
               </div>
-              <figcaption className="relative flex flex-wrap items-center justify-between gap-x-4 gap-y-2 bg-brand-950 pb-1 pt-5 text-brand-100">
-                <span className="font-display text-base text-brand-300">Murilo Alvarenga Nunes</span>
-                <span className="text-[10px] uppercase tracking-[0.12em]">{brand.registration}</span>
+              <figcaption className="flex flex-col gap-2 border-t border-brand-300/25 px-5 pb-7 pt-6 text-center text-sm leading-6 text-brand-100">
+                <span className="font-display text-lg text-brand-300">Duas trajetórias. Um compromisso.</span>
+                <span>Atenção à sua história, em cada etapa.</span>
               </figcaption>
               </figure>
             </motion.div>
@@ -427,7 +420,7 @@ export default function Home() {
             >
               <Heading
 
-                description="Da aposentadoria às decisões do seu negócio, conheça as áreas em que o escritório pode orientar você."
+                description="Das relações familiares ao cuidado com o patrimônio, conheça as áreas em que podemos orientar você."
               >
                 Compromisso com o que é{" "}
                 <span className="text-brand-700">seu por direito.</span>
@@ -485,21 +478,29 @@ export default function Home() {
         </section>
 
         <section id="sobre" className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32">
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24 lg:px-12">
-            <figure className="mx-auto w-full max-w-[420px] bg-brand-950 px-7 py-12 sm:px-10 sm:py-16 lg:ml-0">
-              <Image src={brand.logo} alt={brand.businessName} width={1774} height={887} sizes="(max-width: 450px) 80vw, 340px" className="h-auto w-full" />
-              <figcaption className="mt-10 border-t border-brand-300/25 pt-6 text-center text-xs leading-6 text-brand-100">Pessoas, empresas e produtores rurais.<br />Piumhi e Capitólio, Minas Gerais.</figcaption>
-            </figure>
-            <div>
-              <h2 className="max-w-2xl font-display text-4xl leading-[1.16] text-ink sm:text-5xl">Dr. Murilo <span className="text-brand-700">Alvarenga Nunes.</span></h2>
-              <p className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft">Advogado inscrito na OAB/MG sob o nº 102.602, Murilo Alvarenga Nunes atua em Piumhi, Minas Gerais, com atendimento também em Capitólio. Seu escritório reúne atuação em Direito Ambiental, Previdenciário, do Agronegócio, Bancário, Cível, Empresarial e Trabalhista.</p>
-              <p className="mt-4 max-w-xl text-[15px] leading-7 text-ink-soft">Por trás de cada pedido, existe uma história. Por isso, o atendimento parte da escuta e da análise cuidadosa dos documentos, com explicações acessíveis sobre as possibilidades e os próximos passos de cada demanda.</p>
-              <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4 border-y border-ink/15 py-5 text-sm text-brand-800">
-                <span className="inline-flex items-center gap-2"><Scale size={18} strokeWidth={1.5} /> Atuação jurídica</span>
-                <span className="inline-flex items-center gap-2"><HeartHandshake size={18} strokeWidth={1.5} /> Atenção individual</span>
+          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+            <div className="grid gap-7 lg:grid-cols-2 lg:gap-20">
+              <Heading>Conheça quem cuida da <span className="text-brand-700">sua história.</span></Heading>
+              <div>
+                <p className="max-w-xl text-[15px] leading-7 text-ink-soft">A Botinha & Diniz Advocacia reúne as trajetórias de Priscila Botinha e Kethelen Diniz. Em Ibirité, o escritório oferece orientação nas questões que envolvem a família, o patrimônio e os direitos de cada pessoa.</p>
+                <p className="mt-4 max-w-xl text-[15px] leading-7 text-ink-soft">O atendimento começa pela escuta. A partir da análise de cada situação, as advogadas explicam os caminhos possíveis, com atenção individual, respeito e sigilo.</p>
               </div>
-              <a href={contact} target="_blank" rel="noopener noreferrer" className="group mt-7 inline-flex min-h-11 items-center gap-2 border-b border-brand-700/40 py-2 text-sm font-semibold text-brand-800 transition-colors hover:text-brand-700">Converse com a nossa equipe <ArrowUpRight size={16} /></a>
             </div>
+            <div className="mt-12 grid gap-12 md:grid-cols-2 md:gap-10 lg:gap-16">
+              {team.map((member) => (
+                <figure key={member.name} className="min-w-0">
+                  <div className="flex aspect-[722/769] items-center bg-brand-950">
+                    <Image src={member.image} alt={member.alt} width={member.width} height={member.height} sizes="(max-width: 767px) 100vw, (max-width: 1279px) 45vw, 552px" className="h-auto w-full" />
+                  </div>
+                  <figcaption className="border-b border-ink/15 pb-7 pt-6">
+                    <h3 className="font-display text-2xl text-brand-800 sm:text-[1.75rem]">{member.name}</h3>
+                    <p className="mt-2 text-xs font-medium leading-6 text-ink-soft">{member.role}</p>
+                    <p className="mt-4 max-w-xl text-sm leading-7 text-ink-soft">{member.bio}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+            <a href={contact} target="_blank" rel="noopener noreferrer" className="group mt-8 inline-flex min-h-11 items-center gap-2 border-b border-brand-700/40 py-2 text-sm font-semibold text-brand-800 transition-colors hover:text-brand-700">Converse com a nossa equipe <ArrowUpRight size={16} /></a>
           </div>
         </section>
 
@@ -508,7 +509,7 @@ export default function Home() {
             <Heading
 
               light
-              description="Uma decisão sobre sua aposentadoria, seu patrimônio ou sua empresa começa com informação. Conheça os próximos passos com uma orientação que considera a sua realidade."
+              description="Uma decisão sobre sua família, seu patrimônio ou sua aposentadoria começa com informação. Conheça os próximos passos com uma orientação que considera a sua realidade."
             >
               Clareza para compreender cada{" "}
               <span className="text-brand-200">etapa.</span>
@@ -557,7 +558,7 @@ export default function Home() {
             <div className="divide-y divide-ink/15 border-y border-ink/15">
               {[
                 ["Como funciona o primeiro contato?", `Envie uma mensagem pelo WhatsApp ou ligue para ${brand.phone}. Conte brevemente sua situação para receber informações sobre o atendimento e os documentos iniciais necessários.`],
-                ["Onde fica o escritório?", `Em Piumhi, estamos na ${brand.address}. Em Capitólio: ${brand.secondaryAddress}. Entre em contato para combinar sua visita.`],
+                ["Onde fica o escritório?", `Estamos no ${brand.building}, na ${brand.address}. Entre em contato para combinar sua visita.`],
                 ["Meu benefício foi negado. Posso conversar com a equipe?", "Sim. Informe qual benefício você solicitou e separe a resposta recebida do INSS, caso tenha acesso a ela. A equipe poderá explicar como funciona a análise individual da sua situação."],
                 ["Quais documentos devo separar?", "Envie um resumo da situação pelo WhatsApp. Conforme a área, podem ser necessários contratos, notificações, comprovantes, documentos de trabalho ou respostas do INSS. A equipe orientará quais documentos são pertinentes ao seu caso."],
               ].map(([question, answer]) => (
@@ -576,7 +577,7 @@ export default function Home() {
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
-              <Heading description="Relatos de clientes sobre o atendimento do Dr. Murilo e de sua equipe, publicados no Google.">
+              <Heading description="Relatos de clientes sobre o atendimento da Botinha & Diniz Advocacia, publicados no Google.">
                 Confiança que se{" "}
                 <span className="text-brand-700">compartilha.</span>
               </Heading>
@@ -630,7 +631,7 @@ export default function Home() {
             <div>
               <Heading
 
-                description="Converse com a equipe sobre sua demanda e receba orientações para iniciar o atendimento em Piumhi ou Capitólio."
+                description="Converse com as advogadas sobre sua demanda e receba orientações para iniciar o atendimento em Ibirité."
               >
                 Um primeiro contato com{" "}
                 <span className="text-brand-700">tranquilidade.</span>
@@ -642,7 +643,7 @@ export default function Home() {
                   size="lg"
                   className="rounded-sm"
                 >
-                  <WhatsAppMark size={17} /> Fale com o Dr. Murilo
+                  <WhatsAppMark size={17} /> Converse com as advogadas
                 </GlowingButton>
                 <a href={telephone} className="inline-flex min-h-11 items-center gap-2 text-sm text-brand-700 hover:text-brand-800"><Phone size={16} /> Ligue: {brand.phone}</a>
                 <a href={brand.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 py-2 text-sm text-brand-700 hover:text-brand-800"><Camera size={16} /> {brand.instagramHandle}</a>
@@ -655,18 +656,13 @@ export default function Home() {
                   <MapPin size={21} strokeWidth={1.6} />
                 </span>
                 <div>
-                  <h3 className="font-display text-2xl text-ink">Escritórios em Minas Gerais</h3>
+                  <h3 className="font-display text-2xl text-ink">Nosso escritório em Ibirité</h3>
                 </div>
               </div>
-              <p className="mt-6 text-sm font-semibold text-brand-700">Piumhi</p>
+              <p className="mt-6 flex items-center gap-2 text-sm font-semibold text-brand-700"><Building2 size={16} aria-hidden="true" /> {brand.building}</p>
               <address className="mt-2 max-w-md not-italic text-[14px] leading-7 text-ink-soft">
                 {brand.address}
               </address>
-              <p className="mt-6 text-sm font-semibold text-brand-700">Capitólio</p>
-              <address className="mt-2 max-w-md not-italic text-[14px] leading-7 text-ink-soft">
-                {brand.secondaryAddress}
-              </address>
-              <a href={secondaryMaps} target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex min-h-11 items-center gap-2 text-xs font-semibold text-brand-800 underline underline-offset-4">Ver Capitólio no mapa <ArrowUpRight size={14} /></a>
               <div className="my-7 h-px bg-ink/10" />
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-ink-soft">
@@ -678,7 +674,7 @@ export default function Home() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-ink/15 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.13em] text-ink transition-colors hover:border-brand-700 hover:text-brand-700"
                 >
-                  Ver Piumhi no mapa <ArrowUpRight size={14} />
+                  Ver no Google Maps <ArrowUpRight size={14} />
                 </a>
               </div>
             </div>
@@ -717,9 +713,8 @@ export default function Home() {
                 />
               </div>
               <p className="mt-4 max-w-xs text-xs leading-6 text-ink-soft">
-                Advocacia em Piumhi e Capitólio, MG. Atuação ambiental, previdenciária, no agronegócio, bancária, cível, empresarial e trabalhista.
+                Advocacia em Ibirité, Minas Gerais. Orientação para cuidar da sua família, do seu patrimônio e dos seus direitos.
               </p>
-              <p className="mt-3 text-xs text-brand-300">{brand.registration}</p>
             </div>
             <div>
               <h2 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-700">
@@ -827,16 +822,6 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                {activeArea.title === "Direito Trabalhista" && (
-                  <Image
-                    src={brand.laborImage}
-                    width={632}
-                    height={839}
-                    alt="Verbas rescisórias não pagas: o que fazer nessa situação? Material do escritório com os endereços em Piumhi e Capitólio."
-                    sizes="(max-width: 400px) 75vw, 280px"
-                    className="mx-auto mt-8 h-auto w-full max-w-[280px]"
-                  />
-                )}
                 <GlowingButton
                   href={whatsappFor(activeArea.title.toLowerCase())}
                   target="_blank"

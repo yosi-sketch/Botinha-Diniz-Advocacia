@@ -1,232 +1,365 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-15T20:13:17.912Z",
-  "title": "Design System: Dr. Murilo Alvarenga Nunes",
+  "generatedAt": "2026-10-15T21:15:20.603Z",
+  "title": "Design System: Botinha & Diniz Advocacia",
   "extensions": {
     "colorMeta": {
       "ink": {
         "role": "neutral",
-        "displayName": "Carvão quente",
-        "canonical": "#28231c"
+        "displayName": "ink",
+        "canonical": "#30271f",
+        "tonalRamp": [
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
+        ]
       },
       "ink-soft": {
         "role": "neutral",
-        "displayName": "Texto secundário quente",
-        "canonical": "#695e4e"
+        "displayName": "ink-soft",
+        "canonical": "#6b5e50",
+        "tonalRamp": [
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
+        ]
       },
       "paper": {
         "role": "neutral",
-        "displayName": "Branco",
-        "canonical": "#ffffff"
+        "displayName": "paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
+        ]
       },
       "ivory": {
         "role": "neutral",
-        "displayName": "Marfim quente",
-        "canonical": "#faf7f0"
+        "displayName": "ivory",
+        "canonical": "#f8f5ef",
+        "tonalRamp": [
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
+        ]
       },
       "linen": {
         "role": "neutral",
-        "displayName": "Linho quente",
-        "canonical": "#eee5d6"
+        "displayName": "linen",
+        "canonical": "#e9e1d3",
+        "tonalRamp": [
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
+        ]
       },
       "brand-50": {
         "role": "primary",
-        "displayName": "Dourado quase branco",
-        "canonical": "#f8f1e3",
+        "displayName": "brand-50",
+        "canonical": "#f2ede4",
         "tonalRamp": [
-          "#141310",
-          "#29231b",
-          "#63421f",
-          "#775225",
-          "#c09050",
-          "#e0b060",
-          "#f0d080",
-          "#f8f1e3"
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
         ]
       },
       "brand-100": {
         "role": "primary",
-        "displayName": "Creme dourado",
-        "canonical": "#f5e6c8",
+        "displayName": "brand-100",
+        "canonical": "#f0f0e0",
         "tonalRamp": [
-          "#141310",
-          "#29231b",
-          "#63421f",
-          "#775225",
-          "#c09050",
-          "#e0b060",
-          "#f0d080",
-          "#f8f1e3"
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
         ]
       },
       "brand-200": {
         "role": "primary",
-        "displayName": "Luz dourada",
-        "canonical": "#f0d080",
+        "displayName": "brand-200",
+        "canonical": "#e0d0b0",
         "tonalRamp": [
-          "#141310",
-          "#29231b",
-          "#63421f",
-          "#775225",
-          "#c09050",
-          "#e0b060",
-          "#f0d080",
-          "#f8f1e3"
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
         ]
       },
       "brand-300": {
         "role": "primary",
-        "displayName": "Dourado da marca",
-        "canonical": "#e0b060",
+        "displayName": "brand-300",
+        "canonical": "#d0c0a0",
         "tonalRamp": [
-          "#141310",
-          "#29231b",
-          "#63421f",
-          "#775225",
-          "#c09050",
-          "#e0b060",
-          "#f0d080",
-          "#f8f1e3"
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
         ]
       },
       "brand-400": {
         "role": "primary",
-        "displayName": "Dourado intermediário",
-        "canonical": "#d0a060",
+        "displayName": "brand-400",
+        "canonical": "#c0ab85",
         "tonalRamp": [
-          "#141310",
-          "#29231b",
-          "#63421f",
-          "#775225",
-          "#c09050",
-          "#e0b060",
-          "#f0d080",
-          "#f8f1e3"
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
         ]
       },
       "brand-500": {
         "role": "primary",
-        "displayName": "Bronze da marca",
-        "canonical": "#c09050",
+        "displayName": "brand-500",
+        "canonical": "#a78a5d",
         "tonalRamp": [
-          "#141310",
-          "#29231b",
-          "#63421f",
-          "#775225",
-          "#c09050",
-          "#e0b060",
-          "#f0d080",
-          "#f8f1e3"
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
         ]
       },
       "brand-600": {
         "role": "primary",
-        "displayName": "Bronze de foco",
-        "canonical": "#90652e",
+        "displayName": "brand-600",
+        "canonical": "#80613b",
         "tonalRamp": [
-          "#141310",
-          "#29231b",
-          "#63421f",
-          "#775225",
-          "#c09050",
-          "#e0b060",
-          "#f0d080",
-          "#f8f1e3"
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
         ]
       },
       "brand-700": {
         "role": "primary",
-        "displayName": "Bronze profundo",
-        "canonical": "#775225",
+        "displayName": "brand-700",
+        "canonical": "#70512e",
         "tonalRamp": [
-          "#141310",
-          "#29231b",
-          "#63421f",
-          "#775225",
-          "#c09050",
-          "#e0b060",
-          "#f0d080",
-          "#f8f1e3"
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
         ]
       },
       "brand-800": {
         "role": "primary",
-        "displayName": "Bronze escuro",
-        "canonical": "#63421f",
+        "displayName": "brand-800",
+        "canonical": "#604020",
         "tonalRamp": [
-          "#141310",
-          "#29231b",
-          "#63421f",
-          "#775225",
-          "#c09050",
-          "#e0b060",
-          "#f0d080",
-          "#f8f1e3"
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
         ]
       },
       "brand-900": {
-        "role": "neutral",
-        "displayName": "Superfície escura quente",
-        "canonical": "#29231b"
+        "role": "primary",
+        "displayName": "brand-900",
+        "canonical": "#30271f",
+        "tonalRamp": [
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
+        ]
       },
       "brand-950": {
-        "role": "neutral",
-        "displayName": "Escuro da marca",
-        "canonical": "#141310"
+        "role": "primary",
+        "displayName": "brand-950",
+        "canonical": "#161310",
+        "tonalRamp": [
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
+        ]
       },
       "gold-divider": {
         "role": "primary",
-        "displayName": "Divisória dourada semitransparente",
-        "canonical": "rgb(224 176 96 / 22%)"
+        "displayName": "gold-divider",
+        "canonical": "rgb(208 192 160 / 22%)",
+        "tonalRamp": [
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
+        ]
+      },
+      "gold-frame": {
+        "role": "primary",
+        "displayName": "gold-frame",
+        "canonical": "rgb(208 192 160 / 35%)",
+        "tonalRamp": [
+          "#161310",
+          "#30271f",
+          "#604020",
+          "#70512e",
+          "#80613b",
+          "#a78a5d",
+          "#c0ab85",
+          "#d0c0a0",
+          "#e0d0b0",
+          "#f0f0e0",
+          "#f2ede4"
+        ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Cinzel",
-        "purpose": "Títulos romanos que complementam o logo original."
+        "purpose": "Títulos e assinatura editorial."
       },
       "body": {
-        "displayName": "Manrope",
-        "purpose": "Leitura e ações."
+        "displayName": "Montserrat",
+        "purpose": "Leitura, navegação e ações."
+      },
+      "team-name": {
+        "displayName": "Nome das sócias",
+        "purpose": "Título de apresentação profissional em sm."
       }
     },
     "shadows": [
       {
         "name": "card",
-        "value": "0 18px 48px rgb(40 35 28 / 18%)",
-        "purpose": "Modal de detalhes."
+        "value": "0 18px 48px rgb(48 39 31 / 18%)",
+        "purpose": "Diálogo de detalhes."
       }
     ],
     "motion": [
       {
-        "name": "reveal",
-        "value": "680ms cubic-bezier(0.22, 1, 0.36, 1)",
-        "purpose": "Variants de entrada; os blocos usam initial=false."
-      },
-      {
-        "name": "stagger",
-        "value": "100ms; delayChildren 40ms",
-        "purpose": "Sequência dos blocos."
-      },
-      {
-        "name": "portrait",
-        "value": "900ms cubic-bezier(0.22, 1, 0.36, 1); delay 160ms",
-        "purpose": "Transição configurada do retrato, com initial=false."
-      },
-      {
-        "name": "portrait-frame",
-        "value": "1200ms cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Revelação da moldura do retrato."
-      },
-      {
-        "name": "navigation",
-        "value": "180ms ease",
-        "purpose": "Cor e sublinhado da navegação."
+        "name": "signature-reveal",
+        "value": "1200ms cubic-bezier(0.16,1,0.3,1)",
+        "purpose": "Revelação da assinatura por clip-path; desligada com movimento reduzido."
       },
       {
         "name": "controls",
         "value": "200ms",
-        "purpose": "Cores dos CTAs principais."
+        "purpose": "Cores dos CTAs."
       },
       {
         "name": "menu",
@@ -236,12 +369,12 @@
       {
         "name": "dialog",
         "value": "240ms",
-        "purpose": "Detalhes das áreas de atuação."
+        "purpose": "Diálogo."
       },
       {
-        "name": "reduced-motion",
-        "value": "0.01ms",
-        "purpose": "Fallback CSS reduz animações/transições e remove a animação da moldura; MotionConfig respeita a preferência. Rolagem nativa imediata em todas as preferências, com scroll-padding-top de 2rem no html."
+        "name": "navigation",
+        "value": "180ms ease",
+        "purpose": "Links de navegação."
       }
     ],
     "breakpoints": [
@@ -261,106 +394,76 @@
   },
   "components": [
     {
-      "name": "Botão de contato",
+      "name": "Botão principal",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "CTA padrão de WhatsApp, dourado com texto escuro e raio pequeno.",
-      "html": "<a class=\"ds-primary\" href=\"https://wa.me/5537999836911?text=Ol%C3%A1%2C%20Dr.%20Murilo!%20Gostaria%20de%20orienta%C3%A7%C3%A3o%20sobre%20o%20meu%20caso.\">Fale com o Dr. Murilo <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
-      "css": ".ds-primary{display:inline-flex;min-height:44px;align-items:center;justify-content:center;gap:8px;border:1px solid var(--color-brand-300,#e0b060);border-radius:4px;background:var(--color-brand-300,#e0b060);color:var(--color-brand-950,#141310);padding:14px 24px;font-family:var(--font-body,Manrope),system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-align:center;text-decoration:none;user-select:none;transition:background-color .2s,border-color .2s}.ds-primary:hover{background:var(--color-brand-200,#f0d080);border-color:var(--color-brand-200,#f0d080)}.ds-primary:focus-visible{outline:2px solid var(--color-brand-700,#775225);outline-offset:3px}.ds-dark .ds-primary:focus-visible{outline-color:var(--color-brand-200,#f0d080)}@media(prefers-reduced-motion:reduce){.ds-primary{transition-duration:.01ms}}"
+      "description": "Contato pelo WhatsApp.",
+      "html": "<a class=\"ds-primary\" href=\"https://wa.me/5531995917890\">Converse com as advogadas</a>",
+      "css": ".ds-primary{display:inline-flex;min-height:44px;align-items:center;justify-content:center;gap:8px;border:1px solid var(--color-brand-300,#d0c0a0);border-radius:4px;background:var(--color-brand-300,#d0c0a0);color:var(--color-brand-950,#161310);padding:14px 24px;font-family:var(--font-body,Montserrat),system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-align:center;text-decoration:none;transition:background-color .2s,border-color .2s}.ds-primary:hover{background:var(--color-brand-200,#e0d0b0);border-color:var(--color-brand-200,#e0d0b0)}.ds-primary:focus-visible{outline:2px solid var(--color-brand-700,#70512e);outline-offset:3px}"
     },
     {
-      "name": "Botão de contato pequeno",
+      "name": "Botão compacto",
       "kind": "button",
       "refersTo": "button-primary-small",
-      "description": "Contato compacto do cabeçalho.",
-      "html": "<div class=\"ds-dark\"><a class=\"ds-primary ds-small\" href=\"https://wa.me/5537999836911?text=Ol%C3%A1%2C%20Dr.%20Murilo!%20Gostaria%20de%20orienta%C3%A7%C3%A3o%20sobre%20o%20meu%20caso.\">WhatsApp <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a></div>",
-      "css": ".ds-primary{display:inline-flex;min-height:44px;align-items:center;justify-content:center;gap:8px;border:1px solid var(--color-brand-300,#e0b060);border-radius:4px;background:var(--color-brand-300,#e0b060);color:var(--color-brand-950,#141310);padding:14px 24px;font-family:var(--font-body,Manrope),system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-align:center;text-decoration:none;user-select:none;transition:background-color .2s,border-color .2s}.ds-primary:hover{background:var(--color-brand-200,#f0d080);border-color:var(--color-brand-200,#f0d080)}.ds-primary:focus-visible{outline:2px solid var(--color-brand-700,#775225);outline-offset:3px}.ds-dark .ds-primary:focus-visible{outline-color:var(--color-brand-200,#f0d080)}@media(prefers-reduced-motion:reduce){.ds-primary{transition-duration:.01ms}}.ds-dark{background:var(--color-brand-950,#141310);padding:24px}.ds-small{padding:12px 20px;font-size:10px;letter-spacing:.13em}"
+      "description": "CTA do cabeçalho.",
+      "html": "<a class=\"ds-primary ds-small\" href=\"https://wa.me/5531995917890\">WhatsApp</a>",
+      "css": ".ds-primary{display:inline-flex;min-height:44px;align-items:center;justify-content:center;gap:8px;border:1px solid var(--color-brand-300,#d0c0a0);border-radius:4px;background:var(--color-brand-300,#d0c0a0);color:var(--color-brand-950,#161310);padding:14px 24px;font-family:var(--font-body,Montserrat),system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-align:center;text-decoration:none;transition:background-color .2s,border-color .2s}.ds-primary:hover{background:var(--color-brand-200,#e0d0b0);border-color:var(--color-brand-200,#e0d0b0)}.ds-primary:focus-visible{outline:2px solid var(--color-brand-700,#70512e);outline-offset:3px}.ds-small{padding:12px 20px;font-size:10px;letter-spacing:.13em}"
     },
     {
-      "name": "Botão de contato grande",
+      "name": "Botão grande",
       "kind": "button",
       "refersTo": "button-primary-large",
-      "description": "Ação principal do hero.",
-      "html": "<div class=\"ds-dark\"><a class=\"ds-primary ds-large\" href=\"https://wa.me/5537999836911?text=Ol%C3%A1%2C%20Dr.%20Murilo!%20Gostaria%20de%20orienta%C3%A7%C3%A3o%20sobre%20o%20meu%20caso.\">Fale com o Dr. Murilo <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a></div>",
-      "css": ".ds-primary{display:inline-flex;min-height:44px;align-items:center;justify-content:center;gap:8px;border:1px solid var(--color-brand-300,#e0b060);border-radius:4px;background:var(--color-brand-300,#e0b060);color:var(--color-brand-950,#141310);padding:14px 24px;font-family:var(--font-body,Manrope),system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-align:center;text-decoration:none;user-select:none;transition:background-color .2s,border-color .2s}.ds-primary:hover{background:var(--color-brand-200,#f0d080);border-color:var(--color-brand-200,#f0d080)}.ds-primary:focus-visible{outline:2px solid var(--color-brand-700,#775225);outline-offset:3px}.ds-dark .ds-primary:focus-visible{outline-color:var(--color-brand-200,#f0d080)}@media(prefers-reduced-motion:reduce){.ds-primary{transition-duration:.01ms}}.ds-dark{background:var(--color-brand-950,#141310);padding:24px}.ds-large{padding:16px 28px}"
+      "description": "CTA de destaque no hero e contato.",
+      "html": "<a class=\"ds-primary ds-large\" href=\"https://wa.me/5531995917890\">Converse com as advogadas</a>",
+      "css": ".ds-primary{display:inline-flex;min-height:44px;align-items:center;justify-content:center;gap:8px;border:1px solid var(--color-brand-300,#d0c0a0);border-radius:4px;background:var(--color-brand-300,#d0c0a0);color:var(--color-brand-950,#161310);padding:14px 24px;font-family:var(--font-body,Montserrat),system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-align:center;text-decoration:none;transition:background-color .2s,border-color .2s}.ds-primary:hover{background:var(--color-brand-200,#e0d0b0);border-color:var(--color-brand-200,#e0d0b0)}.ds-primary:focus-visible{outline:2px solid var(--color-brand-700,#70512e);outline-offset:3px}.ds-large{padding:16px 28px}"
     },
     {
-      "name": "Link de navegação",
+      "name": "Navegação desktop",
       "kind": "nav",
-      "description": "Link desktop em superfície escura; sublinhado aparece no hover.",
-      "html": "<nav class=\"ds-nav-surface\" aria-label=\"Navegação principal\"><a class=\"ds-nav\" href=\"#atuacao\">Atuação</a></nav>",
-      "css": ".ds-nav-surface{padding:24px;background:var(--color-brand-950,#141310)}.ds-nav{position:relative;display:inline-block;padding:12px 0;color:var(--color-brand-100,#f5e6c8);font-family:var(--font-body,Manrope),system-ui,sans-serif;font-size:12.8px;font-weight:600;text-decoration:none;transition:color .18s ease}.ds-nav::after{position:absolute;inset:auto 0 0;height:1px;background:var(--color-brand-700,#775225);content:\"\";transform:scaleX(0);transform-origin:left;transition:transform .18s ease}.ds-nav:hover{color:var(--color-brand-300,#e0b060)}.ds-nav:hover::after{transform:scaleX(1)}.ds-nav:focus-visible{outline:2px solid var(--color-brand-200,#f0d080);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-nav,.ds-nav::after{transition-duration:.01ms}}"
+      "description": "Links sobre carvão.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#inicio\">Início</a><a href=\"#atuacao\">Atuação</a><a href=\"#sobre\">Sobre</a><a href=\"#contato\">Contato</a></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:28px;padding:20px;background:var(--color-brand-950,#161310)}.ds-nav a{padding:12px 0;color:var(--color-brand-100,#f0f0e0);font:600 .8rem var(--font-body,Montserrat),sans-serif;text-decoration:none;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}.ds-nav a:hover{color:var(--color-brand-300,#d0c0a0);border-color:var(--color-brand-700,#70512e)}.ds-nav a:focus-visible{outline:2px solid var(--color-brand-200,#e0d0b0);outline-offset:4px}"
     },
     {
-      "name": "Link secundário",
-      "kind": "button",
-      "description": "Contato editorial em superfície clara.",
-      "html": "<a class=\"ds-secondary\" href=\"https://wa.me/5537999836911?text=Ol%C3%A1%2C%20Dr.%20Murilo!%20Gostaria%20de%20orienta%C3%A7%C3%A3o%20sobre%20o%20meu%20caso.\">Converse com a nossa equipe <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
-      "css": ".ds-secondary{display:inline-flex;min-height:44px;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid rgb(119 82 37 / 40%);color:var(--color-brand-800,#63421f);font-family:var(--font-body,Manrope),system-ui,sans-serif;font-size:14px;font-weight:600;text-decoration:none;transition:color .15s}.ds-secondary:hover{color:var(--color-brand-700,#775225)}.ds-secondary:focus-visible{outline:2px solid var(--color-brand-600,#90652e);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-secondary{transition-duration:.01ms}}"
-    },
-    {
-      "name": "Linha de serviço",
-      "kind": "custom",
-      "description": "Área de atuação em linha aberta; a prévia registra aparência, o modal real pertence à aplicação.",
-      "html": "<article class=\"ds-service\"><h3>Direito Previdenciário</h3><p>Orientação sobre aposentadorias e benefícios do INSS, com atenção à sua trajetória e aos seus documentos.</p><button type=\"button\">Saiba mais</button></article>",
-      "css": ".ds-service{padding:32px 0;border-bottom:1px solid rgb(40 35 28 / 15%);color:var(--color-ink,#28231c)}.ds-service h3{margin:0;font-family:var(--font-display-face,Cinzel),Georgia,serif;font-size:24.8px;line-height:1.25;font-weight:400;letter-spacing:-.025em}.ds-service p{max-width:36rem;margin:12px 0;color:var(--color-ink-soft,#695e4e);font-family:var(--font-body,Manrope),system-ui,sans-serif;font-size:13px;line-height:24px}.ds-service button{min-height:44px;padding:0;border:0;background:transparent;color:var(--color-brand-800,#63421f);font-family:var(--font-body,Manrope),system-ui,sans-serif;font-size:12px;font-weight:600;cursor:pointer}.ds-service button:hover{color:var(--color-brand-700,#775225)}.ds-service button:focus-visible{outline:2px solid var(--color-brand-700,#775225);outline-offset:4px}@media(min-width:640px){.ds-service{padding:36px 0}.ds-service h3{font-size:28.8px}}"
-    },
-    {
-      "name": "Depoimento",
-      "kind": "custom",
-      "description": "Transcrição fornecida pelo cliente, com autoria preservada.",
-      "html": "<figure class=\"ds-testimonial\"><blockquote><p>“Dr. Murilo foi sempre atencioso e solícito quando precisei, é um grande profissional que me passou tranquilidade quando eu precisei. Recomendo sempre!”</p></blockquote><figcaption><p>João Marcos Oliveira</p><small>Trecho de avaliação no Google</small></figcaption></figure>",
-      "css": ".ds-testimonial{margin:0;padding:32px 0;border-block:1px solid rgb(40 35 28 / 15%)}.ds-testimonial blockquote{margin:0;font-family:var(--font-body,Manrope),system-ui,sans-serif;font-size:15px;line-height:28px;color:var(--color-ink,#28231c)}.ds-testimonial blockquote p{margin:0}.ds-testimonial figcaption{margin-top:28px}.ds-testimonial figcaption p{margin:0;font-family:var(--font-display-face,Cinzel),Georgia,serif;font-size:20px;line-height:28px;font-weight:400;letter-spacing:-.025em;color:var(--color-brand-700,#775225)}.ds-testimonial small{display:block;margin-top:4px;font-family:var(--font-body,Manrope),system-ui,sans-serif;font-size:12px;line-height:16px;color:var(--color-ink-soft,#695e4e)}"
+      "name": "Menu móvel",
+      "kind": "nav",
+      "description": "Painel marfim com foco bronze escuro.",
+      "html": "<nav class=\"ds-mobile\"><a href=\"#inicio\">Início</a><a href=\"#atuacao\">Atuação</a><a href=\"#contato\">Contato</a></nav>",
+      "css": ".ds-mobile{display:flex;flex-direction:column;padding:20px;background:var(--color-ivory,#f8f5ef)}.ds-mobile a{padding:12px;color:var(--color-ink-soft,#6b5e50);font:400 14px var(--font-body,Montserrat),sans-serif;text-decoration:none;transition:color .15s}.ds-mobile a:hover{color:var(--color-brand-700,#70512e)}.ds-mobile a:focus-visible{outline:2px solid var(--color-brand-800,#604020);outline-offset:4px}"
     },
     {
       "name": "Pergunta frequente",
       "kind": "custom",
-      "description": "Expansão nativa; endereço e texto conforme a página.",
-      "html": "<details class=\"ds-faq\"><summary>Onde fica o escritório?</summary><p>Em Piumhi, estamos na R. Dom Pedro II, 86 — Centro, Piumhi — MG, 37925-000. Em Capitólio: Rua Arcemino Rodrigues da Cunha, 123 — Capitólio — MG. Entre em contato para combinar sua visita.</p></details>",
-      "css": ".ds-faq{padding:24px 0;border-top:1px solid rgb(40 35 28 / 15%);color:var(--color-ink,#28231c);font-family:var(--font-body,Manrope),system-ui,sans-serif;font-size:14px;line-height:28px}.ds-faq summary{cursor:pointer;font-size:16px;font-weight:600}.ds-faq summary::marker{color:var(--color-brand-700,#775225)}.ds-faq summary:focus-visible{outline:2px solid var(--color-brand-600,#90652e);outline-offset:4px}.ds-faq p{margin-top:16px;max-width:36rem;color:var(--color-ink-soft,#695e4e)}"
+      "description": "Details nativo com endereço atual.",
+      "html": "<details class=\"ds-faq\"><summary>Onde fica o escritório?</summary><p>No Ibirité Mall, Av. São Paulo, nº 608 — Loja 4, Nova Esperança, Ibirité — MG, 32400-460.</p></details>",
+      "css": ".ds-faq{padding:24px 0;border-block:1px solid rgb(48 39 31 / 15%);font:14px/28px var(--font-body,Montserrat),sans-serif;color:var(--color-ink-soft,#6b5e50)}.ds-faq summary{color:var(--color-ink,#30271f);font-weight:600;cursor:pointer}.ds-faq summary:hover{color:var(--color-brand-700,#70512e)}.ds-faq summary:focus-visible{outline:2px solid var(--color-brand-600,#80613b);outline-offset:4px}"
     },
     {
-      "name": "Bloco de endereço",
+      "name": "Endereço",
       "kind": "card",
-      "description": "Endereços de Piumhi e Capitólio em superfície branca retangular.",
-      "html": "<section class=\"ds-address\"><h3>Escritórios em Minas Gerais</h3><p>Piumhi</p><address>R. Dom Pedro II, 86 — Centro, Piumhi — MG, 37925-000</address><p>Capitólio</p><address>Rua Arcemino Rodrigues da Cunha, 123 — Capitólio — MG</address></section>",
-      "css": ".ds-address{position:relative;padding:28px;border:1px solid rgb(40 35 28 / 10%);background:var(--color-paper,#ffffff);border-radius:0}.ds-address h3{margin:0;color:var(--color-ink,#28231c);font-family:var(--font-display-face,Cinzel),Georgia,serif;font-size:24px;line-height:32px;font-weight:400;letter-spacing:-.025em}.ds-address p{margin:24px 0 0;color:var(--color-brand-700,#775225);font-family:var(--font-body,Manrope),system-ui,sans-serif;font-size:14px;font-weight:600}.ds-address address{margin-top:8px;max-width:28rem;color:var(--color-ink-soft,#695e4e);font-family:var(--font-body,Manrope),system-ui,sans-serif;font-style:normal;font-size:14px;line-height:28px}@media(min-width:640px){.ds-address{padding:40px}}"
+      "description": "Sede no Ibirité Mall.",
+      "html": "<section class=\"ds-address\"><h3>Nosso escritório em Ibirité</h3><p>Ibirité Mall</p><address>Av. São Paulo, nº 608 — Loja 4, Nova Esperança, Ibirité — MG, 32400-460</address></section>",
+      "css": ".ds-address{padding:28px;background:var(--color-paper,#fff);border:1px solid rgb(48 39 31 / 10%);color:var(--color-ink,#30271f)}.ds-address h3{font:400 24px/32px var(--font-display-face,Cinzel),Georgia,serif}.ds-address p,.ds-address address{font:400 14px/28px var(--font-body,Montserrat),sans-serif;font-style:normal;color:var(--color-ink-soft,#6b5e50)}"
     }
   ],
   "narrative": {
-    "northStar": "Clareza e atenção à sua história",
-    "overview": "O dourado e o bronze do logo MA dão presença à identidade do Dr. Murilo Alvarenga Nunes; marfim e superfícies escuras quentes organizam a leitura. As cores mantêm a marca reconhecível a partir do material original fornecido pelo usuário.\n\nCinzel complementa as serifas romanas do logo nos títulos; Manrope mantém textos e controles legíveis. O material institucional BNI completo, o painel da marca e as ações principais de raio pequeno sustentam a apresentação.",
+    "northStar": "Clareza e cuidado com a sua história",
+    "overview": "O monograma BD original orienta a identidade: marfim, dourado champanhe e bronze sobre carvão quente. Superfícies claras sustentam a leitura dos serviços, das apresentações profissionais e do contato. Cinzel acompanha as serifas romanas do logo; Montserrat complementa a linguagem dos materiais institucionais das sócias.",
     "keyCharacteristics": [
-      "Logo MA original com cores, transparência e proporções preservadas.",
-      "Superfícies quentes claras e escuras com acentos dourados e bronze.",
-      "Títulos Cinzel e leitura Manrope.",
-      "Retrato institucional completo e arte trabalhista proporcionais, sem recorte."
+      "Logo e materiais institucionais preservados integralmente.",
+      "Contraste entre superfícies escuras de marca e fundos claros de leitura.",
+      "CTAs planos, divisórias discretas e tipografia em duas famílias."
     ],
-    "rules": [
-      {
-        "name": "The Surface Contrast Rule",
-        "body": "Usar texto escuro sobre marfim e dourado, texto claro sobre superfícies escuras e foco dourado claro nos contextos escuros.",
-        "section": "colors"
-      },
-      {
-        "name": "The Two Voices Rule",
-        "body": "Usar Cinzel nos títulos e Manrope na leitura e nos controles, preservando o logo como imagem original.",
-        "section": "typography"
-      }
-    ],
+    "rules": [],
     "dos": [
-      "**Do** preservar cores, transparência e proporções das três imagens originais.",
-      "**Do** manter o material institucional BNI completo, incluindo o conteúdo incorporado ao anexo.",
-      "**Do** usar Cinzel nos títulos e Manrope na leitura e nos controles.",
-      "**Do** manter foco visível, operação por teclado, ciclo e retorno de foco nos modais e movimento reduzido.",
-      "**Do** aplicar dourado com texto escuro nos CTAs principais de raio pequeno."
+      "Do preservar as proporções, cores e conteúdo dos três PNGs originais.",
+      "Do usar Cinzel para títulos e Montserrat para leitura e controles.",
+      "Do manter foco visível e respeitar movimento reduzido."
     ],
     "donts": [
-      "**Don't** inventar depoimentos, credenciais, dados de contato, horários ou resultados.",
-      "**Don't** apresentar a nota estática do Google como consulta ao vivo.",
-      "**Don't** recortar, recolorir ou reexportar os PNGs nem embutir metadados de proveniência.",
-      "**Don't** ampliar as sete áreas editoriais a partir do texto tributário incorporado ao retrato.",
-      "**Don't** promover ocorrências locais de cápsulas a regras globais."
+      "Don’t inventar e-mail, horários, credenciais, resultados ou avaliações.",
+      "Don’t extrapolar idades ou experiência incorporadas às artes originais.",
+      "Don’t aplicar contorno claro sobre o painel móvel claro."
     ]
   }
 }

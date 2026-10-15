@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cinzel, Manrope } from "next/font/google";
+import { Cinzel, Montserrat } from "next/font/google";
 import { brand } from "./lib/brand";
 import "./globals.css";
 
@@ -10,7 +10,7 @@ const displayFont = Cinzel({
   display: "swap",
 });
 
-const bodyFont = Manrope({
+const bodyFont = Montserrat({
   variable: "--font-body",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -19,15 +19,15 @@ const bodyFont = Manrope({
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 const metadataBase = siteUrl ? new URL(siteUrl) : undefined;
-const shareImage = brand.portrait;
-const title = "Dr. Murilo Alvarenga Nunes | Advogado em Piumhi, MG";
-const description = "Advocacia em Piumhi e Capitólio, MG. Direito Ambiental, Previdenciário, Agronegócio, Bancário, Cível, Empresarial e Trabalhista. WhatsApp: (37) 99983-6911.";
+const shareImage = brand.logo;
+const title = "Botinha & Diniz Advocacia | Advogadas em Ibirité, MG";
+const description = "Orientação jurídica em Ibirité, MG. Direito de Família, Inventários, Imobiliário, Previdenciário, Cível e Constitucional. Converse pelo WhatsApp: (31) 99591-7890.";
 
 export const metadata: Metadata = {
   ...(metadataBase ? { metadataBase } : {}),
   title,
   description,
-  keywords: ["Murilo Alvarenga Nunes", "advogado em Piumhi", "advogado em Capitólio", "direito ambiental", "aposentadorias", "agronegócio", "direito bancário", "direito cível", "direito empresarial", "direito trabalhista"],
+  keywords: ["Botinha & Diniz Advocacia", "advogadas em Ibirité", "Priscila Botinha", "Kethelen Diniz", "direito de família", "inventários", "direito imobiliário", "direito previdenciário", "direito cível", "direito constitucional"],
   icons: { icon: [{ url: brand.logo, type: "image/png" }], apple: [{ url: brand.logo, type: "image/png" }] },
   openGraph: {
     title,
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
       ? [
           {
             url: shareImage,
-            width: 617,
-            height: 788,
+            width: 1774,
+            height: 887,
             alt: brand.businessName,
           },
         ]
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#141310",
+  themeColor: "#161310",
 };
 
 export default function RootLayout({

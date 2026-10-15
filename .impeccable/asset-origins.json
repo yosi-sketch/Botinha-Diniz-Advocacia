@@ -1,40 +1,29 @@
-{
-  "description": "Origem e integridade dos ativos do cliente atual, registradas externamente para preservar os PNGs.",
-  "verifiedAt": "2026-10-15T20:06:27.471Z",
-  "hashAlgorithm": "SHA-256",
-  "assets": [
-    {
-      "path": "public/murilo-alvarenga-logo.png",
-      "origin": "Anexo fornecido pelo usuário, copiado sem alterações.",
-      "sourcePath": "C:/Users/matheus/Desktop/Logotipo Jurídico Dourado MA、】【.png",
-      "width": 1774,
-      "height": 887,
-      "sha256": "4faf5417bb40e22e50d495c139987598e4bd7071331297c171e619f3020d34f2",
-      "sourceSha256": "4faf5417bb40e22e50d495c139987598e4bd7071331297c171e619f3020d34f2",
-      "identicalToSource": true,
-      "usage": "Logo original MA; cabeçalho, Sobre, rodapé e ícones."
-    },
-    {
-      "path": "public/murilo-alvarenga-advogado.png",
-      "origin": "Anexo fornecido pelo usuário, copiado sem alterações.",
-      "sourcePath": "C:/Users/matheus/AppData/Local/Temp/codex-clipboard-d18b08f1-4d07-4395-922a-bf51170a5eea.png",
-      "width": 617,
-      "height": 788,
-      "sha256": "d733fc38034e4b38398d32bc73cde3bce5961f48a1fa8f889e501374dd0b5f6b",
-      "sourceSha256": "d733fc38034e4b38398d32bc73cde3bce5961f48a1fa8f889e501374dd0b5f6b",
-      "identicalToSource": true,
-      "usage": "Material institucional original no hero, completo e proporcional; compartilhamento."
-    },
-    {
-      "path": "public/verbas-rescisorias.png",
-      "origin": "Anexo fornecido pelo usuário, copiado sem alterações.",
-      "sourcePath": "C:/Users/matheus/AppData/Local/Temp/codex-clipboard-ae221918-0c4e-49e3-bc61-3812c5319d85.png",
-      "width": 632,
-      "height": 839,
-      "sha256": "a0e3918b2c6a72f8f09074917082038dd201d9887655aa3df64d0982bf4104b4",
-      "sourceSha256": "a0e3918b2c6a72f8f09074917082038dd201d9887655aa3df64d0982bf4104b4",
-      "identicalToSource": true,
-      "usage": "Material original no modal Direito Trabalhista."
-    }
-  ]
-}
+[
+  {
+    "path": "public/botinha-diniz-logo.png",
+    "origin": "C:/Users/matheus/Desktop/Logotipo Jurídico Botinha & Diniz.png",
+    "width": 1774,
+    "height": 887,
+    "transformation": "Cópia binária integral do anexo, sem edição.",
+    "sha256": "e981799116f42eba404905a41b83818165d91b2f4e663fe4d73cc65f692bf3f0",
+    "identicalToSource": true
+  },
+  {
+    "path": "public/kethelen-diniz.png",
+    "origin": "C:/Users/matheus/AppData/Local/Temp/codex-clipboard-5daa330f-f32d-4f3e-8379-f96891e31842.png",
+    "width": 793,
+    "height": 785,
+    "transformation": "Cópia binária integral do anexo, sem edição.",
+    "sha256": "4c5699d3b63900a2e5918dc87f596e938e37275148809ef9af366741e16bbbae",
+    "identicalToSource": true
+  },
+  {
+    "path": "public/priscila-botinha.png",
+    "origin": "C:/Users/matheus/AppData/Local/Temp/codex-clipboard-dc4caf42-0f19-44b6-93f3-548c35d2b5f8.png",
+    "width": 722,
+    "height": 769,
+    "transformation": "Cópia binária integral do anexo, sem edição.",
+    "sha256": "fa81ee82088baac28e196a584c13c26e4ec47e1fcd4f03fc04ef3fc60c198ff5",
+    "identicalToSource": true
+  }
+]
